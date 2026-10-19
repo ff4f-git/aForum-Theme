@@ -1,5 +1,10 @@
 // aForum alpha-1. Farben nur über --af-* (siehe color_definitions.scss).
 
+// Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
+@function af-on($value) {
+  @return "#{$value}" == "true";
+}
+
 :root {
   --af-max-width: #{$max_width}px;
   --d-max-width: #{$max_width}px;
@@ -7,8 +12,8 @@
   --af-tile-size: #{$tile_size}px;
   --d-border-radius: #{$border_radius}px;
   --d-border-radius-large: #{$border_radius}px;
-  @if $panel_shadow {
-    --af-shadow: 0 0 32px rgba(0, 0, 0, #{$shadow_opacity * 0.01});
+  @if af-on($panel_shadow) {
+    --af-shadow: #{unquote("0 0 32px color-mix(in srgb, #000 " + $shadow_opacity + "%, transparent)")};
   } @else {
     --af-shadow: none;
   }
@@ -82,7 +87,7 @@ body::before {
   font-weight: 600;
 }
 
-@if $hide_sidebar_categories {
+@if af-on($hide_sidebar_categories) {
   .sidebar-section[data-section-name="categories"] {
     display: none;
   }
@@ -95,8 +100,8 @@ body::before {
   background: var(--af-accent);
   color: var(--af-on-accent);
   font-weight: 700;
-  @if $button_uppercase { text-transform: uppercase; letter-spacing: 0.03em; }
-  @if $button_italic { font-style: italic; }
+  @if af-on($button_uppercase) { text-transform: uppercase; letter-spacing: 0.03em; }
+  @if af-on($button_italic) { font-style: italic; }
 
   .d-icon { color: var(--af-on-accent); }
 
@@ -236,7 +241,7 @@ body::before {
       width: var(--af-tile-size);
       height: var(--af-tile-size);
       margin: 0;
-      @if $tile_background { background: var(--af-accent); }
+      @if af-on($tile_background) { background: var(--af-accent); }
 
       img {
         display: block;
@@ -271,7 +276,7 @@ body::before {
       color: var(--af-muted);
     }
 
-    @if not $show_subcategories {
+    @if not af-on($show_subcategories) {
       .subcategories {
         display: none;
       }
