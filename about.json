@@ -1,0 +1,32 @@
+{
+  "name": "aForum",
+  "component": false,
+  "theme_version": "alpha-1",
+  "about_url": "https://aforum.net",
+  "color_schemes": {
+    "aForum Hell": {
+      "primary": "151515",
+      "secondary": "ffffff",
+      "tertiary": "0e76bd",
+      "quaternary": "ff0000",
+      "header_background": "000000",
+      "header_primary": "ffffff",
+      "highlight": "fff3b0",
+      "danger": "c40000",
+      "success": "1f8a4c",
+      "love": "e0245e"
+    },
+    "aForum Dunkel": {
+      "primary": "ececec",
+      "secondary": "141414",
+      "tertiary": "3b9ae0",
+      "quaternary": "ff2a2a",
+      "header_background": "000000",
+      "header_primary": "ffffff",
+      "highlight": "6b5a10",
+      "danger": "ff5a5a",
+      "success": "3fbf6f",
+      "love": "ff6b81"
+    }
+  }
+}

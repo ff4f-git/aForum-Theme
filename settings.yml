@@ -1,0 +1,117 @@
+# Farben: leer lassen = Wert kommt aus der gewählten Farbpalette. Eingabe als Hex, z. B. #ff0000
+color_accent_light:
+  type: string
+  default: ""
+  description: "Akzent Hell (Buttons, Antwortzahlen, aktiver Sidebar-Eintrag). Leer = Palette quaternary."
+color_accent_dark:
+  type: string
+  default: ""
+  description: "Akzent Dunkel. Leer = Palette quaternary."
+color_nav_light:
+  type: string
+  default: ""
+  description: "Navigationsleiste (Kategorien, Aktuell, Neu, Heiß) Hell. Leer = Akzentfarbe."
+color_nav_dark:
+  type: string
+  default: ""
+  description: "Navigationsleiste Dunkel. Leer = Akzentfarbe."
+color_link_light:
+  type: string
+  default: ""
+  description: "Linkfarbe Hell (Textlinks). Leer = Palette tertiary."
+color_link_dark:
+  type: string
+  default: ""
+  description: "Linkfarbe Dunkel. Leer = Palette tertiary."
+color_page_bg_light:
+  type: string
+  default: ""
+  description: "Grauer Seitenhintergrund Hell. Leer = aus Palette abgeleitet."
+color_page_bg_dark:
+  type: string
+  default: ""
+  description: "Seitenhintergrund Dunkel. Leer = aus Palette abgeleitet."
+color_surface_light:
+  type: string
+  default: ""
+  description: "Weiße Forenfläche Hell. Leer = Palette secondary."
+color_surface_dark:
+  type: string
+  default: ""
+  description: "Forenfläche Dunkel. Leer = Palette secondary."
+color_header_bg_light:
+  type: string
+  default: ""
+  description: "Kopfzeile Hintergrund Hell. Leer = Palette header_background."
+color_header_bg_dark:
+  type: string
+  default: ""
+  description: "Kopfzeile Hintergrund Dunkel. Leer = Palette header_background."
+color_header_text_light:
+  type: string
+  default: ""
+  description: "Kopfzeile Icons und Text Hell. Leer = Palette header_primary."
+color_header_text_dark:
+  type: string
+  default: ""
+  description: "Kopfzeile Icons und Text Dunkel. Leer = Palette header_primary."
+
+# Fläche und Form
+max_width:
+  type: integer
+  default: 1320
+  min: 900
+  max: 2000
+  description: "Maximale Breite der Forenfläche in px (Desktop)."
+panel_radius:
+  type: integer
+  default: 4
+  min: 0
+  max: 24
+  description: "Rundung der oberen Ecken der Forenfläche und Kopfzeile in px."
+border_radius:
+  type: integer
+  default: 0
+  min: 0
+  max: 16
+  description: "Eckenradius für Buttons, Eingabefelder usw. in px. 0 = ganz eckig."
+panel_shadow:
+  type: bool
+  default: true
+  description: "Weicher Schatten um die Forenfläche (nur außen, nicht auf dem Handy)."
+shadow_opacity:
+  type: integer
+  default: 18
+  min: 0
+  max: 60
+  description: "Stärke des Schattens in Prozent."
+
+# Kategorien
+tile_size:
+  type: integer
+  default: 72
+  min: 40
+  max: 120
+  description: "Kantenlänge der quadratischen Kategoriekachel in px (Desktop). Auf dem Handy wird sie kleiner."
+tile_background:
+  type: bool
+  default: false
+  description: "Akzentfarbe hinter dem Kategoriebild (sinnvoll für Icons mit transparentem Hintergrund)."
+show_subcategories:
+  type: bool
+  default: false
+  description: "Unterkategorien in der Kategorieliste anzeigen."
+hide_sidebar_categories:
+  type: bool
+  default: true
+  description: "Abschnitt 'Kategorien' in der Sidebar ausblenden (die Kategorien stehen als Kacheln in der Mitte)."
+
+# Buttons
+button_uppercase:
+  type: bool
+  default: true
+  description: "Hauptbuttons (z. B. Neues Thema) in Großbuchstaben."
+button_italic:
+  type: bool
+  default: true
+  description: "Hauptbuttons kursiv."
