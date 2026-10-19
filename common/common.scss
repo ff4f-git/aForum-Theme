@@ -1,4 +1,4 @@
-// aForum alpha-1. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-2. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -7,7 +7,6 @@
 
 :root {
   --af-max-width: #{$max_width}px;
-  --d-max-width: #{$max_width}px;
   --af-panel-radius: #{$panel_radius}px;
   --af-tile-size: #{$tile_size}px;
   --d-border-radius: #{$border_radius}px;
@@ -21,27 +20,27 @@
 
 // ======================================================
 // 1. Eine Forenfläche auf grauem Grund
-//    Die Fläche ist ein fest stehendes Element hinter dem Inhalt.
+//    html ist der graue Grund, body ist die weiße Fläche mit Schatten.
 // ======================================================
-html { background: var(--af-page-bg); }
-body { background: transparent; }
+html {
+  background: var(--af-page-bg);
+}
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 50%;
+body {
   width: min(var(--af-max-width), 100%);
-  transform: translateX(-50%);
+  min-height: 100vh;
+  margin-inline: auto;
   background: var(--af-surface);
   box-shadow: var(--af-shadow);
   border-radius: var(--af-panel-radius) var(--af-panel-radius) 0 0;
-  z-index: -1;
-  pointer-events: none;
 }
 
-#main-outlet-wrapper,
+// Der Hauptbereich füllt die Fläche, statt eine eigene Maximalbreite mitzubringen
+#main-outlet-wrapper {
+  max-width: none;
+  background: transparent;
+}
+
 #main-outlet {
   background: transparent;
 }
@@ -85,6 +84,15 @@ body::before {
   background: var(--af-hover);
   box-shadow: inset 3px 0 0 var(--af-accent);
   font-weight: 600;
+}
+
+.sidebar-footer-wrapper,
+.sidebar-footer-container {
+  background: transparent;
+}
+
+.sidebar-footer-container::before {
+  display: none;
 }
 
 @if af-on($hide_sidebar_categories) {
@@ -135,6 +143,9 @@ body::before {
 // ======================================================
 .navigation-container {
   background: var(--af-nav-bg);
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: 0;
   padding: 0 0.5em;
   margin-bottom: 1em;
   align-items: center;
@@ -167,9 +178,8 @@ body::before {
     box-shadow: inset 0 -3px 0 var(--af-on-accent);
   }
 
-  // Auswahlfelder (Kategorie, Tags) und Zusatzbuttons auf der roten Leiste
-  .btn-default,
-  .select-kit .select-kit-header {
+  // Zusatzbuttons (Werkzeug) auf der roten Leiste
+  .btn-default {
     background: transparent;
     color: var(--af-on-accent);
     border-color: rgba(255, 255, 255, 0.6);
@@ -180,6 +190,28 @@ body::before {
     &:focus {
       background: rgba(0, 0, 0, 0.18);
       color: var(--af-on-accent);
+    }
+  }
+
+  // Auswahlfelder (Kategorien, Schlagwörter): weiße Schrift und Rahmen, eckig
+  .select-kit .select-kit-header,
+  .select-kit.combo-box .select-kit-header {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+
+    &,
+    * {
+      color: var(--af-on-accent);
+    }
+
+    .d-icon { color: var(--af-on-accent); }
+
+    &:hover,
+    &:focus,
+    &.is-focused {
+      background: rgba(0, 0, 0, 0.18);
+      border-color: var(--af-on-accent);
     }
   }
 
@@ -326,7 +358,7 @@ a:not([class]) {
     --af-tile-size: 56px;
   }
 
-  body::before {
+  body {
     width: 100%;
     box-shadow: none;
     border-radius: 0;
