@@ -1,0 +1,39 @@
+// Wird für jede Farbpalette (hell und dunkel) neu erzeugt.
+// Alle Farben kommen aus der Palette oder aus den Theme-Einstellungen.
+
+@function af-pick($light, $dark, $fallback) {
+  $l: if($light == "", $fallback, unquote($light));
+  $d: if($dark == "", $fallback, unquote($dark));
+  @return dark-light-choose($l, $d);
+}
+
+$af-page-bg-default: dark-light-choose(
+  mix($primary, $secondary, 8%),
+  scale-color($secondary, $lightness: -55%)
+);
+
+:root {
+  // Akzent = Marke und Handlung
+  --af-accent: #{af-pick($color_accent_light, $color_accent_dark, $quaternary)};
+  --af-accent-hover: #{"color-mix(in srgb, var(--af-accent) 82%, #000)"};
+  --af-on-accent: #fff;
+  --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $quaternary)};
+
+  // Link = Information
+  --af-link: #{af-pick($color_link_light, $color_link_dark, $tertiary)};
+  --af-link-hover: #{"color-mix(in srgb, var(--af-link) 75%, var(--primary))"};
+
+  // Flächen
+  --af-page-bg: #{af-pick($color_page_bg_light, $color_page_bg_dark, $af-page-bg-default)};
+  --af-surface: #{af-pick($color_surface_light, $color_surface_dark, $secondary)};
+  --af-header-bg: #{af-pick($color_header_bg_light, $color_header_bg_dark, $header_background)};
+  --af-header-text: #{af-pick($color_header_text_light, $color_header_text_dark, $header_primary)};
+
+  // Linien, Hover, gedämpfter Text
+  --af-border: #{mix($primary, $secondary, 14%)};
+  --af-hover: #{mix($primary, $secondary, 8%)};
+  --af-muted: #{mix($primary, $secondary, 62%)};
+
+  --header_background: var(--af-header-bg);
+  --header_primary: var(--af-header-text);
+}
