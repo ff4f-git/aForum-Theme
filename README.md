@@ -1,4 +1,4 @@
-# aForum – Discourse-Theme (alpha-7)
+# aForum – Discourse-Theme (alpha-8)
 
 Helles, flaches, eckiges Design: schwarze Kopfzeile in voller Breite, darunter eine weiße Forenfläche mit Schatten auf hellgrauem Grund, schwarze Navigationsleiste mit blauem aktivem Tab, roter Hauptbutton, Kategorien als Kachelreihe. Dunkler Modus ist enthalten.
 
@@ -37,7 +37,7 @@ Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
 1. **Schatten:** Trage in der Theme-Einstellung `banner_selector` den CSS-Namen des Banners ein. So findest du ihn: Auf der Startseite Rechtsklick auf den Banner → „Untersuchen“ → in der markierten Zeile steht `class="…"`. Daraus wird der Selektor, z. B. `.hero-banner`. Mehrere Klassen schreibst du ohne Leerzeichen mit Punkten: `.a.b`.
 2. **Position:** Der Banner soll unter der roten Leiste liegen. Das legt die Komponente fest, nicht das Theme. Schau in ihren Einstellungen nach einer Auswahl für die Position (Plugin-Outlet). Ein Ort, der nach der Navigationsleiste kommt, wäre richtig.
 
-## Grenzen von alpha-7
+## Grenzen von alpha-8
 
 - Kategorien: Die Liste zeigt je Kategorie Name, Beschreibung, Themenzahl und Unterkategorien. Letzter Beitrag und Beitragszahl je Kategorie lassen sich mit reinem CSS nicht ergänzen.
 - Nicht gegen eine laufende Discourse-Instanz getestet, Selektoren können in deiner Version abweichen.

@@ -40,6 +40,7 @@ $af-page-bg-default: dark-light-choose(
   --af-border: #{mix($primary, $secondary, 14%)};
   --af-hover: #{mix($primary, $secondary, 8%)};
   --af-muted: #{mix($primary, $secondary, 62%)};
+  --af-visited: #{mix($primary, $secondary, 72%)};
 
   --header_background: var(--af-header-bg);
   --header_primary: var(--af-header-text);

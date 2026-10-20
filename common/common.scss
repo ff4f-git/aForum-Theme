@@ -1,4 +1,4 @@
-// aForum alpha-7. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-8. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -419,16 +419,14 @@ img.avatar,
     border-bottom: 1px solid var(--af-border);
   }
 
-  // Unterkategorien: Spalten, durch eine feine Linie vom Rest abgesetzt
+  // Unterkategorien: Spalten mit fester Breite
   .subcategories {
     display: grid;
     // Feste Spaltenbreite: die zweite Spalte beginnt in jeder Kategorie an derselben Stelle
     grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
     justify-content: start;
     gap: 0.35em 0;
-    margin-top: 0.6em;
-    padding-top: 0.6em;
-    border-top: 1px solid var(--af-border);
+    margin-top: 0.7em;
     font-size: 0.93em;
 
     @media (max-width: 767px) {
@@ -529,6 +527,22 @@ img.avatar,
   color: var(--af-accent);
 }
 
+// Themen-Titel: dunkel und gut lesbar, gelesene nur leicht gedämpft
+.topic-list .main-link a.title,
+.latest-topic-list-item .main-link a.title,
+.category-topic-link a.title {
+  color: var(--primary) !important;
+}
+
+.topic-list .main-link a.title.visited,
+.topic-list .main-link a.title:visited,
+.latest-topic-list-item .main-link a.title.visited,
+.latest-topic-list-item .main-link a.title:visited,
+.category-topic-link a.title.visited,
+.category-topic-link a.title:visited {
+  color: var(--af-visited) !important;
+}
+
 // ======================================================
 // 9. Links (Information)
 // ======================================================
@@ -549,6 +563,7 @@ a:not([class]) {
   :root {
     --af-tile-size: 56px;
     --af-header-h: 56px;
+    --af-cta-over: 0px;
   }
 
   body {
@@ -556,7 +571,19 @@ a:not([class]) {
     box-shadow: none;
   }
 
+  // Leiste auf dem Handy: kein Überstand, Button in normaler Größe
   .navigation-container {
     margin: 0.5em 0;
+    min-height: 0;
+    padding: 0.4em 0.5em;
+    row-gap: 0.4em;
+
+    .btn-primary,
+    #create-topic {
+      height: 44px;
+      margin-block: 0;
+      padding-inline: 0.9em;
+      font-size: 1em;
+    }
   }
 }
