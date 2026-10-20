@@ -520,7 +520,9 @@ img.avatar,
 // ======================================================
 .topic-list-header {
   background: var(--af-hover);
-  border-bottom: 2px solid var(--af-border);
+  // Alpha 26: Markenblaue Trennlinie in Aktuell, Neu und Heiß.
+  // Entspricht der Kategorie-Kopfzeile auf der Startseite.
+  border-bottom: 3px solid var(--af-brand-blue);
 
   th,
   .topic-list-data {

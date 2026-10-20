@@ -1,4 +1,4 @@
-# aForum · Alpha 25
+# aForum · Alpha 26
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
@@ -13,7 +13,7 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 ## Highlights
 
 - **Klassische Kategorienübersicht:** Kategorien links, aktuelle Themen rechts.
-- **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich.
+- **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich. Die Kopfzeilen der vollständigen Themenlisten erhalten eine 3-px-Linie im aForum-Blau `#0F7EC9`, passend zur Kategorienübersicht.
 - **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
 - **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
 - **Willkommensbanner:** Slogan „Die Aprilia Community von Biker für Biker“ in aForum-Blau (`#0F7EC9`); Begrüßung, Suchfeld und Hintergrund bleiben unverändert. Der Banner wird weiterhin von einer separaten Komponente bereitgestellt. Eine dauerhaft sichtbare, kantige 1-px-Kontur in Sponsorenrot (`#d81c1c`) fasst ihn ein. Beide Farben sind ab Alpha 25 je Farbmodus über die Theme-Einstellungen anpassbar.
@@ -38,11 +38,11 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 25` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 26` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Bannerfarben einstellen
 
-Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 25 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
+Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 26 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
 
 | Einstellung | Standard, wenn leer |
 | --- | --- |
@@ -78,6 +78,7 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 
 | Version | Wesentliche Änderung |
 | --- | --- |
+| **Alpha 26** | Blaue Trennlinie unter den Tabellenkopfzeilen in Aktuell, Neu und Heiß, passend zur Kategorienübersicht |
 | **Alpha 25** | Vereinheitlichung der Theme-Blautöne auf das Logoblau `#0F7EC9` |
 | **Alpha 24** | Vier optionale Hex-Farbwerte für Slogan und Bannerrahmen, separat für Hell und Dunkel; leer = bisheriger Standard |
 | **Alpha 23** | Dauerhafte 1-px-Rotkontur um den Willkommensbanner, eckig und ohne Layoutverschiebung |
