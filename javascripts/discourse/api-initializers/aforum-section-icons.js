@@ -1,9 +1,11 @@
 import { apiInitializer } from "discourse/lib/api";
 import { iconHTML } from "discourse-common/lib/icon-library";
 
+// Alpha 13: Die rechte Überschrift ist kein Kind von .latest-topic-list.
+// Beide Überschriften werden deshalb direkt im Main-Outlet gesucht.
 export default apiInitializer("1.14.0", (api) => {
   function insertIcon(target, name, className) {
-    if (!target || target.querySelector(`.${className}`)) return;
+    if (target.querySelector(`.${className}`)) return;
     const holder = document.createElement("span");
     holder.className = `aforum-section-icon ${className}`;
     holder.setAttribute("aria-hidden", "true");
@@ -12,26 +14,21 @@ export default apiInitializer("1.14.0", (api) => {
   }
 
   function decorate() {
-    document.querySelectorAll(".category-list thead th:first-child").forEach((th) => {
-      insertIcon(th, "list", "aforum-section-icon--list");
+    document.querySelectorAll("#main-outlet .category-list thead th:first-child").forEach((heading) => {
+      insertIcon(heading, "list", "aforum-section-icon--list");
     });
 
-    // Discourse kann die rechte Überschrift außerhalb von .latest-topic-list
-    // rendern. Darum den sichtbaren Titel im Bereich der aktuellen Themen finden.
-    document.querySelectorAll(".latest-topic-list").forEach((list) => {
-      const parent = list.parentElement;
-      if (!parent) return;
-      const candidates = [
-        ...parent.querySelectorAll(":scope > .table-heading, :scope > .category-list-heading, :scope > h2, :scope > h3, :scope > header, :scope > div:first-child"),
-        ...list.querySelectorAll(":scope > .table-heading, :scope > .category-list-heading, :scope > h2, :scope > h3")
-      ];
-      const heading = candidates.find((el) =>
-        el.textContent.trim().toLocaleLowerCase("de") === "aktuell"
-      );
-      if (heading) {
-        heading.classList.add("aforum-current-heading");
-        insertIcon(heading, "fire", "aforum-section-icon--fire");
-      }
+    // Überschrift steht je nach Discourse-Version außerhalb der Themenliste.
+    document.querySelectorAll(
+      "#main-outlet .table-heading, #main-outlet .category-list-heading, " +
+      "#main-outlet .latest-topic-list-heading, #main-outlet .topic-list-heading, " +
+      "#main-outlet .latest-topic-list h2, #main-outlet .latest-topic-list h3, " +
+      "#main-outlet .latest-topic-list-container > :first-child"
+    ).forEach((heading) => {
+      const label = heading.textContent.replace(/\s+/g, " ").trim().toLocaleLowerCase("de");
+      if (label !== "aktuell") return;
+      heading.classList.add("aforum-current-heading");
+      insertIcon(heading, "fire", "aforum-section-icon--fire");
     });
   }
 

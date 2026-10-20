@@ -1,53 +1,46 @@
-# aForum – Discourse-Theme (alpha-9)
+# aForum – Discourse Theme · Alpha 14
 
-Helles, flaches, eckiges Design: schwarze Kopfzeile in voller Breite, darunter eine weiße Forenfläche mit Schatten auf hellgrauem Grund, schwarze Navigationsleiste mit blauem aktivem Tab, roter Hauptbutton, Kategorien als Kachelreihe. Dunkler Modus ist enthalten.
+Eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net), die Aprilia-Community. Die Version **Alpha 14** aktualisiert die Versionsangaben und die Dokumentation gegenüber Alpha 13; das sichtbare Layout und die Funktionen bleiben unverändert.
 
-## Farbrollen
+## Gestaltung
 
-| Rolle | Standard | Wofür |
-| --- | --- | --- |
-| Akzent | Rot `#ff0000` | Hauptbutton „Neues Thema“, Antwortzahlen, aktiver Sidebar-Eintrag, übrige Hauptbuttons |
-| Aktiver Tab | Aprilia-Blau `#0e76bd` | Aktueller Eintrag in der schwarzen Navigationsleiste |
-| Link | Aprilia-Blau `#0e76bd` | Textlinks |
-| Flächen | Schwarz, Weiß, Hellgrau | Kopfzeile, Forenfläche, Seitenhintergrund |
+- Schwarze Kopfzeile, weiße Inhaltsfläche auf hellgrauem Seitenhintergrund.
+- Schwarze Navigationsleiste mit blauem aktivem Tab und rotem Button **Neues Thema**.
+- Schlichter Link **★ Abonnieren** in Bronze (`#D6B36A`), ohne Hintergrund, Rahmen oder Animation.
+- Zweispaltiger Startseitenbereich: Kategorien links, aktuelle Themen rechts.
+- Kategorie-Kopfzeile mit blauem Listensymbol und blauer Linie; Aktuell-Kopfzeile mit roter Akzentlinie und vorgesehenem Font-Awesome-Flammensymbol.
+- Helles und dunkles Farbschema; viele Farben und Maße über `settings.yml` konfigurierbar.
 
-Drei Ebenen: Farbpalette (`about.json`) → Theme-Einstellungen (`settings.yml`, leer = Wert aus der Palette) → CSS-Variablen `--af-*`. Im SCSS stehen keine festen Farben.
+## Installation und Aktualisierung
 
-## Installation und Update
+1. Dateien aus dieser ZIP **direkt in das Stammverzeichnis** des bestehenden GitHub-Theme-Repositories kopieren (nicht in einen zusätzlichen Unterordner).
+2. Bestehende Dateien überschreiben und die Änderungen committen.
+3. In Discourse unter **Admin → Darstellung → Themes & Komponenten** das installierte Git-Theme auswählen und auf Updates prüfen.
+4. Nach der Aktualisierung die Startseite auf Desktop und Mobilgeräten testen.
 
-1. Alle Dateien ins **Hauptverzeichnis** des Repositorys legen (nicht in einen Unterordner).
-2. Admin → Darstellung → Themes & Komponenten → Installieren → „Aus einem Git-Repository“.
-3. Zuerst über „Vorschau“ testen. Spätere Änderungen: Dateien in GitHub ersetzen, im Theme auf Updates prüfen.
-4. Palette zuweisen: „aForum Hell“ als helles, „aForum Dunkel“ als dunkles Farbschema.
+**Hinweis zur Versionsanzeige:** Die Felder `name` und `theme_version` in `about.json` stehen hier auf **aForum Alpha 14** und **alpha-14**. Discourse kann einen einmal lokal vergebenen Theme-Namen beibehalten. Falls in der Administration weiterhin „Alpha 11“ steht, den **Anzeigenamen des installierten Themes in Discourse selbst** bearbeiten. Eine Git-Aktualisierung benennt ein vorhandenes Theme nicht zwingend um.
 
-## Das stellst du in Discourse selbst ein
+## Separat installierte Komponenten
 
-- **Kategorien-Seitenstil** auf die Variante mit Boxen (Admin → Einstellungen, nach „Kategorienseite“ suchen). Ohne diese Einstellung greift das Kachel-Layout nicht.
-- **Kachelbilder:** je Kategorie als Logo hochladen, quadratisch. Ohne Bild gibt es eine graue Platzhalterkachel.
-- **Logo und Schrift:** über die Discourse-Einstellungen.
+Das Willkommens-/Suchbanner wird über die Discourse-Bannerfunktion bzw. die dazugehörige Einrichtung verwaltet. Die drei Sponsor-Kacheln stammen aus der **separaten Theme-Komponente aForum Premium Sponsors** und gehören **nicht** zu diesem Repository. Diese Komponente muss weiterhin dem Haupttheme zugewiesen sein; ihre Einstellungen und Sponsoren werden durch dieses Theme-Update nicht verändert.
 
-## Komponenten des alten Themes
+## Dateien
 
-Komponenten hängen an einem Theme und werden nicht automatisch ins neue übernommen. Was im alten Theme als Komponente lief (z. B. Hero-Banner, Dark-Mode-Umschalter), musst du dem neuen Theme zuweisen: Admin → Darstellung → Themes & Komponenten → aForum → Komponenten → hinzufügen.
+- `about.json` – Theme-Name, Metadaten, Farbschemata und Icon-Freigaben.
+- `settings.yml` – konfigurierbare Theme-Einstellungen.
+- `common/color_definitions.scss` – Farbvariablen.
+- `common/common.scss` – Layout, Navigation und Tabellenköpfe.
+- `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` – bestehender Dateiname aus Kompatibilitätsgründen; steuert den schlichten Bronze-Link, **keinen** Glow mehr.
+- `javascripts/discourse/api-initializers/aforum-section-icons.js` – ergänzt Icons und Markierung der Kopfzeilen.
 
-## Banner
+## Versionsverlauf
 
-Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
+- **Alpha 10:** Bronze-Link „★ Abonnieren“, blaue und rote Akzentlinien für die beiden Tabellenbereiche.
+- **Alpha 11:** Überarbeitung der Icon-Darstellung und Schriftgrößen.
+- **Alpha 12:** Anpassung der Erkennung der rechten Kopfzeile.
+- **Alpha 13:** Registrierung von `fire` und `list` in `about.json`, verbesserte Überschriftenerkennung.
+- **Alpha 14:** Korrigierte Theme-Metadaten, konsistente Versionierung und vollständig aktualisierte README. Keine zusätzlichen Layoutänderungen.
 
-1. **Schatten:** Trage in der Theme-Einstellung `banner_selector` den CSS-Namen des Banners ein. So findest du ihn: Auf der Startseite Rechtsklick auf den Banner → „Untersuchen“ → in der markierten Zeile steht `class="…"`. Daraus wird der Selektor, z. B. `.hero-banner`. Mehrere Klassen schreibst du ohne Leerzeichen mit Punkten: `.a.b`.
-2. **Position:** Der Banner soll unter der roten Leiste liegen. Das legt die Komponente fest, nicht das Theme. Schau in ihren Einstellungen nach einer Auswahl für die Position (Plugin-Outlet). Ein Ort, der nach der Navigationsleiste kommt, wäre richtig.
+## Bekannte Einschränkungen
 
-## Grenzen von alpha-9
-
-- Kategorien: Die Liste zeigt je Kategorie Name, Beschreibung, Themenzahl und Unterkategorien. Letzter Beitrag und Beitragszahl je Kategorie lassen sich mit reinem CSS nicht ergänzen.
-- Nicht gegen eine laufende Discourse-Instanz getestet, Selektoren können in deiner Version abweichen.
-- Die rote Leiste sitzt in der Inhaltsspalte rechts neben der Sidebar, nicht über deren gesamter Breite.
-- Die Leiste existiert nur auf Seiten mit Navigationszeile (Startseite, Listen), nicht im Profil oder in Themen.
-
-
-## Alpha 10 – Navigation und Tabellenköpfe
-
-- „Abonnieren“ wird als schlichter bronzefarbener Link mit Stern dargestellt (ohne Rahmen, Pulsieren oder Glanz).
-- Kategorie-Tabelle: feine blaue Linie und Listensymbol.
-- Aktuell-Tabelle: feine rote Linie und Symbol.
-- Die bisherige Datei `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` wird **ersetzt**, nicht gelöscht; sie enthält nun die neue Link-Logik. Der Dateiname bleibt aus Update-Gründen erhalten.
+Die Icon-Ausgabe hängt vom tatsächlichen Discourse-Markup und der geladenen Icon-Bibliothek ab. Die Anzeige der roten Flamme rechts ist noch nicht durch einen erfolgreichen Live-Screenshot bestätigt. Ein erfolgreicher ZIP-Test ist kein Ersatz für einen Browser-Test.
