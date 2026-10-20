@@ -9,6 +9,7 @@
   --af-max-width: #{$max_width}px;
   --af-tile-size: #{$tile_size}px;
   --af-header-h: #{$header_height}px;
+  --af-avatar-radius: #{$avatar_radius}px;
   --af-bar-h: #{$bar_height}px;
   --af-cta-over: #{$cta_overhang}px;
   --d-border-radius: #{$border_radius}px;
@@ -178,16 +179,17 @@ html {
   box-shadow: inset 0 -3px 0 var(--af-accent);
 }
 
-// Avatare eckig (Wert in Prozent, 50 = rund). !important, weil Discourse
+// Avatare eckig (Wert in px, 3 wie im alten Theme). !important, weil Discourse
 // die Rundung an mehreren Stellen mit eigener Spezifität setzt.
 .avatar,
+.user-avatar,
 img.avatar,
 .topic-list img.avatar,
 .latest-topic-list img.avatar,
 .topic-avatar img,
 .user-image img,
 .d-header img.avatar {
-  border-radius: #{$avatar_radius}% !important;
+  border-radius: var(--af-avatar-radius) !important;
 }
 
 // ======================================================
