@@ -18,7 +18,7 @@ Eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net), die 
 3. In Discourse unter **Admin → Darstellung → Themes & Komponenten** das installierte Git-Theme auswählen und auf Updates prüfen.
 4. Nach der Aktualisierung die Startseite auf Desktop und Mobilgeräten testen.
 
-**Hinweis zur Versionsanzeige:** Die Felder `name` und `theme_version` in `about.json` stehen hier auf **aForum Alpha 14** und **alpha-14**. Discourse kann einen einmal lokal vergebenen Theme-Namen beibehalten. Falls in der Administration weiterhin „Alpha 11“ steht, den **Anzeigenamen des installierten Themes in Discourse selbst** bearbeiten. Eine Git-Aktualisierung benennt ein vorhandenes Theme nicht zwingend um.
+**Hinweis zur Versionsanzeige:** Die Felder `name` und `theme_version` in `about.json` stehen hier auf **aForum Alpha 19** und **alpha-19**. Discourse kann einen einmal lokal vergebenen Theme-Namen beibehalten. Falls in der Administration weiterhin „Alpha 11“ steht, den **Anzeigenamen des installierten Themes in Discourse selbst** bearbeiten. Eine Git-Aktualisierung benennt ein vorhandenes Theme nicht zwingend um.
 
 ## Separat installierte Komponenten
 
@@ -43,8 +43,11 @@ Das Willkommens-/Suchbanner wird über die Discourse-Bannerfunktion bzw. die daz
 
 ## Bekannte Einschränkungen
 
-Die Icon-Ausgabe hängt vom tatsächlichen Discourse-Markup und der geladenen Icon-Bibliothek ab. Die Anzeige der roten Flamme rechts ist noch nicht durch einen erfolgreichen Live-Screenshot bestätigt. Ein erfolgreicher ZIP-Test ist kein Ersatz für einen Browser-Test.
+Die Icon-Ausgabe hängt vom tatsächlichen Discourse-Markup und der geladenen Icon-Bibliothek ab. Die rote Flamme wurde auf aForum bereits im Browser bestätigt. Ein erfolgreicher ZIP-Test ist kein Ersatz für einen Browser-Test der neuen Dark-Mode-Abstimmungen.
 
 - **Alpha 18:** Discourse-konforme SVG-Icon-Registrierung über `about.json` → `modifiers.svg_icons` als Array (`fire`, `list`), statt des wirkungslosen Top-Level-Eintrags `svg_icons`. Dadurch wird `#fire` in die SVG-Sprite-Sammlung aufgenommen.
 
 - **Alpha 18:** Rückkehr zur nativen Discourse-Navigation. Sämtliche Racing-Sidebar-Styles aus Alpha 16 und das eigene „Mehr“-Popup samt JavaScript aus Alpha 17 sind entfernt. Das Layout und die Sidebar verhalten sich wieder wie im Discourse-Standard. Die funktionierende Flamme und alle übrigen Alpha-15-Designmerkmale bleiben erhalten. Die Navigationseinstellung (Sidebar oder Header Dropdown) wird ausschließlich in der Discourse-Administration festgelegt.
+
+
+- **Alpha 19:** Ausschließlich Dark-Mode-Feinschliff: sehr dezente, aus der aktiven Discourse-Farbpalette berechnete Zeilenflächen, Hover-Abstufungen und besser lesbare Thementitel. Mit `dark-light-choose()` bleibt der Light Mode unverändert. Keine hartcodierten neuen Farben, keine Änderungen an Navigation, Sponsor-Komponente oder Icon-Registrierung.

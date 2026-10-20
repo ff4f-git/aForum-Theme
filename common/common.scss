@@ -686,3 +686,35 @@ a:not([class]) {
 .aforum-current-heading .aforum-section-icon--fire {
   flex: 0 0 20px;
 }
+
+// ======================================================
+// Alpha 19: dezenter Dark-Mode-Feinschliff, komplett palettenbasiert.
+// dark-light-choose liefert im Light Mode transparente/unveränderte Werte.
+// Keine festen Hintergrund- oder Textfarben.
+// ======================================================
+
+// Subtile Trennung von Inhalt und Zeilen, ohne die Light-Palette anzutasten.
+.category-list .category-list-item,
+.latest-topic-list .latest-topic-list-item,
+.topic-list tbody tr.topic-list-item {
+  background-color: dark-light-choose(transparent, mix($primary, $secondary, 2%));
+}
+
+.category-list .category-list-item:hover,
+.latest-topic-list .latest-topic-list-item:hover,
+.topic-list tbody tr.topic-list-item:hover {
+  background-color: dark-light-choose(var(--af-hover), mix($primary, $secondary, 7%));
+}
+
+// Mehr Kontrast für Titel, Beschreibungen bleiben bewusst abgestuft.
+.latest-topic-list-item .main-link a.title,
+.topic-list .main-link a.title,
+.category-list .category-text-title a {
+  color: dark-light-choose(inherit, mix($primary, $secondary, 94%));
+}
+
+// Sanfte Flächentrennung der Listen, nur in der dunklen Farbpalette.
+.categories-and-latest .column,
+.topic-list {
+  border-color: dark-light-choose(transparent, mix($primary, $secondary, 13%));
+}
