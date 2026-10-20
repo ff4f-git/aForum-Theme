@@ -1,4 +1,4 @@
-// aForum alpha-2. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-3. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -7,8 +7,9 @@
 
 :root {
   --af-max-width: #{$max_width}px;
-  --af-panel-radius: #{$panel_radius}px;
   --af-tile-size: #{$tile_size}px;
+  --af-bar-h: #{$bar_height}px;
+  --af-cta-over: #{$cta_overhang}px;
   --d-border-radius: #{$border_radius}px;
   --d-border-radius-large: #{$border_radius}px;
   @if af-on($panel_shadow) {
@@ -16,6 +17,7 @@
   } @else {
     --af-shadow: none;
   }
+  --af-banner-shadow: #{unquote("0 6px 18px color-mix(in srgb, #000 " + $banner_shadow_opacity + "%, transparent)")};
 }
 
 // ======================================================
@@ -32,10 +34,8 @@ body {
   margin-inline: auto;
   background: var(--af-surface);
   box-shadow: var(--af-shadow);
-  border-radius: var(--af-panel-radius) var(--af-panel-radius) 0 0;
 }
 
-// Der Hauptbereich füllt die Fläche, statt eine eigene Maximalbreite mitzubringen
 #main-outlet-wrapper {
   max-width: none;
   background: transparent;
@@ -46,23 +46,14 @@ body {
 }
 
 // ======================================================
-// 2. Kopfzeile sitzt in der Fläche
+// 2. Kopfzeile: schwarz, durchgehend von links nach rechts
 // ======================================================
-.d-header-wrap {
-  background: transparent;
-  left: 0;
-  right: 0;
-  width: min(var(--af-max-width), 100%);
-  margin-inline: auto;
-}
-
 .d-header {
   background: var(--af-header-bg);
   box-shadow: none;
-  border-radius: var(--af-panel-radius) var(--af-panel-radius) 0 0;
 
   .wrap {
-    max-width: none;
+    max-width: min(var(--af-max-width), 100%);
   }
 }
 
@@ -142,12 +133,14 @@ body {
 // 5. Rote Navigationsleiste (Kategorien, Aktuell, Neu, Heiß)
 // ======================================================
 .navigation-container {
+  position: relative;
+  z-index: 2;
   background: var(--af-nav-bg);
   box-sizing: border-box;
   width: 100%;
-  margin-inline: 0;
+  min-height: var(--af-bar-h);
+  margin: 1em 0;
   padding: 0 0.5em;
-  margin-bottom: 1em;
   align-items: center;
 
   .nav-pills {
@@ -193,47 +186,52 @@ body {
     }
   }
 
-  // Auswahlfelder (Kategorien, Schlagwörter): weiße Schrift und Rahmen, eckig
-  .select-kit .select-kit-header,
-  .select-kit.combo-box .select-kit-header {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 0;
-
-    &,
-    * {
-      color: var(--af-on-accent);
-    }
+  // Hauptbutton: Aprilia-Blau, weiße fette Schrift, ragt über die Leiste hinaus
+  .btn-primary,
+  #create-topic {
+    box-sizing: border-box;
+    height: calc(var(--af-bar-h) + 2 * var(--af-cta-over));
+    margin-block: calc(-1 * var(--af-cta-over));
+    padding-inline: 1.4em;
+    font-size: 1.1em;
+    font-weight: 800;
+    background: var(--af-cta);
+    color: var(--af-on-accent);
+    border-radius: var(--d-border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
     .d-icon { color: var(--af-on-accent); }
 
     &:hover,
-    &:focus,
-    &.is-focused {
-      background: rgba(0, 0, 0, 0.18);
-      border-color: var(--af-on-accent);
+    &:focus {
+      background: var(--af-cta-hover);
+      color: var(--af-on-accent);
+      .d-icon { color: var(--af-on-accent); }
     }
   }
 
-  // Hauptbutton dreht sich um: weiß mit roter Schrift
-  .btn-primary,
-  #create-topic {
-    background: var(--af-on-accent);
-    color: var(--af-nav-bg);
-
-    .d-icon { color: var(--af-nav-bg); }
-
-    &:hover,
-    &:focus {
-      background: rgba(255, 255, 255, 0.85);
-      color: var(--af-nav-bg);
-      .d-icon { color: var(--af-nav-bg); }
+  @if af-on($hide_nav_dropdowns) {
+    .category-breadcrumb,
+    .category-drop,
+    .tag-drop {
+      display: none;
     }
   }
 }
 
 // ======================================================
-// 6. Kategorieliste als zweispaltige Kachelreihe
+// 6. Banner (deine Hero-Komponente) hebt sich mit eigenem Schatten ab
+// ======================================================
+@if $banner_selector != "" {
+  #{$banner_selector} {
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--af-banner-shadow);
+  }
+}
+
+// ======================================================
+// 7. Kategorieliste als zweispaltige Kachelreihe
 //    Voraussetzung: Kategorien-Seitenstil auf "Boxen" (siehe README)
 // ======================================================
 .category-boxes {
@@ -317,7 +315,7 @@ body {
 }
 
 // ======================================================
-// 7. Themenlisten: flache Zeilen, Hover dunkler
+// 8. Themenlisten: flache Zeilen, Hover dunkler
 // ======================================================
 .topic-list-header {
   border-bottom: 2px solid var(--af-border);
@@ -338,7 +336,7 @@ body {
 }
 
 // ======================================================
-// 8. Links (Information)
+// 9. Links (Information)
 // ======================================================
 .cooked a,
 a:not([class]) {
@@ -351,7 +349,7 @@ a:not([class]) {
 }
 
 // ======================================================
-// 9. Handy
+// 10. Handy
 // ======================================================
 @media (max-width: 767px) {
   :root {
@@ -361,14 +359,9 @@ a:not([class]) {
   body {
     width: 100%;
     box-shadow: none;
-    border-radius: 0;
-  }
-
-  .d-header {
-    border-radius: 0;
   }
 
   .navigation-container {
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
   }
 }

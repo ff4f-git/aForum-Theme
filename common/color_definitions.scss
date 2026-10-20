@@ -19,6 +19,10 @@ $af-page-bg-default: dark-light-choose(
   --af-on-accent: #fff;
   --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $quaternary)};
 
+  // Hauptbutton (Neues Thema)
+  --af-cta: #{af-pick($color_cta_light, $color_cta_dark, $tertiary)};
+  --af-cta-hover: #{"color-mix(in srgb, var(--af-cta) 82%, #000)"};
+
   // Link = Information
   --af-link: #{af-pick($color_link_light, $color_link_dark, $tertiary)};
   --af-link-hover: #{"color-mix(in srgb, var(--af-link) 75%, var(--primary))"};

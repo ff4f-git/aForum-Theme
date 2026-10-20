@@ -15,6 +15,14 @@ color_nav_dark:
   type: string
   default: ""
   description: "Navigationsleiste Dunkel. Leer = Akzentfarbe."
+color_cta_light:
+  type: string
+  default: ""
+  description: "Farbe des Buttons 'Neues Thema' Hell. Leer = Palette tertiary (Aprilia-Blau)."
+color_cta_dark:
+  type: string
+  default: ""
+  description: "Farbe des Buttons 'Neues Thema' Dunkel. Leer = Palette tertiary."
 color_link_light:
   type: string
   default: ""
@@ -63,12 +71,6 @@ max_width:
   min: 900
   max: 2000
   description: "Maximale Breite der Forenfläche in px (Desktop)."
-panel_radius:
-  type: integer
-  default: 4
-  min: 0
-  max: 24
-  description: "Rundung der oberen Ecken der Forenfläche und Kopfzeile in px."
 border_radius:
   type: integer
   default: 0
@@ -85,6 +87,36 @@ shadow_opacity:
   min: 0
   max: 60
   description: "Stärke des Schattens in Prozent."
+
+# Rote Leiste und Hauptbutton
+bar_height:
+  type: integer
+  default: 52
+  min: 36
+  max: 80
+  description: "Höhe der roten Navigationsleiste in px."
+cta_overhang:
+  type: integer
+  default: 8
+  min: 0
+  max: 24
+  description: "Wie weit der Button 'Neues Thema' oben und unten über die rote Leiste hinausragt, in px."
+hide_nav_dropdowns:
+  type: bool
+  default: true
+  description: "Die Auswahlfelder 'Kategorien' und 'Schlagwörter' links in der Leiste ausblenden."
+
+# Banner
+banner_selector:
+  type: string
+  default: ""
+  description: "CSS-Selektor deines Hero-Banners, z. B. .mein-banner (siehe README). Leer = kein Schatten am Banner."
+banner_shadow_opacity:
+  type: integer
+  default: 30
+  min: 0
+  max: 80
+  description: "Stärke des Schattens unter dem Banner in Prozent."
 
 # Kategorien
 tile_size:

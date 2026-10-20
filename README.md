@@ -1,33 +1,40 @@
-# aForum – Discourse-Theme (alpha-1)
+# aForum – Discourse-Theme (alpha-3)
 
-Helles, flaches, eckiges Design: eine weiße Forenfläche mit Schatten auf hellgrauem Grund, schwarze Kopfzeile, rote Navigationsleiste, Kategorien als Kachelreihe. Dunkler Modus ist enthalten.
+Helles, flaches, eckiges Design: schwarze Kopfzeile in voller Breite, darunter eine weiße Forenfläche mit Schatten auf hellgrauem Grund, rote Navigationsleiste, blauer Hauptbutton, Kategorien als Kachelreihe. Dunkler Modus ist enthalten.
 
 ## Farbrollen
 
 | Rolle | Standard | Wofür |
 | --- | --- | --- |
-| Akzent | Rot `#ff0000` | Hauptbuttons, Navigationsleiste, Antwortzahlen, aktiver Sidebar-Eintrag, Unterstreichung aktiver Tabs |
-| Link | Blau `#0e76bd` | Textlinks |
+| Akzent | Rot `#ff0000` | Navigationsleiste, Antwortzahlen, aktiver Sidebar-Eintrag, übrige Hauptbuttons |
+| Hauptbutton | Aprilia-Blau `#0e76bd` | „Neues Thema“ in der roten Leiste |
+| Link | Aprilia-Blau `#0e76bd` | Textlinks |
 | Flächen | Schwarz, Weiß, Hellgrau | Kopfzeile, Forenfläche, Seitenhintergrund |
 
 Drei Ebenen: Farbpalette (`about.json`) → Theme-Einstellungen (`settings.yml`, leer = Wert aus der Palette) → CSS-Variablen `--af-*`. Im SCSS stehen keine festen Farben.
 
-## Installation
+## Installation und Update
 
-1. Alle Dateien ins Hauptverzeichnis eines GitHub-Repositorys legen.
+1. Alle Dateien ins **Hauptverzeichnis** des Repositorys legen (nicht in einen Unterordner).
 2. Admin → Darstellung → Themes & Komponenten → Installieren → „Aus einem Git-Repository“.
-3. Das Theme nicht sofort zum Standard machen, sondern in der **Vorschau** testen. Dein altes Theme bleibt bis dahin unberührt.
-4. Palette zuweisen: „aForum Hell“ als helles, „aForum Dunkel“ als dunkles Farbschema des Themes.
+3. Zuerst über „Vorschau“ testen. Spätere Änderungen: Dateien in GitHub ersetzen, im Theme auf Updates prüfen.
+4. Palette zuweisen: „aForum Hell“ als helles, „aForum Dunkel“ als dunkles Farbschema.
 
 ## Das stellst du in Discourse selbst ein
 
-- **Kategorien-Seitenstil** auf die Variante mit Boxen stellen (Admin → Einstellungen, nach „Kategorienseite“ bzw. „category page style“ suchen). Ohne diese Einstellung greift das Kachel-Layout nicht.
-- **Kachelbilder:** je Kategorie als Logo hochladen, quadratisch. Kategorien ohne Bild zeigen eine graue Platzhalterkachel.
-- **Logo und Schrift:** über die Discourse-Einstellungen, das Theme setzt nichts davon fest.
-- **Hero-Banner:** bleibt deine eigene Komponente.
+- **Kategorien-Seitenstil** auf die Variante mit Boxen (Admin → Einstellungen, nach „Kategorienseite“ suchen). Ohne diese Einstellung greift das Kachel-Layout nicht.
+- **Kachelbilder:** je Kategorie als Logo hochladen, quadratisch. Ohne Bild gibt es eine graue Platzhalterkachel.
+- **Logo und Schrift:** über die Discourse-Einstellungen.
 
-## Grenzen von alpha-1
+## Banner
 
-- Nicht gegen eine laufende Discourse-Instanz getestet. Einige Selektoren (Kopfzeile, Navigationsleiste, Kategorieboxen) beruhen auf dem bekannten Aufbau von Discourse und können in deiner Version leicht abweichen.
-- Die rote Leiste ist die Navigationszeile der Seite. Auf Seiten ohne diese Zeile (z. B. Profil) gibt es sie nicht.
-- Das Zusammenspiel mit dem Hero-Banner ist ungeprüft.
+Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
+
+1. **Schatten:** Trage in der Theme-Einstellung `banner_selector` den CSS-Namen des Banners ein. So findest du ihn: Auf der Startseite Rechtsklick auf den Banner → „Untersuchen“ → in der markierten Zeile steht `class="…"`. Daraus wird der Selektor, z. B. `.hero-banner`. Mehrere Klassen schreibst du ohne Leerzeichen mit Punkten: `.a.b`.
+2. **Position:** Der Banner soll unter der roten Leiste liegen. Das legt die Komponente fest, nicht das Theme. Schau in ihren Einstellungen nach einer Auswahl für die Position (Plugin-Outlet). Ein Ort, der nach der Navigationsleiste kommt, wäre richtig.
+
+## Grenzen von alpha-3
+
+- Nicht gegen eine laufende Discourse-Instanz getestet, Selektoren können in deiner Version abweichen.
+- Die rote Leiste sitzt in der Inhaltsspalte rechts neben der Sidebar, nicht über deren gesamter Breite.
+- Die Leiste existiert nur auf Seiten mit Navigationszeile (Startseite, Listen), nicht im Profil oder in Themen.
