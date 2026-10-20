@@ -1,4 +1,4 @@
-# aForum – Discourse-Theme (alpha-3)
+# aForum – Discourse-Theme (alpha-4)
 
 Helles, flaches, eckiges Design: schwarze Kopfzeile in voller Breite, darunter eine weiße Forenfläche mit Schatten auf hellgrauem Grund, rote Navigationsleiste, blauer Hauptbutton, Kategorien als Kachelreihe. Dunkler Modus ist enthalten.
 
@@ -26,6 +26,10 @@ Drei Ebenen: Farbpalette (`about.json`) → Theme-Einstellungen (`settings.yml`,
 - **Kachelbilder:** je Kategorie als Logo hochladen, quadratisch. Ohne Bild gibt es eine graue Platzhalterkachel.
 - **Logo und Schrift:** über die Discourse-Einstellungen.
 
+## Komponenten des alten Themes
+
+Komponenten hängen an einem Theme und werden nicht automatisch ins neue übernommen. Was im alten Theme als Komponente lief (z. B. Hero-Banner, Dark-Mode-Umschalter), musst du dem neuen Theme zuweisen: Admin → Darstellung → Themes & Komponenten → aForum → Komponenten → hinzufügen.
+
 ## Banner
 
 Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
@@ -33,7 +37,7 @@ Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
 1. **Schatten:** Trage in der Theme-Einstellung `banner_selector` den CSS-Namen des Banners ein. So findest du ihn: Auf der Startseite Rechtsklick auf den Banner → „Untersuchen“ → in der markierten Zeile steht `class="…"`. Daraus wird der Selektor, z. B. `.hero-banner`. Mehrere Klassen schreibst du ohne Leerzeichen mit Punkten: `.a.b`.
 2. **Position:** Der Banner soll unter der roten Leiste liegen. Das legt die Komponente fest, nicht das Theme. Schau in ihren Einstellungen nach einer Auswahl für die Position (Plugin-Outlet). Ein Ort, der nach der Navigationsleiste kommt, wäre richtig.
 
-## Grenzen von alpha-3
+## Grenzen von alpha-4
 
 - Nicht gegen eine laufende Discourse-Instanz getestet, Selektoren können in deiner Version abweichen.
 - Die rote Leiste sitzt in der Inhaltsspalte rechts neben der Sidebar, nicht über deren gesamter Breite.

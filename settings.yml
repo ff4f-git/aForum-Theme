@@ -88,6 +88,22 @@ shadow_opacity:
   max: 60
   description: "Stärke des Schattens in Prozent."
 
+# Kopfzeile
+header_height:
+  type: integer
+  default: 80
+  min: 56
+  max: 140
+  description: "Höhe der schwarzen Kopfzeile in px (Desktop). Das Logo wird darin senkrecht zentriert."
+
+# Avatare
+avatar_radius:
+  type: integer
+  default: 0
+  min: 0
+  max: 50
+  description: "Rundung der Avatare in Prozent. 0 = eckig, 50 = rund (Discourse-Standard)."
+
 # Rote Leiste und Hauptbutton
 bar_height:
   type: integer
@@ -119,6 +135,12 @@ banner_shadow_opacity:
   description: "Stärke des Schattens unter dem Banner in Prozent."
 
 # Kategorien
+subcategory_columns:
+  type: integer
+  default: 2
+  min: 1
+  max: 3
+  description: "Spalten für die Unterkategorien unter jeder Kategorie (Listenansicht)."
 tile_size:
   type: integer
   default: 72

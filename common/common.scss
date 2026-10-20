@@ -1,4 +1,4 @@
-// aForum alpha-3. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-4. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -8,6 +8,7 @@
 :root {
   --af-max-width: #{$max_width}px;
   --af-tile-size: #{$tile_size}px;
+  --af-header-h: #{$header_height}px;
   --af-bar-h: #{$bar_height}px;
   --af-cta-over: #{$cta_overhang}px;
   --d-border-radius: #{$border_radius}px;
@@ -46,14 +47,62 @@ body {
 }
 
 // ======================================================
-// 2. Kopfzeile: schwarz, durchgehend von links nach rechts
+// 2. Kopfzeile: schwarz, dicker, über die ganze Seitenbreite
+//    Das Schwarz läuft über ein Hilfselement bis an beide Fensterränder,
+//    der Inhalt (Logo, Icons) bleibt auf der Breite der Forenfläche.
 // ======================================================
+html {
+  overflow-x: hidden;
+}
+
+.d-header-wrap {
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: var(--af-header-bg);
+    z-index: -1;
+  }
+}
+
 .d-header {
   background: var(--af-header-bg);
   box-shadow: none;
+  height: var(--af-header-h);
 
   .wrap {
     max-width: min(var(--af-max-width), 100%);
+    height: 100%;
+  }
+
+  .contents {
+    height: 100%;
+    align-items: center;
+  }
+
+  .title,
+  .title a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  #site-logo,
+  .logo-big,
+  .logo-small {
+    width: auto;
+    height: auto;
+    max-height: calc(var(--af-header-h) - 24px);
+  }
+
+  .panel {
+    align-items: center;
   }
 }
 
@@ -129,6 +178,12 @@ body {
   box-shadow: inset 0 -3px 0 var(--af-accent);
 }
 
+// Avatare eckig (Wert in Prozent, 50 = rund)
+.avatar,
+img.avatar {
+  border-radius: #{$avatar_radius}%;
+}
+
 // ======================================================
 // 5. Rote Navigationsleiste (Kategorien, Aktuell, Neu, Heiß)
 // ======================================================
@@ -140,7 +195,7 @@ body {
   width: 100%;
   min-height: var(--af-bar-h);
   margin: 1em 0;
-  padding: 0 0.5em;
+  padding: 0 0 0 0.5em;
   align-items: center;
 
   .nav-pills {
@@ -315,6 +370,32 @@ body {
 }
 
 // ======================================================
+// 7b. Kategorieliste in der Tabellenansicht: Unterkategorien in Spalten
+// ======================================================
+.category-list {
+  .category-list-item {
+    border-bottom: 1px solid var(--af-border);
+  }
+
+  .subcategories {
+    display: grid;
+    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 1fr));
+    gap: 0.35em 1.5em;
+    margin-top: 0.7em;
+    font-size: 0.93em;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .subcategory {
+    min-width: 0;
+    margin: 0;
+  }
+}
+
+// ======================================================
 // 8. Themenlisten: flache Zeilen, Hover dunkler
 // ======================================================
 .topic-list-header {
@@ -354,6 +435,7 @@ a:not([class]) {
 @media (max-width: 767px) {
   :root {
     --af-tile-size: 56px;
+    --af-header-h: 56px;
   }
 
   body {
