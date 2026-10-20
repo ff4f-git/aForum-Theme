@@ -1,4 +1,4 @@
-// aForum alpha-8. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-9. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -107,6 +107,13 @@ html {
   }
 }
 
+// Auch auf Seiten mit eigener Kopfzeile (z. B. Anmeldung) schwarz
+.d-header,
+.d-header-wrap .d-header,
+.login-page .d-header {
+  background: var(--af-header-bg) !important;
+}
+
 // ======================================================
 // 3. Sidebar in der Fläche
 // ======================================================
@@ -205,8 +212,20 @@ img.avatar,
   margin: 1em 0;
   padding: 0 0 0 0.5em;
   align-items: center;
+  flex-wrap: nowrap;
+
+  // Erstes Element (Tabs bzw. Auswahlfeld) nimmt den Platz, Buttons behalten ihre Größe
+  > :first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  > :not(:first-child) {
+    flex: 0 0 auto;
+  }
 
   .nav-pills {
+    min-width: 0;
     overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: none;
@@ -221,7 +240,7 @@ img.avatar,
     > li > button {
       display: flex;
       align-items: center;
-      padding-inline: 1.1em;
+      padding-inline: 0.9em;
       border-radius: 0;
     }
   }
