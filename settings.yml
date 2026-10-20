@@ -138,11 +138,18 @@ banner_shadow_opacity:
 compact_lists:
   type: bool
   default: true
-  description: "Dichtere Listen: kleinere Schrift, Beschreibungen auf zwei Zeilen gekürzt, kleinere Avatare in der Themenliste."
+  description: "Dichtere Kategorietabelle: kleinere Schrift, Beschreibungen auf zwei Zeilen gekürzt."
 mute_category_colors:
   type: bool
-  default: true
+  default: false
   description: "Kategoriefarben in Listen grau darstellen. Die Farbe bleibt nur als dünner Streifen links an den Kategorien."
+
+latest_avatar_size:
+  type: integer
+  default: 48
+  min: 24
+  max: 80
+  description: "Größe der Avatare in der Liste 'Aktuell' in px."
 
 # Kategorien
 subcategory_columns:

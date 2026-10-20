@@ -1,4 +1,4 @@
-// aForum alpha-5. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-6. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -408,8 +408,9 @@ img.avatar,
   // Unterkategorien: Spalten, durch eine feine Linie vom Rest abgesetzt
   .subcategories {
     display: grid;
-    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 1fr));
-    gap: 0.35em 1.5em;
+    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, max-content));
+    justify-content: start;
+    gap: 0.35em 2em;
     margin-top: 0.6em;
     padding-top: 0.6em;
     border-top: 1px solid var(--af-border);
@@ -448,15 +449,25 @@ img.avatar,
       color: var(--af-muted);
     }
   }
+}
 
-  .latest-topic-list-item {
-    font-size: 0.95em;
+// Avatare in der Liste "Aktuell"
+.latest-topic-list-item img.avatar {
+  width: #{$latest_avatar_size}px;
+  height: #{$latest_avatar_size}px;
+}
 
-    img.avatar {
-      width: 32px;
-      height: 32px;
-    }
-  }
+// Überschrift der Liste "Aktuell" im selben Stil wie "Kategorie / Themen"
+.latest-topic-list > .table-heading,
+.latest-topic-list .table-heading,
+.latest-topic-list > :first-child:not(.latest-topic-list-item):not(.topic-list-body) {
+  background: var(--af-hover);
+  padding: 0.5em 0.75em;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--af-muted);
 }
 
 // Kategoriefarben in Listen dämpfen
