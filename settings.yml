@@ -130,6 +130,24 @@ hide_nav_dropdowns:
   default: true
   description: "Die Auswahlfelder 'Kategorien' und 'Schlagwörter' links in der Leiste ausblenden."
 
+# Willkommensbanner – leer lassen = bisherige aForum-Standardfarbe
+banner_subtitle_color_light:
+  type: string
+  default: ""
+  description: "Slogan im Willkommensbanner (Hell). Hex mit #, z. B. #00a3e0. Leer = bisheriges aForum-Blau (#00a3e0)."
+banner_subtitle_color_dark:
+  type: string
+  default: ""
+  description: "Slogan im Willkommensbanner (Dunkel). Hex mit #. Leer = bisheriges aForum-Blau (#00a3e0)."
+banner_border_color_light:
+  type: string
+  default: ""
+  description: "1-px-Rahmen um den Willkommensbanner (Hell). Hex mit #. Leer = Sponsorenrot (#d81c1c)."
+banner_border_color_dark:
+  type: string
+  default: ""
+  description: "1-px-Rahmen um den Willkommensbanner (Dunkel). Hex mit #. Leer = Sponsorenrot (#d81c1c)."
+
 # Banner
 banner_selector:
   type: string

@@ -733,10 +733,22 @@ a:not([class]) {
 }
 
 // ======================================================
-// Alpha 22 – aForum-Blau für den Slogan im Willkommensbanner
+// Alpha 24 – konfigurierbare Sloganfarbe im Willkommensbanner
 // Das Banner selbst wird von einer separaten Komponente gerendert.
 // Nur die Unterzeile einfärben; Titel, Suche und Bild bleiben unverändert.
 // ======================================================
 .welcome-banner .welcome-banner__subheader {
-  color: #00a3e0;
+  color: var(--af-banner-subtitle);
+}
+
+
+// ======================================================
+// Alpha 24 – konfigurierbare, dauerhaft sichtbare Banner-Kontur
+// Gleicher Rotton wie Premium-Sponsoren, ohne Rundung.
+// Das Outline verändert die Bannerabmessungen nicht.
+// ======================================================
+.welcome-banner .custom-search-banner-wrap.welcome-banner__wrap {
+  outline: 1px solid var(--af-banner-border);
+  outline-offset: -1px;
+  border-radius: 0;
 }
