@@ -765,3 +765,40 @@ a:not([class]) {
     display: none;
   }
 }
+
+// ======================================================
+// Alpha 17: schwebendes "Mehr"-Menü statt heller Sidebar-Verlängerung
+// ======================================================
+@media (min-width: 900px) {
+  .sidebar-wrapper .aforum-more-popup {
+    position: fixed !important;
+    top: var(--aforum-more-top, 230px) !important;
+    left: var(--aforum-more-left, 230px) !important;
+    width: min(260px, calc(100vw - var(--aforum-more-left, 230px) - 16px)) !important;
+    max-height: min(65vh, calc(100vh - var(--aforum-more-top, 230px) - 16px)) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    z-index: 1005 !important;
+    padding: 9px !important;
+    margin: 0 !important;
+    background: #111317 !important;
+    border: 1px solid #343941 !important;
+    border-left: 3px solid #d81c1c !important;
+    border-radius: 6px !important;
+    box-shadow: 0 14px 36px rgba(0,0,0,.45) !important;
+    color: #e8e8e8 !important;
+  }
+  .sidebar-wrapper .aforum-more-popup .sidebar-section-link,
+  .sidebar-wrapper .aforum-more-popup a {
+    color: #d5d9df !important;
+    background: transparent !important;
+  }
+  .sidebar-wrapper .aforum-more-popup .sidebar-section-link:hover,
+  .sidebar-wrapper .aforum-more-popup a:hover,
+  .sidebar-wrapper .aforum-more-popup .sidebar-section-link:focus-visible {
+    color: #fff !important;
+    background: #25292f !important;
+  }
+  .sidebar-wrapper .aforum-more-popup .d-icon { color: #aeb4be !important; }
+  .sidebar-wrapper .aforum-more-popup .sidebar-section-link:hover .d-icon { color: #d81c1c !important; }
+}
