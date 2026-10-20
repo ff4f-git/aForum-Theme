@@ -1,53 +1,77 @@
-# aForum – Discourse Theme · Alpha 14
+# aForum · Alpha 21
 
-Eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net), die Aprilia-Community. Die Version **Alpha 14** aktualisiert die Versionsangaben und die Dokumentation gegenüber Alpha 13; das sichtbare Layout und die Funktionen bleiben unverändert.
+**Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-## Gestaltung
+Alpha 21 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
-- Schwarze Kopfzeile, weiße Inhaltsfläche auf hellgrauem Seitenhintergrund.
-- Schwarze Navigationsleiste mit blauem aktivem Tab und rotem Button **Neues Thema**.
-- Schlichter Link **★ Abonnieren** in Bronze (`#D6B36A`), ohne Hintergrund, Rahmen oder Animation.
-- Zweispaltiger Startseitenbereich: Kategorien links, aktuelle Themen rechts.
-- Kategorie-Kopfzeile mit blauem Listensymbol und blauer Linie; Aktuell-Kopfzeile mit roter Akzentlinie und vorgesehenem Font-Awesome-Flammensymbol.
-- Helles und dunkles Farbschema; viele Farben und Maße über `settings.yml` konfigurierbar.
+## Highlights
 
-## Installation und Aktualisierung
+- **Klassische Kategorienübersicht:** Kategorien links, aktuelle Themen rechts.
+- **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich.
+- **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
+- **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
+- **Light & Dark:** zwei mitgelieferte Farbschemata und palettenabhängige Feinabstimmungen.
+- **Konfigurierbar:** zentrale Farben und weitere Designparameter über `settings.yml`.
+- **Native Discourse-Navigation:** keine eigene Sidebar-Nachbildung und kein zusätzliches „Mehr“-Popup.
 
-1. Dateien aus dieser ZIP **direkt in das Stammverzeichnis** des bestehenden GitHub-Theme-Repositories kopieren (nicht in einen zusätzlichen Unterordner).
-2. Bestehende Dateien überschreiben und die Änderungen committen.
-3. In Discourse unter **Admin → Darstellung → Themes & Komponenten** das installierte Git-Theme auswählen und auf Updates prüfen.
-4. Nach der Aktualisierung die Startseite auf Desktop und Mobilgeräten testen.
+## Installation
 
-**Hinweis zur Versionsanzeige:** Die Felder `name` und `theme_version` in `about.json` stehen hier auf **aForum Alpha 20** und **alpha-20**. Discourse kann einen einmal lokal vergebenen Theme-Namen beibehalten. Falls in der Administration weiterhin „Alpha 11“ steht, den **Anzeigenamen des installierten Themes in Discourse selbst** bearbeiten. Eine Git-Aktualisierung benennt ein vorhandenes Theme nicht zwingend um.
+### Neues Theme
 
-## Separat installierte Komponenten
+1. Repository in GitHub bereitstellen.
+2. In Discourse **Admin → Darstellung → Themes & Komponenten** öffnen.
+3. **Installieren → Aus einem Git-Repository** auswählen.
+4. Repository-URL eingeben und das Theme installieren.
+5. Theme aktivieren und die Darstellung auf Desktop und Mobilgeräten prüfen.
 
-Das Willkommens-/Suchbanner wird über die Discourse-Bannerfunktion bzw. die dazugehörige Einrichtung verwaltet. Die drei Sponsor-Kacheln stammen aus der **separaten Theme-Komponente aForum Premium Sponsors** und gehören **nicht** zu diesem Repository. Diese Komponente muss weiterhin dem Haupttheme zugewiesen sein; ihre Einstellungen und Sponsoren werden durch dieses Theme-Update nicht verändert.
+### Bestehendes Alpha-Theme aktualisieren
 
-## Dateien
+1. Die Dateien dieses Releases in das **Stammverzeichnis** des bestehenden Theme-Repositories übernehmen – nicht in einen zusätzlichen Unterordner.
+2. Änderungen committen und nach GitHub übertragen.
+3. In Discourse das Git-Theme aktualisieren.
+4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-- `about.json` – Theme-Name, Metadaten, Farbschemata und Icon-Freigaben.
-- `settings.yml` – konfigurierbare Theme-Einstellungen.
-- `common/color_definitions.scss` – Farbvariablen.
-- `common/common.scss` – Layout, Navigation und Tabellenköpfe.
-- `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` – bestehender Dateiname aus Kompatibilitätsgründen; steuert den schlichten Bronze-Link, **keinen** Glow mehr.
-- `javascripts/discourse/api-initializers/aforum-section-icons.js` – ergänzt Icons und Markierung der Kopfzeilen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 21` und die Version `alpha-21` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+
+## Theme-Komponenten
+
+Das Theme ist das **Haupttheme**. Folgende Erweiterungen werden separat verwaltet und sind **nicht** Bestandteil dieses Repositories:
+
+- **aForum Premium Sponsors:** Sponsor-Kacheln und deren Konfiguration.
+- **Category Badge Styles EVO:** unabhängig konfigurierbare Kategorie-Badges.
+- **Force Mobile Homepage:** mobile Startseitensteuerung, sofern installiert.
+
+Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme zugewiesen sein. Das Willkommens-/Suchbanner wird ebenfalls über die jeweilige Discourse-Einrichtung verwaltet.
+
+## Projektstruktur
+
+| Datei | Zweck |
+| --- | --- |
+| `about.json` | Theme-Metadaten, Farbpaletten und SVG-Icon-Registrierung |
+| `settings.yml` | Konfigurierbare Farben und Designoptionen |
+| `common/color_definitions.scss` | Zentrale Farbdefinitionen |
+| `common/common.scss` | Layout, Navigation, Themenlisten und Hover-Effekte |
+| `javascripts/discourse/api-initializers/aforum-section-icons.js` | Icons und Markierung der Bereichsüberschriften |
+| `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` | Darstellung des schlichten Bronze-Abonnieren-Links; Dateiname aus Kompatibilitätsgründen beibehalten |
 
 ## Versionsverlauf
 
-- **Alpha 10:** Bronze-Link „★ Abonnieren“, blaue und rote Akzentlinien für die beiden Tabellenbereiche.
-- **Alpha 11:** Überarbeitung der Icon-Darstellung und Schriftgrößen.
-- **Alpha 12:** Anpassung der Erkennung der rechten Kopfzeile.
-- **Alpha 13:** Registrierung von `fire` und `list` in `about.json`, verbesserte Überschriftenerkennung.
-- **Alpha 14:** Korrigierte Theme-Metadaten, konsistente Versionierung und vollständig aktualisierte README. Keine zusätzlichen Layoutänderungen.
+| Version | Wesentliche Änderung |
+| --- | --- |
+| **Alpha 21** | Rote, kantige 1-px-Hover-Kontur auch in den vollständigen Themenlisten Aktuell, Neu und Heiß |
+| **Alpha 20** | Einführung der feinen roten Hover-Kontur für die aktuellen Themen auf der Kategorienseite; anschließend Eckenradius auf 0 gesetzt |
+| **Alpha 19** | Dezenter, palettenbasierter Dark-Mode-Feinschliff für Zeilenflächen und Lesbarkeit |
+| **Alpha 18** | Rückkehr zur nativen Discourse-Navigation; Discourse-konforme SVG-Icon-Registrierung |
+| **Alpha 17** | Zwischenstand mit eigener „Mehr“-Navigation, später wieder entfernt |
+| **Alpha 16** | Zwischenstand mit angepasster Sidebar, später wieder entfernt |
+| **Alpha 14** | Bereinigung der Metadaten und Dokumentation |
+| **Alpha 13** | Verbesserte Erkennung der Bereichsüberschriften |
+| **Alpha 12** | Überarbeitete Erkennung der rechten Kopfzeile |
+| **Alpha 11** | Anpassungen an Icons und Schriftgrößen |
+| **Alpha 10** | Bronze-Abonnieren-Link sowie blaue und rote Bereichsakzente |
 
-## Bekannte Einschränkungen
+## Hinweise
 
-Die Icon-Ausgabe hängt vom tatsächlichen Discourse-Markup und der geladenen Icon-Bibliothek ab. Die rote Flamme wurde auf aForum bereits im Browser bestätigt. Ein erfolgreicher ZIP-Test ist kein Ersatz für einen Browser-Test der neuen Dark-Mode-Abstimmungen.
+Die tatsächliche Darstellung hängt von der verwendeten Discourse-Version, den aktiven Farbpaletten und weiteren Theme-Komponenten ab. Besonders nach Updates sollten Kategorienübersicht, Themenlisten, Mobilansicht und beide Farbmodi geprüft werden.
 
-- **Alpha 18:** Discourse-konforme SVG-Icon-Registrierung über `about.json` → `modifiers.svg_icons` als Array (`fire`, `list`), statt des wirkungslosen Top-Level-Eintrags `svg_icons`. Dadurch wird `#fire` in die SVG-Sprite-Sammlung aufgenommen.
-
-- **Alpha 18:** Rückkehr zur nativen Discourse-Navigation. Sämtliche Racing-Sidebar-Styles aus Alpha 16 und das eigene „Mehr“-Popup samt JavaScript aus Alpha 17 sind entfernt. Das Layout und die Sidebar verhalten sich wieder wie im Discourse-Standard. Die funktionierende Flamme und alle übrigen Alpha-15-Designmerkmale bleiben erhalten. Die Navigationseinstellung (Sidebar oder Header Dropdown) wird ausschließlich in der Discourse-Administration festgelegt.
-
-
-- **Alpha 20:** Ausschließlich Dark-Mode-Feinschliff: sehr dezente, aus der aktiven Discourse-Farbpalette berechnete Zeilenflächen, Hover-Abstufungen und besser lesbare Thementitel. Mit `dark-light-choose()` bleibt der Light Mode unverändert. Keine hartcodierten neuen Farben, keine Änderungen an Navigation, Sponsor-Komponente oder Icon-Registrierung.
+**Projekt:** [aForum.net](https://aforum.net) · Entwickelt und erprobt für die Aprilia-Community.
