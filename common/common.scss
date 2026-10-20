@@ -541,6 +541,18 @@ img.avatar,
   }
 }
 
+// aForum: Premium-Sponsor-Kontur für aktuelle Themen auf der Kategorienseite.
+// Derselbe Rotton (#d81c1c), 1px, ohne Layoutverschiebung oder Schatten nach außen.
+.categories-and-latest .latest-topic-list .latest-topic-list-item {
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px #d81c1c;
+  }
+}
+
 .topic-list .posts .number,
 .latest-topic-list .posts .number {
   color: var(--af-accent);
