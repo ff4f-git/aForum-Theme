@@ -1,4 +1,4 @@
-# aForum · Alpha 21
+# aForum · Alpha 22
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
@@ -10,6 +10,7 @@ Alpha 21 verbindet eine klassische, übersichtliche Forenansicht mit einer eigen
 - **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich.
 - **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
 - **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
+- **Willkommensbanner:** Slogan „Die Aprilia Community von Biker für Biker“ in aForum-Blau (`#00a3e0`); Begrüßung, Suchfeld und Hintergrund bleiben unverändert. Der Banner wird weiterhin von einer separaten Komponente bereitgestellt.
 - **Light & Dark:** zwei mitgelieferte Farbschemata und palettenabhängige Feinabstimmungen.
 - **Konfigurierbar:** zentrale Farben und weitere Designparameter über `settings.yml`.
 - **Native Discourse-Navigation:** keine eigene Sidebar-Nachbildung und kein zusätzliches „Mehr“-Popup.
@@ -31,7 +32,7 @@ Alpha 21 verbindet eine klassische, übersichtliche Forenansicht mit einer eigen
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 21` und die Version `alpha-21` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 22` und die Version `alpha-22` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Theme-Komponenten
 
@@ -58,6 +59,7 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 
 | Version | Wesentliche Änderung |
 | --- | --- |
+| **Alpha 22** | Blaue Unterzeile im Willkommensbanner, gezielt über `.welcome-banner__subheader` |
 | **Alpha 21** | Rote, kantige 1-px-Hover-Kontur auch in den vollständigen Themenlisten Aktuell, Neu und Heiß |
 | **Alpha 20** | Einführung der feinen roten Hover-Kontur für die aktuellen Themen auf der Kategorienseite; anschließend Eckenradius auf 0 gesetzt |
 | **Alpha 19** | Dezenter, palettenbasierter Dark-Mode-Feinschliff für Zeilenflächen und Lesbarkeit |

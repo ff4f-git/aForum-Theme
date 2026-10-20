@@ -731,3 +731,12 @@ a:not([class]) {
 .topic-list {
   border-color: dark-light-choose(transparent, mix($primary, $secondary, 13%));
 }
+
+// ======================================================
+// Alpha 22 – aForum-Blau für den Slogan im Willkommensbanner
+// Das Banner selbst wird von einer separaten Komponente gerendert.
+// Nur die Unterzeile einfärben; Titel, Suche und Bild bleiben unverändert.
+// ======================================================
+.welcome-banner .welcome-banner__subheader {
+  color: #00a3e0;
+}
