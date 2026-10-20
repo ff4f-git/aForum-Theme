@@ -14,7 +14,7 @@ export default apiInitializer("1.14.0", (api) => {
       color: #d6b36a !important;
       background: linear-gradient(115deg, #211a0e 0%, #302511 50%, #211a0e 100%) !important;
       border: 1px solid #d6b36a !important;
-      border-radius: 5px !important;
+      border-radius: 3px !important;
       margin: 5px 3px !important;
       padding: 0 13px !important;
       min-height: 38px;
