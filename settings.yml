@@ -10,19 +10,27 @@ color_accent_dark:
 color_nav_light:
   type: string
   default: ""
-  description: "Navigationsleiste (Kategorien, Aktuell, Neu, Heiß) Hell. Leer = Akzentfarbe."
+  description: "Navigationsleiste (Kategorien, Aktuell, Neu, Heiß) Hell. Leer = Palette header_background (Schwarz)."
 color_nav_dark:
   type: string
   default: ""
-  description: "Navigationsleiste Dunkel. Leer = Akzentfarbe."
+  description: "Navigationsleiste Dunkel. Leer = Palette header_background."
+color_active_light:
+  type: string
+  default: ""
+  description: "Aktiver Tab in der Navigationsleiste Hell. Leer = Palette tertiary (Aprilia-Blau)."
+color_active_dark:
+  type: string
+  default: ""
+  description: "Aktiver Tab in der Navigationsleiste Dunkel. Leer = Palette tertiary."
 color_cta_light:
   type: string
   default: ""
-  description: "Farbe des Buttons 'Neues Thema' Hell. Leer = Palette tertiary (Aprilia-Blau)."
+  description: "Farbe des Buttons 'Neues Thema' Hell. Leer = Palette quaternary (Rot)."
 color_cta_dark:
   type: string
   default: ""
-  description: "Farbe des Buttons 'Neues Thema' Dunkel. Leer = Palette tertiary."
+  description: "Farbe des Buttons 'Neues Thema' Dunkel. Leer = Palette quaternary."
 color_link_light:
   type: string
   default: ""

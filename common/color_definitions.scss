@@ -17,10 +17,13 @@ $af-page-bg-default: dark-light-choose(
   --af-accent: #{af-pick($color_accent_light, $color_accent_dark, $quaternary)};
   --af-accent-hover: #{"color-mix(in srgb, var(--af-accent) 82%, #000)"};
   --af-on-accent: #fff;
-  --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $quaternary)};
+  --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $header_background)};
+
+  // Aktiver Tab in der Navigationsleiste
+  --af-active: #{af-pick($color_active_light, $color_active_dark, $tertiary)};
 
   // Hauptbutton (Neues Thema)
-  --af-cta: #{af-pick($color_cta_light, $color_cta_dark, $tertiary)};
+  --af-cta: #{af-pick($color_cta_light, $color_cta_dark, $quaternary)};
   --af-cta-hover: #{"color-mix(in srgb, var(--af-cta) 82%, #000)"};
 
   // Link = Information
