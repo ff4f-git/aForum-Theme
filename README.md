@@ -43,3 +43,11 @@ Der Hero-Banner ist deine eigene Komponente. Zwei Dinge dazu:
 - Nicht gegen eine laufende Discourse-Instanz getestet, Selektoren können in deiner Version abweichen.
 - Die rote Leiste sitzt in der Inhaltsspalte rechts neben der Sidebar, nicht über deren gesamter Breite.
 - Die Leiste existiert nur auf Seiten mit Navigationszeile (Startseite, Listen), nicht im Profil oder in Themen.
+
+
+## Alpha 10 – Navigation und Tabellenköpfe
+
+- „Abonnieren“ wird als schlichter bronzefarbener Link mit Stern dargestellt (ohne Rahmen, Pulsieren oder Glanz).
+- Kategorie-Tabelle: feine blaue Linie und Listensymbol.
+- Aktuell-Tabelle: feine rote Linie und Symbol.
+- Die bisherige Datei `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` wird **ersetzt**, nicht gelöscht; sie enthält nun die neue Link-Logik. Der Dateiname bleibt aus Update-Gründen erhalten.

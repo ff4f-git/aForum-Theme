@@ -606,3 +606,67 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Alpha 10: Bronze-Abo-Link und feine Bereichs-Akzente
+// ======================================================
+.navigation-container {
+  a.aforum-subscribe-link,
+  button.aforum-subscribe-link {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.35em;
+    color: #d6b36a !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    animation: none !important;
+    overflow: visible;
+    margin: 0 !important;
+    padding-inline: 0.9em !important;
+    min-height: 0;
+    font-weight: 700;
+    text-decoration: none;
+
+    &::before {
+      content: "★";
+      display: inline-block;
+      color: #d6b36a;
+      font-size: 0.95em;
+      line-height: 1;
+    }
+    &::after { content: none !important; }
+    &:hover { color: #f1d49a !important; background: transparent !important; }
+    &:focus-visible { outline: 2px solid #d6b36a; outline-offset: 3px; }
+  }
+}
+
+// Dezente Linien unter den Tabellenköpfen; keine Änderung an den Tabellenzeilen.
+.category-list thead tr {
+  background: var(--af-hover);
+  border-bottom: 2px solid #0e76bd;
+}
+.category-list thead th:first-child::before {
+  content: "☷";
+  color: #0e76bd;
+  margin-right: 0.55em;
+  font-size: 1.2em;
+  vertical-align: -0.04em;
+}
+.latest-topic-list > .table-heading,
+.latest-topic-list .table-heading,
+.latest-topic-list > :first-child:not(.latest-topic-list-item):not(.topic-list-body) {
+  border-bottom: 2px solid #d81c1c;
+}
+.latest-topic-list > .table-heading::before,
+.latest-topic-list .table-heading::before {
+  content: "♨";
+  color: #d81c1c;
+  margin-right: 0.55em;
+  font-size: 1.2em;
+  vertical-align: -0.04em;
+}
