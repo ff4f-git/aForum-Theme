@@ -686,3 +686,82 @@ a:not([class]) {
 .aforum-current-heading .aforum-section-icon--fire {
   flex: 0 0 20px;
 }
+
+
+// ======================================================
+// Alpha 16: aForum Racing Sidebar (Desktop)
+// ======================================================
+// Die Sidebar bleibt eine native Discourse-Sidebar. Keine DOM-Eingriffe.
+@media (min-width: 900px) {
+  :root {
+    --d-sidebar-width: 220px;
+  }
+
+  .sidebar-wrapper {
+    background: #111317;
+    color: #e8e8e8;
+    border-right: 1px solid #30343a;
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.025);
+  }
+
+  // Manche Discourse-Versionen legen die sichtbare Hintergrundfläche
+  // auf den inneren Sidebar-Container statt auf den Wrapper.
+  .sidebar-wrapper .sidebar-container,
+  .sidebar-wrapper .sidebar-sections,
+  .sidebar-wrapper .sidebar-footer-wrapper,
+  .sidebar-wrapper .sidebar-footer-container {
+    background: #111317;
+  }
+
+  .sidebar-wrapper .sidebar-section-link,
+  .sidebar-wrapper .sidebar-section-header,
+  .sidebar-wrapper .sidebar-section-header-text,
+  .sidebar-wrapper .sidebar-section-link-content-text,
+  .sidebar-wrapper .sidebar-section-link-prefix,
+  .sidebar-wrapper .sidebar-section-link-suffix,
+  .sidebar-wrapper .sidebar-section-link .d-icon,
+  .sidebar-wrapper .sidebar-section-header .d-icon {
+    color: #c5c9cf;
+  }
+
+  .sidebar-wrapper .sidebar-section-link {
+    border-radius: 0 4px 4px 0;
+    transition: background-color 140ms ease, color 140ms ease;
+  }
+
+  .sidebar-wrapper .sidebar-section-link:hover,
+  .sidebar-wrapper .sidebar-section-link:focus-visible {
+    background: #22262b;
+  }
+
+  .sidebar-wrapper .sidebar-section-link:hover .d-icon,
+  .sidebar-wrapper .sidebar-section-link:focus-visible .d-icon {
+    color: #d81c1c;
+  }
+
+  .sidebar-wrapper .sidebar-section-link.active,
+  .sidebar-wrapper .sidebar-section-link--active,
+  .sidebar-wrapper .sidebar-section-link[aria-current="page"] {
+    background: #25292f;
+    box-shadow: inset 3px 0 0 #d81c1c;
+    font-weight: 700;
+  }
+
+  .sidebar-wrapper .sidebar-section-link.active,
+  .sidebar-wrapper .sidebar-section-link--active,
+  .sidebar-wrapper .sidebar-section-link[aria-current="page"],
+  .sidebar-wrapper .sidebar-section-link.active .sidebar-section-link-content-text,
+  .sidebar-wrapper .sidebar-section-link--active .sidebar-section-link-content-text,
+  .sidebar-wrapper .sidebar-section-link[aria-current="page"] .sidebar-section-link-content-text {
+    color: #fff;
+  }
+
+  .sidebar-wrapper .sidebar-section,
+  .sidebar-wrapper .sidebar-footer-wrapper {
+    border-color: #30343a;
+  }
+
+  .sidebar-wrapper .sidebar-footer-container::before {
+    display: none;
+  }
+}
