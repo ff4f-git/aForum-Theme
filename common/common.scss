@@ -645,28 +645,33 @@ a:not([class]) {
   }
 }
 
-// Dezente Linien unter den Tabellenköpfen; keine Änderung an den Tabellenzeilen.
+// Alpha 11: kräftige Kopfzeilen und echte Discourse-Font-Awesome-Icons.
 .category-list thead tr {
   background: var(--af-hover);
   border-bottom: 2px solid #0e76bd;
 }
-.category-list thead th:first-child::before {
-  content: "☷";
-  color: #0e76bd;
-  margin-right: 0.55em;
-  font-size: 1.2em;
-  vertical-align: -0.04em;
+.category-list thead th,
+.latest-topic-list .table-heading {
+  font-size: 16px;
+  font-weight: 700;
 }
+.category-list thead th:first-child::before,
+.latest-topic-list .table-heading::before { content: none !important; }
 .latest-topic-list > .table-heading,
 .latest-topic-list .table-heading,
 .latest-topic-list > :first-child:not(.latest-topic-list-item):not(.topic-list-body) {
   border-bottom: 2px solid #d81c1c;
 }
-.latest-topic-list > .table-heading::before,
-.latest-topic-list .table-heading::before {
-  content: "♨";
-  color: #d81c1c;
+.aforum-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
   margin-right: 0.55em;
-  font-size: 1.2em;
-  vertical-align: -0.04em;
+  vertical-align: middle;
+  line-height: 1;
+  .d-icon { width: 20px; height: 20px; fill: currentColor; }
 }
+.aforum-section-icon--list { color: #0e76bd; }
+.aforum-section-icon--fire { color: #d81c1c; }
