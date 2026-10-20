@@ -1,4 +1,4 @@
-// aForum alpha-4. Farben nur über --af-* (siehe color_definitions.scss).
+// aForum alpha-5. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
 @function af-on($value) {
@@ -178,10 +178,16 @@ html {
   box-shadow: inset 0 -3px 0 var(--af-accent);
 }
 
-// Avatare eckig (Wert in Prozent, 50 = rund)
+// Avatare eckig (Wert in Prozent, 50 = rund). !important, weil Discourse
+// die Rundung an mehreren Stellen mit eigener Spezifität setzt.
 .avatar,
-img.avatar {
-  border-radius: #{$avatar_radius}%;
+img.avatar,
+.topic-list img.avatar,
+.latest-topic-list img.avatar,
+.topic-avatar img,
+.user-image img,
+.d-header img.avatar {
+  border-radius: #{$avatar_radius}% !important;
 }
 
 // ======================================================
@@ -370,18 +376,41 @@ img.avatar {
 }
 
 // ======================================================
-// 7b. Kategorieliste in der Tabellenansicht: Unterkategorien in Spalten
+// 7b. Kategorieliste in der Tabellenansicht: sachlich und dicht
+//     Kategoriefarbe nur als dünner Streifen links.
 // ======================================================
 .category-list {
+  // Kopfzeile der Tabelle als schmale, helle Leiste
+  thead tr {
+    background: var(--af-hover);
+  }
+
+  thead th {
+    padding-block: 0.5em;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--af-muted);
+  }
+
+  // Streifen links schmaler (die Farbe selbst setzt Discourse je Kategorie)
+  tbody .category {
+    border-left-width: 4px;
+  }
+
   .category-list-item {
     border-bottom: 1px solid var(--af-border);
   }
 
+  // Unterkategorien: Spalten, durch eine feine Linie vom Rest abgesetzt
   .subcategories {
     display: grid;
     grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 1fr));
     gap: 0.35em 1.5em;
-    margin-top: 0.7em;
+    margin-top: 0.6em;
+    padding-top: 0.6em;
+    border-top: 1px solid var(--af-border);
     font-size: 0.93em;
 
     @media (max-width: 767px) {
@@ -395,11 +424,67 @@ img.avatar {
   }
 }
 
+@if af-on($compact_lists) {
+  .category-list {
+    font-size: 0.94em;
+
+    tbody .category {
+      padding-block: 0.7em;
+    }
+
+    .category-description {
+      margin-top: 0.2em;
+      color: var(--af-muted);
+      font-size: 0.95em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .topics {
+      color: var(--af-muted);
+    }
+  }
+
+  .latest-topic-list-item {
+    font-size: 0.95em;
+
+    img.avatar {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+// Kategoriefarben in Listen dämpfen
+@if af-on($mute_category_colors) {
+  .category-list .badge-wrapper,
+  .category-list .badge-category__wrapper,
+  .category-list .badge-category,
+  .latest-topic-list .badge-wrapper,
+  .latest-topic-list .badge-category__wrapper,
+  .topic-list .badge-wrapper,
+  .topic-list .badge-category__wrapper {
+    filter: grayscale(1);
+  }
+}
+
 // ======================================================
 // 8. Themenlisten: flache Zeilen, Hover dunkler
 // ======================================================
 .topic-list-header {
+  background: var(--af-hover);
   border-bottom: 2px solid var(--af-border);
+
+  th,
+  .topic-list-data {
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--af-muted);
+  }
 }
 
 .topic-list .topic-list-item,

@@ -134,6 +134,16 @@ banner_shadow_opacity:
   max: 80
   description: "Stärke des Schattens unter dem Banner in Prozent."
 
+# Listen
+compact_lists:
+  type: bool
+  default: true
+  description: "Dichtere Listen: kleinere Schrift, Beschreibungen auf zwei Zeilen gekürzt, kleinere Avatare in der Themenliste."
+mute_category_colors:
+  type: bool
+  default: true
+  description: "Kategoriefarben in Listen grau darstellen. Die Farbe bleibt nur als dünner Streifen links an den Kategorien."
+
 # Kategorien
 subcategory_columns:
   type: integer
