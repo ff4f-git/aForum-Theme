@@ -44,3 +44,5 @@ Das Willkommens-/Suchbanner wird über die Discourse-Bannerfunktion bzw. die daz
 ## Bekannte Einschränkungen
 
 Die Icon-Ausgabe hängt vom tatsächlichen Discourse-Markup und der geladenen Icon-Bibliothek ab. Die Anzeige der roten Flamme rechts ist noch nicht durch einen erfolgreichen Live-Screenshot bestätigt. Ein erfolgreicher ZIP-Test ist kein Ersatz für einen Browser-Test.
+
+- **Alpha 15:** Discourse-konforme SVG-Icon-Registrierung über `about.json` → `modifiers.svg_icons` als Array (`fire`, `list`), statt des wirkungslosen Top-Level-Eintrags `svg_icons`. Dadurch wird `#fire` in die SVG-Sprite-Sammlung aufgenommen.

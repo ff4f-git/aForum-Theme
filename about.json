@@ -1,7 +1,7 @@
 {
-  "name": "aForum Alpha 14",
+  "name": "aForum Alpha 15",
   "component": false,
-  "theme_version": "alpha-14",
+  "theme_version": "alpha-15",
   "about_url": "https://aforum.net",
   "color_schemes": {
     "aForum Hell": {
@@ -29,5 +29,10 @@
       "love": "ff6b81"
     }
   },
-  "svg_icons": "fire|list"
+  "modifiers": {
+    "svg_icons": [
+      "fire",
+      "list"
+    ]
+  }
 }
