@@ -1,13 +1,13 @@
 {
-  "name": "aForum Alpha 24",
+  "name": "aForum Alpha 25",
   "component": false,
-  "theme_version": "alpha-24",
+  "theme_version": "alpha-25",
   "about_url": "https://aforum.net",
   "color_schemes": {
     "aForum Hell": {
       "primary": "151515",
       "secondary": "ffffff",
-      "tertiary": "0e76bd",
+      "tertiary": "0f7ec9",
       "quaternary": "ff0000",
       "header_background": "000000",
       "header_primary": "ffffff",
@@ -19,7 +19,7 @@
     "aForum Dunkel": {
       "primary": "ececec",
       "secondary": "141414",
-      "tertiary": "3b9ae0",
+      "tertiary": "0f7ec9",
       "quaternary": "ff2a2a",
       "header_background": "000000",
       "header_primary": "ffffff",

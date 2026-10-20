@@ -661,7 +661,7 @@ a:not([class]) {
 // Alpha 11: kräftige Kopfzeilen und echte Discourse-Font-Awesome-Icons.
 .category-list thead tr {
   background: var(--af-hover);
-  border-bottom: 2px solid #0e76bd;
+  border-bottom: 2px solid var(--af-brand-blue);
 }
 .category-list thead th,
 .latest-topic-list .table-heading {
@@ -686,7 +686,7 @@ a:not([class]) {
   line-height: 1;
   .d-icon { width: 20px; height: 20px; fill: currentColor; }
 }
-.aforum-section-icon--list { color: #0e76bd; }
+.aforum-section-icon--list { color: var(--af-brand-blue); }
 .aforum-section-icon--fire { color: #d81c1c; }
 
 // Alpha 12: Überschrift rechts unabhängig vom Discourse-Markup hervorheben.

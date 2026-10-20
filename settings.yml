@@ -134,11 +134,11 @@ hide_nav_dropdowns:
 banner_subtitle_color_light:
   type: string
   default: ""
-  description: "Slogan im Willkommensbanner (Hell). Hex mit #, z. B. #00a3e0. Leer = bisheriges aForum-Blau (#00a3e0)."
+  description: "Slogan im Willkommensbanner (Hell). Hex mit #, z. B. #0F7EC9. Leer = aForum-Logoblau (#0F7EC9)."
 banner_subtitle_color_dark:
   type: string
   default: ""
-  description: "Slogan im Willkommensbanner (Dunkel). Hex mit #. Leer = bisheriges aForum-Blau (#00a3e0)."
+  description: "Slogan im Willkommensbanner (Dunkel). Hex mit #. Leer = aForum-Logoblau (#0F7EC9)."
 banner_border_color_light:
   type: string
   default: ""

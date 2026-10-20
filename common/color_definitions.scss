@@ -13,6 +13,9 @@ $af-page-bg-default: dark-light-choose(
 );
 
 :root {
+  // Einheitliches Markenblau aus dem aForum-Logo.
+  --af-brand-blue: #0f7ec9;
+
   // Akzent = Marke und Handlung
   --af-accent: #{af-pick($color_accent_light, $color_accent_dark, $quaternary)};
   --af-accent-hover: #{"color-mix(in srgb, var(--af-accent) 82%, #000)"};
@@ -38,7 +41,7 @@ $af-page-bg-default: dark-light-choose(
 
   // Willkommensbanner: unabhängig je Farbmodus einstellbar.
   // Leere Felder behalten die bisherigen Alpha-23-Farben bei.
-  --af-banner-subtitle: #{af-pick($banner_subtitle_color_light, $banner_subtitle_color_dark, #00a3e0)};
+  --af-banner-subtitle: #{af-pick($banner_subtitle_color_light, $banner_subtitle_color_dark, #0f7ec9)};
   --af-banner-border: #{af-pick($banner_border_color_light, $banner_border_color_dark, #d81c1c)};
 
   // Linien, Hover, gedämpfter Text

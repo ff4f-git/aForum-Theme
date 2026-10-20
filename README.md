@@ -1,8 +1,14 @@
-# aForum · Alpha 24
+# aForum · Alpha 25
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 24 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 25 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+
+## Einheitliches Markenblau
+
+Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
+
+**Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
 
 ## Highlights
 
@@ -10,7 +16,7 @@ Alpha 24 verbindet eine klassische, übersichtliche Forenansicht mit einer eigen
 - **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich.
 - **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
 - **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
-- **Willkommensbanner:** Slogan „Die Aprilia Community von Biker für Biker“ in aForum-Blau (`#00a3e0`); Begrüßung, Suchfeld und Hintergrund bleiben unverändert. Der Banner wird weiterhin von einer separaten Komponente bereitgestellt. Eine dauerhaft sichtbare, kantige 1-px-Kontur in Sponsorenrot (`#d81c1c`) fasst ihn ein. Beide Farben sind ab Alpha 24 je Farbmodus über die Theme-Einstellungen anpassbar.
+- **Willkommensbanner:** Slogan „Die Aprilia Community von Biker für Biker“ in aForum-Blau (`#0F7EC9`); Begrüßung, Suchfeld und Hintergrund bleiben unverändert. Der Banner wird weiterhin von einer separaten Komponente bereitgestellt. Eine dauerhaft sichtbare, kantige 1-px-Kontur in Sponsorenrot (`#d81c1c`) fasst ihn ein. Beide Farben sind ab Alpha 25 je Farbmodus über die Theme-Einstellungen anpassbar.
 - **Light & Dark:** zwei mitgelieferte Farbschemata und palettenabhängige Feinabstimmungen.
 - **Konfigurierbar:** zentrale Farben und weitere Designparameter über `settings.yml`.
 - **Native Discourse-Navigation:** keine eigene Sidebar-Nachbildung und kein zusätzliches „Mehr“-Popup.
@@ -32,16 +38,16 @@ Alpha 24 verbindet eine klassische, übersichtliche Forenansicht mit einer eigen
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 24` und die Version `alpha-24` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 25` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Bannerfarben einstellen
 
-Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 24 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
+Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 25 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
 
 | Einstellung | Standard, wenn leer |
 | --- | --- |
-| Sloganfarbe Hell | `#00a3e0` |
-| Sloganfarbe Dunkel | `#00a3e0` |
+| Sloganfarbe Hell | `#0F7EC9` |
+| Sloganfarbe Dunkel | `#0F7EC9` |
 | Bannerrahmen Hell | `#d81c1c` |
 | Bannerrahmen Dunkel | `#d81c1c` |
 
@@ -72,6 +78,7 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 
 | Version | Wesentliche Änderung |
 | --- | --- |
+| **Alpha 25** | Vereinheitlichung der Theme-Blautöne auf das Logoblau `#0F7EC9` |
 | **Alpha 24** | Vier optionale Hex-Farbwerte für Slogan und Bannerrahmen, separat für Hell und Dunkel; leer = bisheriger Standard |
 | **Alpha 23** | Dauerhafte 1-px-Rotkontur um den Willkommensbanner, eckig und ohne Layoutverschiebung |
 | **Alpha 22** | Blaue Unterzeile im Willkommensbanner, gezielt über `.welcome-banner__subheader` |
