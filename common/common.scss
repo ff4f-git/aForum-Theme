@@ -115,7 +115,7 @@ html {
 }
 
 // ======================================================
-// 3. Sidebar in der Fläche
+// 3. Sidebar und Hamburger-Menü: konsistente Zustandsfarben
 // ======================================================
 .sidebar-wrapper {
   background: transparent;
@@ -123,15 +123,36 @@ html {
   border-right: 1px solid var(--af-border);
 }
 
-.sidebar-section-link:hover {
+// Discourse verwendet dieselben Sidebar-Links auch im Hamburger-Popup.
+// Der native Wert von --sidebar-active-background kann dort im Dark Mode
+// auf eine helle Fläche zeigen. Deshalb setzen wir ihn direkt am Container.
+.sidebar-wrapper,
+.sidebar-hamburger-dropdown {
+  --sidebar-active-background: var(--af-hover);
+}
+
+.sidebar-section-link:hover,
+.sidebar-section-link:focus-visible,
+.sidebar-section-link.active,
+.sidebar-section-link--active {
   background: var(--af-hover);
+  color: var(--primary);
 }
 
 .sidebar-section-link.active,
 .sidebar-section-link--active {
-  background: var(--af-hover);
   box-shadow: inset 3px 0 0 var(--af-accent);
   font-weight: 600;
+}
+
+// Im Popup muss auch ein aktiver Link beim Darüberfahren lesbar bleiben.
+.sidebar-hamburger-dropdown .sidebar-section-link:is(:hover, :focus-visible, .active, .sidebar-section-link--active) {
+  background: var(--af-hover);
+  color: var(--primary);
+}
+
+.sidebar-hamburger-dropdown .sidebar-section-link:is(:hover, :focus-visible, .active, .sidebar-section-link--active) .d-icon {
+  color: currentColor;
 }
 
 .sidebar-footer-wrapper,

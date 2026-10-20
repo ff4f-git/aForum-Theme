@@ -1,4 +1,4 @@
-# aForum · Alpha 26
+# aForum · Alpha 27
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
@@ -38,11 +38,11 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 26` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 27` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Bannerfarben einstellen
 
-Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 26 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
+Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 27 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
 
 | Einstellung | Standard, wenn leer |
 | --- | --- |
@@ -78,7 +78,7 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 
 | Version | Wesentliche Änderung |
 | --- | --- |
-| **Alpha 26** | Blaue Trennlinie unter den Tabellenkopfzeilen in Aktuell, Neu und Heiß, passend zur Kategorienübersicht |
+| **Alpha 27** | Blaue Trennlinie unter den Tabellenkopfzeilen in Aktuell, Neu und Heiß, passend zur Kategorienübersicht |
 | **Alpha 25** | Vereinheitlichung der Theme-Blautöne auf das Logoblau `#0F7EC9` |
 | **Alpha 24** | Vier optionale Hex-Farbwerte für Slogan und Bannerrahmen, separat für Hell und Dunkel; leer = bisheriger Standard |
 | **Alpha 23** | Dauerhafte 1-px-Rotkontur um den Willkommensbanner, eckig und ohne Layoutverschiebung |
@@ -100,3 +100,10 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 Die tatsächliche Darstellung hängt von der verwendeten Discourse-Version, den aktiven Farbpaletten und weiteren Theme-Komponenten ab. Besonders nach Updates sollten Kategorienübersicht, Themenlisten, Mobilansicht und beide Farbmodi geprüft werden.
 
 **Projekt:** [aForum.net](https://aforum.net) · Entwickelt und erprobt für die Aprilia-Community.
+
+
+### Alpha 27
+
+- Harmonisiert Hover-, Fokus- und Aktivzustände im Hamburger-Menü und in der Sidebar.
+- Verhindert einen hellen aktiven Menühintergrund im Dunkelmodus und erhält die rote aktive Markierung.
+- Verwendet die vorhandene Theme-Farbvariable `--af-hover` statt zusätzlicher externer CSS-Overrides.
