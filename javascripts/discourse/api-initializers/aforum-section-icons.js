@@ -3,7 +3,7 @@ import { iconHTML } from "discourse-common/lib/icon-library";
 
 // Alpha 11: Discourse/Font-Awesome-Icons statt Unicode-Sonderzeichen.
 export default apiInitializer("1.14.0", (api) => {
-  api.addToIconRegistry("list", "fire");
+  // Standard-Icons von Discourse: keine zusätzliche Registrierung nötig.
 
   function insertIcon(target, name, className) {
     if (!target || target.querySelector(`.${className}`)) return;
