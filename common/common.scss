@@ -408,9 +408,10 @@ img.avatar,
   // Unterkategorien: Spalten, durch eine feine Linie vom Rest abgesetzt
   .subcategories {
     display: grid;
-    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, max-content));
+    // Feste Spaltenbreite: die zweite Spalte beginnt in jeder Kategorie an derselben Stelle
+    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
     justify-content: start;
-    gap: 0.35em 2em;
+    gap: 0.35em 0;
     margin-top: 0.6em;
     padding-top: 0.6em;
     border-top: 1px solid var(--af-border);
