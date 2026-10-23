@@ -477,6 +477,14 @@ img.avatar,
   .subcategory {
     min-width: 0;
     margin: 0;
+
+    // Alpha 28: Nur Statuszähler an Unterkategorien ausblenden.
+    // Neue/ungelesene Themen bleiben in den Themenlisten sichtbar.
+    .badge-notification,
+    .unread-new,
+    .category-unread {
+      display: none;
+    }
   }
 }
 

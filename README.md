@@ -1,8 +1,8 @@
-# aForum · Alpha 27
+# aForum · Alpha 28
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 25 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 28 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
@@ -12,7 +12,7 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 
 ## Highlights
 
-- **Klassische Kategorienübersicht:** Kategorien links, aktuelle Themen rechts.
+- **Klassische Kategorienübersicht:** Kategorien links, aktuelle Themen rechts. Statuszähler „neu“ und „ungelesen“ werden nur neben Unterkategorien in der Kategorienliste ausgeblendet, damit deren Namen lesbar bleiben.
 - **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich. Die Kopfzeilen der vollständigen Themenlisten erhalten eine 3-px-Linie im aForum-Blau `#0F7EC9`, passend zur Kategorienübersicht.
 - **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
 - **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
@@ -38,11 +38,11 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 27` und die Version `alpha-25` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 28` und die Version `alpha-28` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Bannerfarben einstellen
 
-Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 27 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
+Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 28 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
 
 | Einstellung | Standard, wenn leer |
 | --- | --- |
@@ -78,6 +78,7 @@ Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme z
 
 | Version | Wesentliche Änderung |
 | --- | --- |
+| **Alpha 28** | Blendet Neu-/Ungelesen-Zähler bei Unterkategorien in der Kategorienübersicht aus; Themenlisten und übrige Benachrichtigungen bleiben unverändert |
 | **Alpha 27** | Blaue Trennlinie unter den Tabellenkopfzeilen in Aktuell, Neu und Heiß, passend zur Kategorienübersicht |
 | **Alpha 25** | Vereinheitlichung der Theme-Blautöne auf das Logoblau `#0F7EC9` |
 | **Alpha 24** | Vier optionale Hex-Farbwerte für Slogan und Bannerrahmen, separat für Hell und Dunkel; leer = bisheriger Standard |
@@ -107,3 +108,10 @@ Die tatsächliche Darstellung hängt von der verwendeten Discourse-Version, den 
 - Harmonisiert Hover-, Fokus- und Aktivzustände im Hamburger-Menü und in der Sidebar.
 - Verhindert einen hellen aktiven Menühintergrund im Dunkelmodus und erhält die rote aktive Markierung.
 - Verwendet die vorhandene Theme-Farbvariable `--af-hover` statt zusätzlicher externer CSS-Overrides.
+
+### Alpha 28
+
+- Ergänzt in `common/common.scss` eine auf `.category-list .subcategory` begrenzte CSS-Regel für `.badge-notification`, `.unread-new` und `.category-unread`.
+- Unterkategorienamen sollen dadurch nicht mehr von Statusangaben wie „1 ungelesenes“ und „2 neue“ verdrängt werden.
+- Keine Änderung an Discourse-Einstellungen, JavaScript, Themenstatus oder der Anzeige außerhalb der Kategorienliste.
+- Nach Installation mit einem Benutzerkonto mit neuen/ungelesenen Unterkategorie-Themen auf Desktop und Mobilgerät prüfen; je nach Discourse-Version können zusätzliche CSS-Klassen relevant sein.
