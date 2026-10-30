@@ -1,14 +1,20 @@
-# aForum · Alpha 43
+# aForum · Alpha 44
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 43 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 44 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 44: Inter für Lesetexte
+
+- Inter wird für Beiträge, Thementitel, Auszüge und längere Beschreibungen geladen und gezielt zugewiesen.
+- Oxanium bleibt in Discourse als Basis- und Überschriftenschrift eingestellt und wird für Kategorien, Navigation und Buttons beibehalten.
+- Kachel- und Tabellenlayouts bleiben unverändert.
 
 ## Alpha 43: Tabellenlayout der mobilen Kategorien entkoppelt
 
