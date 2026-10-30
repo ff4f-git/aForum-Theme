@@ -1,3 +1,8 @@
+## Alpha 49: Gerader Antworten-Button
+
+- Der rote Antworten-Button am Ende eines Themas verwendet keine kursive Schrift mehr.
+- Andere Buttons und Layout unverändert.
+
 ## Alpha 48: Kontrast in Diskussionen
 
 - Beitragsaktionen und Zeitleisten-Beschriftungen im Light Mode etwas kräftiger.
