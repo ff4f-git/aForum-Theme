@@ -1,3 +1,8 @@
+## Alpha 48: Kontrast in Diskussionen
+
+- Beitragsaktionen und Zeitleisten-Beschriftungen im Light Mode etwas kräftiger.
+- Dark Mode, Textlayout und Beitragsabstände unverändert.
+
 ## Alpha 47: Eckiger Neues-Thema-Button
 
 - Roter Desktop-Button jetzt eckig und bündig zur schwarzen Navigationsleiste, passend zum blauen Kategorien-Tab.
