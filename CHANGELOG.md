@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.27
+
+- Desktop: roten Unterstrich unter „Aktuell“ entfernt und die Spaltenüberschriften „Kategorie / Themen“ und „Aktuell“ mit identischem neutralem Hintergrund ohne Farblinie gestaltet.
+- Rahmen der Themenkarten im Normalzustand dezenter, beim Hover weiterhin erkennbar.
+- Rote Flamme, Themenstatus, Antwortzahlen und sämtliche Mobilregeln bleiben unverändert.
+
 ## Beta 1.26
 
 - Desktop: rechte Startseiten-Spalte „Aktuell“ mit einzelnen, dezent umrandeten Themenkarten und 3 px Eckenrundung.

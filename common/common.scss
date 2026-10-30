@@ -1503,3 +1503,29 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.27 – Desktop: gleiche Spaltenköpfe und leisere
+// Themenkarten-Rahmen. Mobile-Regeln bleiben unangetastet.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest {
+    .category-list thead th,
+    .latest-topic-list > .table-heading,
+    .latest-topic-list .table-heading,
+    .latest-topic-list > :first-child:not(.latest-topic-list-item):not(.topic-list-body) {
+      box-sizing: border-box;
+      background: var(--af-hover);
+      border-bottom: 0;
+    }
+
+    .latest-topic-list .latest-topic-list-item {
+      border-color: color-mix(in srgb, var(--af-border) 55%, transparent);
+
+      &:hover,
+      &:focus-within {
+        border-color: var(--af-border);
+      }
+    }
+  }
+}
