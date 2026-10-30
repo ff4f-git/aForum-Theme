@@ -706,37 +706,46 @@ img.avatar,
     }
   }
 
-  // Prevent the large desktop new-topic label from clipping offscreen.
-  .navigation-container #create-topic {
-    width: 48px;
-    min-width: 48px;
-    max-width: 48px;
-    height: 48px;
-    min-height: 48px;
-    max-height: 48px;
-    box-sizing: border-box;
-    padding: 0;
-    margin-block: auto;
-    align-self: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 0;
-    gap: 0;
+  // Alpha 36: Match the compact portrait CTA in phone landscape.
+  // Important: the main navigation CTA normally inherits negative margins
+  // and an oversized height from the desktop bar; reset both together.
+  .navigation-container {
+    .btn-primary#create-topic,
+    #create-topic {
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 0 0 44px;
+      width: 44px;
+      min-width: 44px;
+      max-width: 44px;
+      height: 44px;
+      min-height: 44px;
+      max-height: 44px;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      line-height: 1;
+      font-size: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      border-radius: var(--d-border-radius);
 
-    .d-icon,
-    svg {
-      font-size: 20px;
-      width: 20px;
-      height: 20px;
-      flex: 0 0 20px;
-    }
+      .d-button-label {
+        display: none;
+      }
 
-    .d-button-label {
-      display: none;
+      .d-icon,
+      svg {
+        display: block;
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        margin: 0;
+      }
     }
   }
 
