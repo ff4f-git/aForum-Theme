@@ -37,14 +37,14 @@
 :root {
   --af-max-width: #{$max_width}px;
   --af-tile-size: 72px;
-  --af-header-h: 80px;
-  --af-avatar-radius: 3px;
-  --af-bar-h: 52px;
+  --af-header-h: #{$header_height}px;
+  --af-avatar-radius: #{$avatar_radius}px;
+  --af-bar-h: #{$bar_height}px;
   --af-cta-over: 8px;
   --d-border-radius: 0px;
   --d-border-radius-large: 0px;
-  @if true {
-    --af-shadow: #{unquote("0 0 32px color-mix(in srgb, #000 " + 18 + "%, transparent)")};
+  @if af-on($panel_shadow) {
+    --af-shadow: 0 0 32px rgba(0, 0, 0, #{$shadow_opacity / 100});
   } @else {
     --af-shadow: none;
   }
@@ -193,11 +193,6 @@ html {
   display: none;
 }
 
-@if af-on($hide_sidebar_categories) {
-  .sidebar-section[data-section-name="categories"] {
-    display: none;
-  }
-}
 
 // ======================================================
 // 4. Buttons und Tabs
