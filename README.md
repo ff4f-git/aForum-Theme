@@ -1,3 +1,8 @@
+## Alpha 45: Unterkategorie-Beschriftungen
+
+- Beschriftungen in Desktop- und Querformat-Kacheln vertikal mittig, weiterhin linksbündig.
+- Keine Änderungen an Kachelgrößen, Abständen oder Hochkant-Layout.
+
 # aForum · Alpha 44
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
