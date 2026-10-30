@@ -1005,14 +1005,15 @@ img.avatar,
   }
 }
 
-// Other topic lists keep their existing hover treatment.
+// Beta 1.1: Themenlisten in Unterkategorien verwenden denselben
+// dezenten roten 3-px-Linksstreifen wie „Aktuell“ auf der Startseite.
 .topic-list tbody tr.topic-list-item {
   border-radius: 0;
-  box-shadow: inset 0 0 0 1px transparent;
+  box-shadow: inset 3px 0 0 transparent;
   transition: background-color 180ms ease, box-shadow 180ms ease;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px #d81c1c;
+    box-shadow: inset 3px 0 0 #ff0000;
   }
 }
 
