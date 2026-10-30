@@ -1320,7 +1320,9 @@ a:not([class]) {
           width: 100%;
           max-width: 100%;
           padding: 0;
-          border-left: 0;
+          // Keep Discourse's category border-color even when the strip is hidden.
+          // The icon-color synchronizer reads this computed color.
+          border-left-width: 0;
         }
 
         > td.topics {

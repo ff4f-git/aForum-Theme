@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.22
+
+- Behebt graue Hauptkategorie-Icon-Kacheln: Die Kategoriefarbe bleibt als CSS-Border-Farbe erhalten, obwohl der sichtbare Seitenstreifen ausgeblendet ist.
+- Icon-Kacheln verwenden dadurch wieder die jeweilige Discourse-Kategoriefarbe in Hell und Dunkel.
+
 ## Beta 1.21
 
 - Linke Desktop-Kategoriespalte in eigenständige, dezent umrandete Karten gegliedert.
