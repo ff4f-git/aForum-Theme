@@ -617,6 +617,59 @@ img.avatar,
 }
 
 // ======================================================
+// Alpha 31: On the categories + latest homepage, place the topic count
+// in the top-right corner and let subcategory tiles use the whole row.
+// Scope to the homepage and only when the tile layout is enabled.
+// ======================================================
+@if af-on($subcategory_tiles) {
+  .categories-and-latest .category-list {
+    width: 100%;
+
+    tbody {
+      display: block;
+      width: 100%;
+    }
+
+    tbody tr.category-list-item {
+      display: block;
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    tbody tr.category-list-item > td.category {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: none;
+      padding-right: 0.75em;
+    }
+
+    // The count stays aligned with the heading, not the tiles.
+    tbody tr.category-list-item > td.topics {
+      position: absolute;
+      top: 0.7em;
+      right: 0.75em;
+      width: auto;
+      padding: 0;
+      text-align: right;
+      white-space: nowrap;
+      border: 0;
+    }
+
+    // Prevent long category headings from running underneath the count.
+    tbody tr.category-list-item .category-text-title {
+      padding-right: 5.5em;
+    }
+
+    tbody tr.category-list-item .subcategories {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+// ======================================================
 // 8. Themenlisten: flache Zeilen, Hover dunkler
 // ======================================================
 .topic-list-header {
