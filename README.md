@@ -1,3 +1,8 @@
+## Beta 1.1 – Einheitlicher Hover-Effekt
+
+- Themenlisten in Unterkategorien zeigen beim Hover wie „Aktuell“ auf der Startseite nur noch einen 3 px breiten roten Streifen links (`#ff0000`), statt des umlaufenden roten Rahmens.
+- Die dezente Hintergrundaufhellung bleibt erhalten.
+
 ## Beta 1.1 – Navigationsleiste individuell gestalten
 
 - Neuer Schalter `nav_background_enabled` (Standard: an) zeigt oder verbirgt nur die Hintergrundfläche der horizontalen Leiste „Kategorien / Aktuell / Neu / Heiß“. Links und „Neues Thema“ bleiben erhalten.
