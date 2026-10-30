@@ -1,3 +1,12 @@
+## Beta 1.1 – finale KISS-Einstellungen
+
+- Visuelle Feinabstimmung wieder möglich: Forenflächenschatten ein/aus und Stärke 0–60 %, Header-Höhe 56–140 px (Desktop), Avatar-Radius 0–50 px (forumweit), horizontale Navigationsleisten-Höhe 36–80 px.
+- Banner-Untertitelfarbe mit eigenem HEX-Eingabefeld für hellen und dunklen Modus (Standard jeweils #0f7ec9).
+- Den überflüssigen Schalter „Sidebar-Kategorien ausblenden“ und seine Ausblenderegel entfernt; das Discourse-Hamburger-/Pop-up-Panel bleibt unangetastet.
+- Avatargröße in „Aktuell“ bleibt fest bei 48 px. Die Mobil-Headerhöhe bleibt bewusst bei 56 px.
+- Die Discourse-Theme-Administration zeigt für Integer-Werte abhängig von der Discourse-Version ggf. Zahlenfelder statt grafischer Slider. Wertebereiche sind hinterlegt.
+- Bei individuell gesetzten Werten früher entfernter Einstellungen gilt weiterhin: Sie werden nicht automatisch übernommen.
+
 ## Beta 1.1: KISS – Theme-Einstellungen aufräumen
 
 - Admin-Einstellungen von 46 auf 8 Felder reduziert (7 Funktionsbereiche, Akzent Hell/Dunkel getrennt).
