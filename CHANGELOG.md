@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.29
+
+- Desktop-Themenkarten in „Aktuell“ erhalten beim Hover und Tastaturfokus den 3-px-Streifen in der tatsächlichen Farbe ihrer Discourse-Kategorie.
+- Kategorie-Farben werden dynamisch aus den Badge-CSS-Variablen gelesen; bei fehlender Farbinformation bleibt der bisherige Akzent als Fallback.
+- Normalzustand, Themenstatus, Antwortzahlen und Mobilansicht bleiben unverändert.
+
 ## Beta 1.28
 
 - Desktop-Unterkategorien: deutlich sichtbarer Hover mit Kategoriefarb-Tönung, farbigem Rahmen und Pointer-Cursor.

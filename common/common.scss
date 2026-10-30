@@ -1567,3 +1567,18 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.29 – Desktop: Hover-Streifen in der tatsächlichen
+// Themen-Kategoriefarbe statt pauschal Rot.
+// Die Variable wird nur bei erkannter Badge-Farbe gesetzt.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .latest-topic-list .latest-topic-list-item {
+    &:hover,
+    &:focus-within {
+      box-shadow: inset 3px 0 0
+        var(--af-topic-category-color, var(--af-accent));
+    }
+  }
+}
