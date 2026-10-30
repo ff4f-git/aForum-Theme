@@ -1,14 +1,20 @@
-# aForum · Alpha 35
+# aForum · Alpha 36
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 35 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 36 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 36: Button im Querformat wie Hochkant
+
+- Die große Desktop-CTA hat negative vertikale Außenabstände; diese werden im Smartphone-Querformat zurückgesetzt.
+- `#create-topic` wird auf 44 × 44 px gesetzt, ohne Text, mit zentriertem Icon.
+- Kacheln und die beiden Hauptspalten bleiben unverändert.
 
 ## Alpha 35: kompakter Neuer-Thema-Button
 
