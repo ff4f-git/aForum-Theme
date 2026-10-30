@@ -2076,3 +2076,90 @@ a:not([class]) {
     }
   }
 }
+
+
+// ======================================================
+// Beta 1.49 – 700–767 px: native Themenlisten als Einzelkarten.
+// Aktuell, Neu und Heiss; Tabellenstruktur und Besuchstrenner
+// bleiben erhalten. Hoverfarbe anhand Discourse-Kategorieklasse.
+// ======================================================
+@media (min-width: 700px) and (max-width: 767px) {
+  #list-area .topic-list:not(.category-list) {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    > tbody > tr.topic-list-item {
+      --af-topic-hover-color: var(--af-accent);
+      box-shadow: none;
+
+      &.category-community-stammtisch,
+      &.category-community-newsletter,
+      &.category-community-wiki {
+        --af-topic-hover-color: var(--category-37-color, #0f7ec9);
+      }
+
+      &.category-marktplatz-biete {
+        --af-topic-hover-color: var(--category-23-color, #1f8a4c);
+      }
+
+      &.category-boxengasse-offtopic {
+        --af-topic-hover-color: var(--category-47-color, #ff0000);
+      }
+
+      &.category-rsv4-tuono-v4-technik-hilfe,
+      &.category-rsv4-tuono-v4-bilder-umbau {
+        --af-topic-hover-color: var(--category-21-color, #6f36ae);
+      }
+
+      &.category-downloads-guzzidiag-ecu-tools {
+        --af-topic-hover-color: var(--category-51-color, #12a89d);
+      }
+
+      > td {
+        background-color: var(--af-surface);
+        border-top: 1px solid var(--af-border);
+        border-bottom: 1px solid var(--af-border);
+        padding-top: 12px;
+        padding-bottom: 12px;
+        transition: background-color 180ms ease;
+      }
+
+      > td:first-child {
+        border-left: 1px solid var(--af-border);
+        border-radius: 3px 0 0 3px;
+        padding-left: 12px;
+        box-shadow: inset 3px 0 0 transparent;
+        transition: background-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      > td:last-child {
+        border-right: 1px solid var(--af-border);
+        border-radius: 0 3px 3px 0;
+        padding-right: 12px;
+      }
+
+      .main-link a.title {
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .link-bottom-line {
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
+      &:hover,
+      &:focus-within {
+        box-shadow: none;
+
+        > td {
+          background-color: var(--af-hover);
+        }
+
+        > td:first-child {
+          box-shadow: inset 3px 0 0 var(--af-topic-hover-color);
+        }
+      }
+    }
+  }
+}

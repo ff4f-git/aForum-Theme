@@ -2,6 +2,13 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.49
+
+- Zwischenansicht 700–767 px: Aktuell, Neu und Heiß erhalten einzelne Themenkarten mit 10 px Abstand und 3 px Eckenradius.
+- Titel auf 18 px und Kategoriezeile auf 13 px abgestimmt.
+- Hoverstreifen übernimmt die Kategoriezuordnung (u. a. Stammtisch blau, Biete grün, Bilder/Umbau violett) statt pauschal rot.
+- Native Tabellenstruktur, Besuchstrenner, Avatare, Antwortzahlen und andere Ansichten bleiben erhalten.
+
 ## Beta 1.48
 
 - Zwischenansicht 700–767 px: Thementitel in der rechten „Aktuell“-Spalte auf 18 px und 1,3 Zeilenhöhe abgestimmt.
