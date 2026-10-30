@@ -2184,3 +2184,15 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.59 – Keine permanenten Kategorie-Farbstreifen an den
+// Seiten der mobilen Hauptkategorie-Karten. Die Farbsynchronisierung
+// fuer Icon und Unterkategorie-Hover bleibt unveraendert.
+@media (max-width: 714px) {
+  .mobile-view .categories-list .category-list-item,
+  .mobile-view .category-list-item {
+    border-left: 1px solid var(--af-border) !important;
+    border-right: 1px solid var(--af-border) !important;
+  }
+}
