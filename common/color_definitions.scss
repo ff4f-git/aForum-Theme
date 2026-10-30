@@ -20,7 +20,7 @@ $af-page-bg-default: dark-light-choose(
   --af-accent: #{af-pick($color_accent_light, $color_accent_dark, $quaternary)};
   --af-accent-hover: #{"color-mix(in srgb, var(--af-accent) 82%, #000)"};
   --af-on-accent: #fff;
-  --af-nav-bg: #{$header_background};
+  --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $header_background)};
 
   // Aktiver Tab in der Navigationsleiste
   --af-active: #{$tertiary};
