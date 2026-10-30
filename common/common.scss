@@ -729,6 +729,9 @@ img.avatar,
         gap: 8px;
         width: calc(100vw - 48px);
         max-width: none;
+        // Alpha 41: do not let the wide grid contribute to the table's
+        // intrinsic column width; preserve space for topic reply counts.
+        contain: inline-size;
         margin: 0.5em 0 0.75em;
         box-sizing: border-box;
 
