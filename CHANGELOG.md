@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.50
+
+- Hoverfarben der Themenkarten auf der Startseite und in Aktuell/Neu/Heiß (ab 700 px) lesen die aktuelle Farbe direkt aus dem Discourse-Kategorie-Badge.
+- Änderungen an Kategoriefarben und neu angelegte Kategorien brauchen keine feste Zuordnung im Theme mehr.
+- Seitenwechsel und nachgeladene Themen werden berücksichtigt; Layout, Typografie und Abstände bleiben unverändert.
+
 ## Beta 1.49
 
 - Zwischenansicht 700–767 px: Aktuell, Neu und Heiß erhalten einzelne Themenkarten mit 10 px Abstand und 3 px Eckenradius.

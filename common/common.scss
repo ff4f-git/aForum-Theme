@@ -2163,3 +2163,8 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.50 – Themen-Hoverfarbe wird vom Discourse-Badge per
+// Initializer als Inline-CSS-Variable gesetzt. Die bestehenden
+// Hover-Regeln nutzen diese Variable ohne Layout-Aenderungen.
