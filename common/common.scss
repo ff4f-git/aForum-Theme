@@ -705,15 +705,14 @@ img.avatar,
       width: 100%;
     }
 
-    // Alpha 39: The mobile topic table has multiple columns, but the
-    // subcategory row has only one cell. Percentage widths inherit the
-    // first-column constraint. Size the tile row against the viewport
-    // instead, while keeping a safe inset from both screen edges.
+    // Alpha 40: The table cell is still intrinsically narrow on mobile.
+    // Let the row keep its natural width; size the actual tile grid against
+    // the viewport so its 100% does not inherit the narrow table column.
     .mobile-view .category-list-item tr.subcategories-list {
       display: block;
       box-sizing: border-box;
-      width: calc(100vw - 48px);
-      max-width: calc(100vw - 48px);
+      width: 100%;
+      max-width: 100%;
 
       > td {
         display: block;
@@ -728,8 +727,8 @@ img.avatar,
         grid-template-columns: minmax(0, 1fr);
         grid-auto-rows: minmax(44px, auto);
         gap: 8px;
-        width: 100%;
-        max-width: 100%;
+        width: calc(100vw - 48px);
+        max-width: none;
         margin: 0.5em 0 0.75em;
         box-sizing: border-box;
 
