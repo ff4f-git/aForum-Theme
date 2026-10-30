@@ -2234,3 +2234,67 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.63 – Native Kompaktnavigation optisch an aForum anpassen.
+// Ausschliesslich 640–725 px; keine Aenderung an Funktion oder DOM.
+@media (min-width: 640px) and (max-width: 725px) {
+  .navigation-container .list-control-toggle-link-trigger {
+    font-weight: 700;
+    color: var(--af-on-accent);
+
+    .list-control-toggle-link__text {
+      font-weight: 700;
+    }
+
+    .d-icon {
+      color: var(--af-on-accent);
+      opacity: 1;
+    }
+  }
+
+  // Das Discourse-Menue kann ausserhalb der Navigationsleiste
+  // in einem Floating-Container gerendert werden.
+  .list-control-toggle-link-content .dropdown-menu {
+    box-sizing: border-box;
+    min-width: 220px;
+    padding: 4px;
+    background: var(--af-surface);
+    border: 1px solid var(--af-border);
+    border-radius: 3px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+
+    a {
+      display: flex;
+      align-items: center;
+      min-height: 36px;
+      box-sizing: border-box;
+      padding: 8px 12px;
+      color: var(--primary);
+      font-size: 0.95em;
+      line-height: 1.3;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 3px;
+      border-bottom: 1px solid var(--af-border);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--primary);
+        background: var(--af-hover);
+        outline: none;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: var(--primary);
+        background: var(--af-hover);
+        box-shadow: inset 3px 0 0 var(--af-brand-blue);
+      }
+    }
+
+    li:last-child a {
+      border-bottom-color: transparent;
+    }
+  }
+}

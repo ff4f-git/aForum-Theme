@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.63
+
+- Nativen Dropdown-Ausloeser bei 640–725 px fett und mit gut sichtbarem Pfeil formatiert.
+- Dropdown mit neutralen Textfarben, kompakten Abstaenden, dezenten Trennlinien, Hover und blauer Aktivmarkierung gestaltet.
+- 3-px-Ecken; JavaScript-Umschaltung und uebrige Ansichten unveraendert.
+
 ## Beta 1.62
 
 - Nativer Dropdown-Modus reagiert dank Discourse TrackedMediaQuery beim Ueberschreiten von 725 px ohne Neuladen.
