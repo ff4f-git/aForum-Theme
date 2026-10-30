@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.61
+
+- Native Discourse-Kompaktnavigation bis einschliesslich 725 px ueber den offiziellen Value Transformer aktiviert; keine zweite Navigation oder kopierten Links.
+- Zwischen 640 und 725 px den Dropdown-Ausloeser und den 52-px-Erstellen-Button gezielt formatiert.
+- Hinweis: Der Wechsel beim reinen Fenster-Resize ohne Neuladen muss noch im Browser getestet werden.
+
 ## Beta 1.60
 
 - Mobile Hauptkategorie-Karten unter 715 px mit einem geschlossenen 1-px-Aussenrahmen in der dynamischen Discourse-Kategoriefarbe versehen.
