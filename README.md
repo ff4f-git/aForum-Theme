@@ -1,14 +1,21 @@
-# aForum · Alpha 33
+# aForum · Alpha 34
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 33 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 34 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 34: Smartphone-Querformat
+
+- Bei Querformat auf kleinen Bildschirmen (max. 1200 px breit und max. 600 px hoch) stehen Unterkategorie-Kacheln in einer Spalte.
+- Der Button „Neues Thema“ wird in dieser Ansicht auf ein kompaktes Symbol reduziert.
+- Kategorien und Aktuell werden untereinander angeordnet.
+- Desktop bleibt unverändert. Die Hochkantansicht nutzt möglicherweise anderes Discourse-Markup; ohne DOM-Nachweis können dort fehlende Unterkategorien nicht per CSS ergänzt werden.
 
 ## Alpha 33: responsive Kacheln in voller Breite
 
