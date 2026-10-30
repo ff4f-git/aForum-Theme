@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.25
+
+- Desktop-Unterkategorien mit 48 px Mindesthöhe, etwas mehr Innenabstand und 10 px Rasterabstand luftiger gestaltet.
+- Dezente Rahmen und abgestimmte Flächenfarben in Hell/Dunkel, weiterhin 3 px Eckenrundung.
+- Kategorie-Farbquadrate, Hauptkarten, rechte Themenliste und sämtliche Mobilregeln unverändert.
+
 ## Beta 1.24
 
 - Mobile Hochkant: Schloss-Icons aus der farbigen Kategorie-Kachel ausgenommen und wieder klein/grau dargestellt.

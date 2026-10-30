@@ -1448,3 +1448,33 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.25 – Unterkategorien auf dem Desktop dezent luftiger.
+// Mobile Hochkant/Querformat und rechte Themenliste unverändert.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .category-list > tbody > tr:has(> td.category) {
+    .subcategories {
+      gap: 10px;
+    }
+
+    .subcategories .subcategory {
+      min-height: 48px;
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+      background: color-mix(in srgb, var(--af-hover) 88%, var(--af-surface));
+
+      > a,
+      > .badge-wrapper,
+      > .badge-category__wrapper {
+        padding: 10px 12px;
+      }
+
+      &:hover,
+      &:focus-within {
+        background: var(--af-hover);
+      }
+    }
+  }
+}
