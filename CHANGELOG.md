@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.37
+
+- Desktop-Navigation optisch verfeinert: dezente untere Kontur, 3-px-Tab-Ecken, etwas mehr Tab-Innenabstand und zurückhaltende Hoverfarben.
+- „Neues Thema“ mit 8 px Abstand, 3-px-Ecken und leichtem Schatten als eigenständige Aktion betont.
+- Keine Änderung an Anordnung, Funktionen, Admin-Werkzeugen, JavaScript oder Mobilansicht.
+
 ## Beta 1.36
 
 - Desktop-Themenkarten: 3-px-Hoverstreifen links in der Kategoriefarbe (u. a. Stammtisch blau, Biete grün, Boxengasse rot, RSV4/Tuono violett).

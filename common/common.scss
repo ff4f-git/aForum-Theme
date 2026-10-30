@@ -1760,3 +1760,42 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.37 – Desktop navigation polish (visual only).
+// Keep Discourse layout, controls, scroll behavior and breakpoints.
+// ======================================================
+@media (min-width: 768px) {
+  .navigation-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+    .nav-pills > li > a,
+    .nav-pills > li > button {
+      margin-block: 4px;
+      padding-inline: 1.05em;
+      border-radius: 3px;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .nav-pills > li > a:not(.active):hover,
+    .nav-pills > li > button:not(.active):hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .nav-pills > li > a.active,
+    .nav-pills > li > a.active:hover,
+    .nav-pills > li > a.active:focus,
+    .nav-pills > li > button.active,
+    .nav-pills > li > button.active:hover {
+      background: var(--af-active);
+      border-radius: 3px;
+    }
+
+    // Separate the primary action visually without moving its container.
+    #create-topic {
+      margin-left: 8px;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
