@@ -1003,9 +1003,19 @@ img.avatar,
   }
 }
 
-// aForum: Premium-Sponsor-Kontur für aktuelle Themen auf der Kategorienseite.
-// Derselbe Rotton (#d81c1c), 1px, ohne Layoutverschiebung oder Schatten nach außen.
-.categories-and-latest .latest-topic-list .latest-topic-list-item,
+// Alpha 50: A quiet left red hover accent instead of a full red frame.
+// No layout shift; the existing hover background stays in place.
+.categories-and-latest .latest-topic-list .latest-topic-list-item {
+  border-radius: 0;
+  box-shadow: inset 3px 0 0 transparent;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    box-shadow: inset 3px 0 0 #d81c1c;
+  }
+}
+
+// Other topic lists keep their existing hover treatment.
 .topic-list tbody tr.topic-list-item {
   border-radius: 0;
   box-shadow: inset 0 0 0 1px transparent;
