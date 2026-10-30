@@ -23,10 +23,10 @@ $af-page-bg-default: dark-light-choose(
   --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $header_background)};
 
   // Aktiver Tab in der Navigationsleiste
-  --af-active: #{$tertiary};
+  --af-active: #{af-pick($nav_active_color_light, $nav_active_color_dark, $tertiary)};
 
   // Hauptbutton (Neues Thema)
-  --af-cta: #{$quaternary};
+  --af-cta: #{af-pick($cta_color_light, $cta_color_dark, $quaternary)};
   --af-cta-hover: #{"color-mix(in srgb, var(--af-cta) 82%, #000)"};
 
   // Link = Information
