@@ -1792,14 +1792,14 @@ a:not([class]) {
     #create-topic {
       box-sizing: border-box;
       display: inline-flex;
-      flex: 0 0 48px;
-      width: 48px;
-      min-width: 48px;
-      max-width: 48px;
-      height: 48px;
-      min-height: 48px;
-      max-height: 48px;
-      margin-block: 0;
+      flex: 0 0 52px;
+      width: 52px;
+      min-width: 52px;
+      max-width: 52px;
+      height: calc(var(--af-bar-h) + 4px);
+      min-height: calc(var(--af-bar-h) + 4px);
+      max-height: none;
+      margin-block: -2px;
       padding-inline: 0;
       align-items: center;
       justify-content: center;

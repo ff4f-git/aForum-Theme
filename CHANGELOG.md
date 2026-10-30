@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.43
+
+- Schmaler Desktop (768–979 px): Roter Icon-Button wieder mit 2 px Überstand oben und unten (insgesamt 4 px), passend zur Desktop-CTA.
+- Buttonbreite auf 52 px angepasst, damit die kompakte Schaltfläche weiterhin annähernd quadratisch bleibt; Icon-Zentrierung erhalten.
+
 ## Beta 1.42
 
 - Schmaler Desktop (768–979 px): Standardabstand des Icons im kompakten „Neues Thema“-Button entfernt, damit es trotz ausgeblendeter Beschriftung mittig sitzt.
