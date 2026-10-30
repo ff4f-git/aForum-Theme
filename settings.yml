@@ -40,7 +40,45 @@ subcategory_columns:
   max: 3
   description: "Spalten für die Unterkategorien unter jeder Kategorie (Listenansicht)."
 
-hide_sidebar_categories:
+panel_shadow:
   type: bool
   default: true
-  description: "Abschnitt 'Kategorien' in der Sidebar ausblenden (die Kategorien stehen als Kacheln in der Mitte)."
+  description: "Schatten um die Forenfläche aktivieren."
+
+shadow_opacity:
+  type: integer
+  default: 18
+  min: 0
+  max: 60
+  description: "Stärke des Forenflächenschattens in Prozent (0–60)."
+
+header_height:
+  type: integer
+  default: 80
+  min: 56
+  max: 140
+  description: "Header-Höhe auf Desktop in px (mobil bleibt die optimierte Höhe erhalten)."
+
+avatar_radius:
+  type: integer
+  default: 3
+  min: 0
+  max: 50
+  description: "Eckenradius aller Benutzeravatare in px (0 = eckig, 50 = rund bei üblichen Avatargrößen)."
+
+bar_height:
+  type: integer
+  default: 52
+  min: 36
+  max: 80
+  description: "Höhe der horizontalen Navigationsleiste in px."
+
+banner_subtitle_color_light:
+  type: string
+  default: "#0f7ec9"
+  description: "Banner-Untertitel im hellen Modus: HEX-Farbcode mit # (z. B. #0F7EC9)."
+
+banner_subtitle_color_dark:
+  type: string
+  default: "#0f7ec9"
+  description: "Banner-Untertitel im dunklen Modus: HEX-Farbcode mit # (z. B. #0F7EC9)."
