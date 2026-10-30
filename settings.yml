@@ -1,4 +1,4 @@
-# aForum Beta 1.1 — KISS: wesentliche Einstellungen
+# aForum — wesentliche Einstellungen
 # Andere Farben über die Discourse-Farbpalette einstellen.
 
 color_accent_light:
@@ -18,20 +18,10 @@ max_width:
   max: 2000
   description: "Maximale Breite der Forenfläche in px (Desktop)."
 
-compact_lists:
-  type: bool
-  default: true
-  description: "Dichtere Kategorietabelle: kleinere Schrift, Beschreibungen auf zwei Zeilen gekürzt."
-
 lock_parent_category_links:
   type: bool
   default: true
   description: "Links der Überkategorien auf der Kategorien-Startseite für Mausklicks deaktivieren. Unterkategorien bleiben anklickbar. Tastatur-Links bleiben technisch erhalten."
-
-subcategory_tiles:
-  type: bool
-  default: true
-  description: "Unterkategorien als gleich große Link-Kacheln darstellen. Aus = bisherige kompakte Textlinks."
 
 subcategory_columns:
   type: integer
@@ -66,13 +56,6 @@ avatar_radius:
   max: 50
   description: "Eckenradius aller Benutzeravatare in px (0 = eckig, 50 = rund bei üblichen Avatargrößen)."
 
-bar_height:
-  type: integer
-  default: 52
-  min: 36
-  max: 80
-  description: "Höhe der horizontalen Navigationsleiste in px."
-
 banner_subtitle_color_light:
   type: string
   default: "#0f7ec9"
@@ -83,11 +66,6 @@ banner_subtitle_color_dark:
   default: "#0f7ec9"
   description: "Banner-Untertitel im dunklen Modus: HEX-Farbcode mit # (z. B. #0F7EC9)."
 
-nav_background_enabled:
-  type: bool
-  default: true
-  description: "Hintergrundfläche der horizontalen Navigationsleiste anzeigen (Navigation und Neues Thema bleiben sichtbar)."
-
 color_nav_light:
   type: string
   default: ""
@@ -97,3 +75,24 @@ color_nav_dark:
   type: string
   default: ""
   description: "Hintergrundfarbe der Navigationsleiste im dunklen Modus als HEX-Code (#RRGGBB). Leer = bisherige Header-Hintergrundfarbe."
+
+# Optionale Farben: Leer = jeweilige Discourse-Farbpalette.
+cta_color_light:
+  type: string
+  default: ""
+  description: "Farbe des Buttons Neues Thema im hellen Modus (#RRGGBB). Leer = Palette quaternary."
+
+cta_color_dark:
+  type: string
+  default: ""
+  description: "Farbe des Buttons Neues Thema im dunklen Modus (#RRGGBB). Leer = Palette quaternary."
+
+nav_active_color_light:
+  type: string
+  default: ""
+  description: "Farbe des aktiven Navigationspunkts im hellen Modus (#RRGGBB). Leer = Palette tertiary."
+
+nav_active_color_dark:
+  type: string
+  default: ""
+  description: "Farbe des aktiven Navigationspunkts im dunklen Modus (#RRGGBB). Leer = Palette tertiary."
