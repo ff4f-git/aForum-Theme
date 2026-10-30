@@ -711,8 +711,17 @@ img.avatar,
     width: 48px;
     min-width: 48px;
     max-width: 48px;
-    padding-inline: 0;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    box-sizing: border-box;
+    padding: 0;
+    margin-block: auto;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    line-height: 1;
     overflow: hidden;
     white-space: nowrap;
     font-size: 0;
