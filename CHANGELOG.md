@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.56
+
+- Unterkategorie-Kacheln bei 600–767 px an Desktop angeglichen: 10 px Abstand, 3 px Radius, einspaltig.
+- Kategorieabhaengiger Hover-Hintergrund und -Rahmen aus der vorhandenen dynamischen Discourse-Farbe.
+- Permanente linke Farbstreifen im Ruhezustand entfernt; schmale Mobilansicht unter 600 px unberuehrt.
+
 ## Beta 1.55
 
 - Gleiche Navigationsleistenhoehe wie bei 700–767 px jetzt auch fuer 600–699 px.

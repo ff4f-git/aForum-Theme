@@ -2064,3 +2064,50 @@ a:not([class]) {
 // Beta 1.51 – Feste Kategorie-Farbtabellen aus Beta 1.29, 1.36,
 // 1.45 und 1.49 entfernt. Die Badgefarbe ist alleinige Quelle;
 // fehlende Badges verwenden weiterhin den Akzent-Fallback.
+
+
+// Beta 1.56 – Unterkategorien bei 600–767 px wie bei Desktop.
+// Die alten linken Dauerstreifen und der neutrale Hover entfallen.
+@media (min-width: 600px) and (max-width: 767px) {
+  .categories-and-latest .category-list > tbody > tr:has(> td.category) {
+    .subcategories {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .subcategories .subcategory {
+      box-sizing: border-box;
+      min-height: 48px;
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+      background: color-mix(in srgb, var(--af-hover) 88%, var(--af-surface));
+      box-shadow: none;
+      cursor: pointer;
+      transition: background-color 160ms ease, border-color 160ms ease,
+        box-shadow 160ms ease;
+
+      > a,
+      > .badge-wrapper,
+      > .badge-category__wrapper {
+        padding: 10px 12px;
+        cursor: pointer;
+      }
+
+      &:hover,
+      &:focus-within {
+        background: color-mix(
+          in srgb,
+          var(--af-category-icon-color, var(--af-brand-blue)) 18%,
+          var(--af-surface)
+        );
+        border-color: var(--af-category-icon-color, var(--af-brand-blue));
+        box-shadow: inset 0 0 0 1px var(--af-category-icon-color, var(--af-brand-blue));
+      }
+
+      &:focus-within {
+        outline: 2px solid var(--af-category-icon-color, var(--af-brand-blue));
+        outline-offset: 2px;
+      }
+    }
+  }
+}
