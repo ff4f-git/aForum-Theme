@@ -1,3 +1,9 @@
+## Beta 1.1 – Navigationsleiste individuell gestalten
+
+- Neuer Schalter `nav_background_enabled` (Standard: an) zeigt oder verbirgt nur die Hintergrundfläche der horizontalen Leiste „Kategorien / Aktuell / Neu / Heiß“. Links und „Neues Thema“ bleiben erhalten.
+- `color_nav_light` und `color_nav_dark` sind unabhängige HEX-Farbfelder. Leere Felder übernehmen wie bisher `header_background` der jeweiligen Discourse-Farbpalette, damit der aktuelle Look unverändert bleibt.
+- Der bestehende Regler `bar_height` bleibt bestehen.
+
 ## Beta 1.1 – finale KISS-Einstellungen
 
 - Visuelle Feinabstimmung wieder möglich: Forenflächenschatten ein/aus und Stärke 0–60 %, Header-Höhe 56–140 px (Desktop), Avatar-Radius 0–50 px (forumweit), horizontale Navigationsleisten-Höhe 36–80 px.
