@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.35
+
+- Desktop: Themenzeilen der vollständigen Themenliste als dezente Karten mit 10 px Abstand, 3-px-Ecken, Rahmen und mehr Innenabstand.
+- Tabellenstruktur, Avatarspalten, Zähler, Sortierung, Lesestatus und „letzter Besuch“ bleiben unverändert.
+- Noch keine neuen Kategorie-Hoverfarben; Mobilansicht und JavaScript unverändert.
+
 ## Beta 1.34
 
 - Desktop-Willkommensbanner: Suchfeldbreite von 55 % auf 48 % reduziert.

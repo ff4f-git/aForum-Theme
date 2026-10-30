@@ -1670,3 +1670,45 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.35 – Desktop topic-list cards, phase 1.
+// Native table layout, sorting and last-visit marker remain intact.
+// No category-specific hover colors yet.
+// ======================================================
+@media (min-width: 768px) {
+  // Full topic tables only; the homepage's two-column lists are separate.
+  #list-area .topic-list:not(.category-list) {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    > tbody > tr.topic-list-item {
+      // Cell backgrounds avoid changing the native table-row layout.
+      > td {
+        background-color: var(--af-surface);
+        border-top: 1px solid var(--af-border);
+        border-bottom: 1px solid var(--af-border);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        transition: background-color 180ms ease;
+      }
+
+      > td:first-child {
+        border-left: 1px solid var(--af-border);
+        border-radius: 3px 0 0 3px;
+        padding-left: 14px;
+      }
+
+      > td:last-child {
+        border-right: 1px solid var(--af-border);
+        border-radius: 0 3px 3px 0;
+        padding-right: 14px;
+      }
+
+      &:hover > td,
+      &:focus-within > td {
+        background-color: var(--af-hover);
+      }
+    }
+  }
+}
