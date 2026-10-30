@@ -705,10 +705,15 @@ img.avatar,
       width: 100%;
     }
 
+    // Alpha 39: The mobile topic table has multiple columns, but the
+    // subcategory row has only one cell. Percentage widths inherit the
+    // first-column constraint. Size the tile row against the viewport
+    // instead, while keeping a safe inset from both screen edges.
     .mobile-view .category-list-item tr.subcategories-list {
       display: block;
       box-sizing: border-box;
-      width: 100%;
+      width: calc(100vw - 48px);
+      max-width: calc(100vw - 48px);
 
       > td {
         display: block;
