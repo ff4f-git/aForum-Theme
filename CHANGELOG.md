@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.26
+
+- Desktop: rechte Startseiten-Spalte „Aktuell“ mit einzelnen, dezent umrandeten Themenkarten und 3 px Eckenrundung.
+- Mehr Innenabstand, gleichmäßige Kartenabstände und zurückhaltender Hover-Effekt.
+- Titel-/Gelesen-Status, rote Antwortzahlen, Themenreihenfolge und Mobilansicht bleiben unverändert.
+
 ## Beta 1.25
 
 - Desktop-Unterkategorien mit 48 px Mindesthöhe, etwas mehr Innenabstand und 10 px Rasterabstand luftiger gestaltet.

@@ -1478,3 +1478,28 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.26 – Desktop: aktuelle Themen als ruhige Einzelkarten.
+// Keine Änderung an Titelfarben, Reply-Zahlen oder Mobile-Layout.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .latest-topic-list {
+    .latest-topic-list-item {
+      box-sizing: border-box;
+      margin: 0 0 10px;
+      padding: 14px 12px;
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+      background: var(--af-surface);
+      box-shadow: inset 3px 0 0 transparent;
+      transition: background-color 180ms ease, box-shadow 180ms ease;
+
+      &:hover,
+      &:focus-within {
+        background: var(--af-hover);
+        box-shadow: inset 3px 0 0 var(--af-accent);
+      }
+    }
+  }
+}
