@@ -739,6 +739,24 @@ img.avatar,
   }
 }
 
+// Alpha 46: Calm the prominent new-topic CTA on desktop.
+// Keep the existing red palette and mobile compact-button rules.
+@media (min-width: 768px) {
+  .navigation-container #create-topic {
+    height: var(--af-bar-h);
+    margin-block: 0;
+    padding-inline: 1.05em;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: normal;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .navigation-container #create-topic .d-button-label {
+    font-style: normal;
+  }
+}
+
 // ======================================================
 // Alpha 37: Portrait mobile uses a separate Discourse DOM:
 // .category-list-item > table.topic-list > tbody > tr.subcategories-list
