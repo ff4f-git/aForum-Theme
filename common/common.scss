@@ -1382,8 +1382,8 @@ a:not([class]) {
     padding-block: 10px;
 
     // Category heading: preserve native link, lock and unread markers.
-    .category-text-title .d-icon,
-    .category-title-link .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+    .category-title-link .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid),
+    .category-text-title > .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
       box-sizing: content-box;
       width: 20px;
       height: 20px;
@@ -1406,6 +1406,45 @@ a:not([class]) {
       border-left: 0;
       border-radius: 3px;
       background: var(--af-hover);
+    }
+  }
+}
+
+// ======================================================
+// Beta 1.24 – Mobile-Portrait: Icon und Schloss trennen,
+// Kopf und Unterkategorien kompakter gestalten.
+// ======================================================
+@media (orientation: portrait) and (max-width: 767px) {
+  .mobile-view .category-list-item {
+    padding-block: 8px;
+
+    // Locks may be nested in the category link. Never render as a tile.
+    .d-icon-lock,
+    .d-icon-lock-solid {
+      width: 1em;
+      height: 1em;
+      padding: 0;
+      margin-right: 0.25em;
+      border-radius: 0;
+      background: transparent;
+      color: var(--af-muted);
+      fill: currentColor;
+      vertical-align: middle;
+    }
+
+    .category-description {
+      margin-block: 4px 6px;
+    }
+
+    tr.subcategories-list .subcategories {
+      gap: 6px;
+      margin-block: 0.35em 0.5em;
+
+      > a,
+      > .badge-category__wrapper {
+        min-height: 44px;
+        padding-block: 7px;
+      }
     }
   }
 }

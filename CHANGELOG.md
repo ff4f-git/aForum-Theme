@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.24
+
+- Mobile Hochkant: Schloss-Icons aus der farbigen Kategorie-Kachel ausgenommen und wieder klein/grau dargestellt.
+- Kategorie-Kopf und Unterkategorie-Abstände verdichtet, ohne die 44-px-Touch-Ziele zu reduzieren.
+- Reihenfolge Kategorie → drei Themen → Unterkategorien und Desktop-Layout unverändert.
+
 ## Beta 1.23
 
 - Mobile Hochkant-Kategorien an das Kartenlayout angeglichen: dezente Rahmen, 3 px Radius und konsistente Abstände.
