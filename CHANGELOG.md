@@ -2,6 +2,13 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.23
+
+- Mobile Hochkant-Kategorien an das Kartenlayout angeglichen: dezente Rahmen, 3 px Radius und konsistente Abstände.
+- Mobile Unterkategorien erhalten ruhige Kacheln ohne Seitenstreifen; einspaltiges Raster und 44-px-Touch-Ziele bleiben erhalten.
+- Mobile Kategorie-Symbole erhalten weiße Icons auf Kategoriefarbe, sofern die native Discourse-Farbvariable verfügbar ist.
+- Themenzeilen und Landscape-Sonderlayout bleiben in ihrer Geometrie unverändert.
+
 ## Beta 1.22
 
 - Behebt graue Hauptkategorie-Icon-Kacheln: Die Kategoriefarbe bleibt als CSS-Border-Farbe erhalten, obwohl der sichtbare Seitenstreifen ausgeblendet ist.

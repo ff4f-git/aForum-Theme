@@ -1365,3 +1365,47 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.23 – Mobile-Kategorien an die Desktop-Karten anpassen.
+// Portrait nutzt Discourse-eigene .category-list-item-Struktur;
+// die Topic- und Subcategory-Grid-Geometrie bleibt unverändert.
+// ======================================================
+@media (orientation: portrait) and (max-width: 767px) {
+  .mobile-view .categories-list .category-list-item,
+  .mobile-view .category-list-item {
+    box-sizing: border-box;
+    background: var(--af-surface);
+    border: 1px solid var(--af-border);
+    border-radius: 3px;
+    margin-bottom: 12px;
+    padding-block: 10px;
+
+    // Category heading: preserve native link, lock and unread markers.
+    .category-text-title .d-icon,
+    .category-title-link .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+      box-sizing: content-box;
+      width: 20px;
+      height: 20px;
+      padding: 8px;
+      margin-right: 0.4em;
+      border-radius: 3px;
+      background: var(--category-badge-color, var(--af-category-icon-color, var(--af-brand-blue)));
+      color: #fff;
+      fill: currentColor;
+      vertical-align: middle;
+    }
+
+    .category-description {
+      margin-block: 6px 10px;
+    }
+
+    // Keep the established 44px touch target and one-column layout.
+    tr.subcategories-list .subcategories > a,
+    tr.subcategories-list .subcategories > .badge-category__wrapper {
+      border-left: 0;
+      border-radius: 3px;
+      background: var(--af-hover);
+    }
+  }
+}
