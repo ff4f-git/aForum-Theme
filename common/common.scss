@@ -1195,9 +1195,17 @@ a:not([class]) {
 // Nur Hauptkategorie-Titel der Kategorien-Startseite, nicht Unterkategorien.
 // CSS deaktiviert Pointer-Klicks, nicht Tastatur-Navigation oder die Zielseite.
 @if af-on($lock_parent_category_links) {
-  .categories-and-latest .category-list .category-text-title a {
-    pointer-events: none;
+  // CategoryTitleLink wraps .category-text-title; the anchor is not inside it.
+  // Direct table children exclude nested subcategory tables.
+  .categories-and-latest .category-list > tbody > tr > td.category > h3,
+  .categories-list .category-list-item[data-category-id] > table.topic-list > tbody > tr:first-child > th.main-link > h3 {
     cursor: default;
+
+    > a.category-title-link,
+    > a.category-title-link * {
+      pointer-events: none;
+      cursor: default;
+    }
   }
 }
 
