@@ -1242,3 +1242,10 @@ a:not([class]) {
 .topic-timeline .timeline-ago {
   color: dark-light-choose(mix($primary, $secondary, 62%), inherit);
 }
+
+// Alpha 49: Upright label on the bottom-of-topic Reply button only.
+.topic-footer-main-buttons .btn-primary,
+.topic-footer-main-buttons .btn-primary .d-button-label,
+.topic-footer-main-buttons .btn-primary .d-icon {
+  font-style: normal;
+}
