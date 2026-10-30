@@ -1,3 +1,9 @@
+## Alpha 46: Ruhigerer Neues-Thema-Button
+
+- Desktop-CTA ohne kursive Schrift und ohne vertikalen Überstand.
+- Etwas weniger Innenabstand, Schriftgröße und Schatten; Rot bleibt erhalten.
+- Mobile Kompaktansicht und übrige Buttons unverändert.
+
 ## Alpha 45: Unterkategorie-Beschriftungen
 
 - Beschriftungen in Desktop- und Querformat-Kacheln vertikal mittig, weiterhin linksbündig.
