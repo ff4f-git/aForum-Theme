@@ -691,6 +691,61 @@ img.avatar,
   }
 }
 
+// Alpha 34: Phone landscape can exceed Discourse's 767px mobile breakpoint.
+// Use viewport height as well as width so a landscape phone gets a single
+// column, while ordinary desktop layouts remain untouched.
+// The portrait mobile category view may use different markup; do not invent
+// missing subcategory links via CSS.
+// ======================================================
+@media (orientation: landscape) and (max-height: 600px) and (max-width: 1200px) {
+  @if af-on($subcategory_tiles) {
+    .category-list .subcategories,
+    .categories-and-latest .category-list .subcategories,
+    .categories-and-latest .category-list tbody > tr:has(> td.category > .subcategories) .subcategories {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  // Prevent the large desktop new-topic label from clipping offscreen.
+  .navigation-container #create-topic {
+    width: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    padding-inline: 0;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    gap: 0;
+
+    .d-icon,
+    svg {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+    }
+
+    .d-button-label {
+      display: none;
+    }
+  }
+
+  // A landscape phone should not squeeze two homepage panels side by side.
+  .categories-and-latest {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > * {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  }
+}
+
 // ======================================================
 // 8. Themenlisten: flache Zeilen, Hover dunkler
 // ======================================================
