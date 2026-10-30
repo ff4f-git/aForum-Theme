@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.55
+
+- Gleiche Navigationsleistenhoehe wie bei 700–767 px jetzt auch fuer 600–699 px.
+- Zusaetzliches vertikales Padding und Row-Gap entfernt; 2-px-Ueberstand des Themenbuttons bleibt bestehen.
+- Keine weiteren Layoutaenderungen.
+
 ## Beta 1.54
 
 - Banner und Neues-Thema-Icon-Button der Zwischenansicht auf 600–699 px erweitert.

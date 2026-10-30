@@ -1934,7 +1934,7 @@ a:not([class]) {
 // wie Desktop. Die alte mobile Regel addiert 0.4em vertikales
 // Padding; nur dieses Extra entfernen. CTA-Ueberstand bleibt.
 // ======================================================
-@media (min-width: 700px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .navigation-container {
     min-height: var(--af-bar-h);
     padding-top: 0;
