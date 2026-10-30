@@ -1,228 +1,46 @@
-# Farben: leer lassen = Wert kommt aus der gewählten Farbpalette. Eingabe als Hex, z. B. #ff0000
+# aForum Beta 1.1 — KISS: wesentliche Einstellungen
+# Andere Farben über die Discourse-Farbpalette einstellen.
+
 color_accent_light:
   type: string
   default: ""
   description: "Akzent Hell (Buttons, Antwortzahlen, aktiver Sidebar-Eintrag). Leer = Palette quaternary."
+
 color_accent_dark:
   type: string
   default: ""
   description: "Akzent Dunkel. Leer = Palette quaternary."
-color_nav_light:
-  type: string
-  default: ""
-  description: "Navigationsleiste (Kategorien, Aktuell, Neu, Heiß) Hell. Leer = Palette header_background (Schwarz)."
-color_nav_dark:
-  type: string
-  default: ""
-  description: "Navigationsleiste Dunkel. Leer = Palette header_background."
-color_active_light:
-  type: string
-  default: ""
-  description: "Aktiver Tab in der Navigationsleiste Hell. Leer = Palette tertiary (Aprilia-Blau)."
-color_active_dark:
-  type: string
-  default: ""
-  description: "Aktiver Tab in der Navigationsleiste Dunkel. Leer = Palette tertiary."
-color_cta_light:
-  type: string
-  default: ""
-  description: "Farbe des Buttons 'Neues Thema' Hell. Leer = Palette quaternary (Rot)."
-color_cta_dark:
-  type: string
-  default: ""
-  description: "Farbe des Buttons 'Neues Thema' Dunkel. Leer = Palette quaternary."
-color_link_light:
-  type: string
-  default: ""
-  description: "Linkfarbe Hell (Textlinks). Leer = Palette tertiary."
-color_link_dark:
-  type: string
-  default: ""
-  description: "Linkfarbe Dunkel. Leer = Palette tertiary."
-color_page_bg_light:
-  type: string
-  default: ""
-  description: "Grauer Seitenhintergrund Hell. Leer = aus Palette abgeleitet."
-color_page_bg_dark:
-  type: string
-  default: ""
-  description: "Seitenhintergrund Dunkel. Leer = aus Palette abgeleitet."
-color_surface_light:
-  type: string
-  default: ""
-  description: "Weiße Forenfläche Hell. Leer = Palette secondary."
-color_surface_dark:
-  type: string
-  default: ""
-  description: "Forenfläche Dunkel. Leer = Palette secondary."
-color_header_bg_light:
-  type: string
-  default: ""
-  description: "Kopfzeile Hintergrund Hell. Leer = Palette header_background."
-color_header_bg_dark:
-  type: string
-  default: ""
-  description: "Kopfzeile Hintergrund Dunkel. Leer = Palette header_background."
-color_header_text_light:
-  type: string
-  default: ""
-  description: "Kopfzeile Icons und Text Hell. Leer = Palette header_primary."
-color_header_text_dark:
-  type: string
-  default: ""
-  description: "Kopfzeile Icons und Text Dunkel. Leer = Palette header_primary."
 
-# Fläche und Form
 max_width:
   type: integer
   default: 1320
   min: 900
   max: 2000
   description: "Maximale Breite der Forenfläche in px (Desktop)."
-border_radius:
-  type: integer
-  default: 0
-  min: 0
-  max: 16
-  description: "Eckenradius für Buttons, Eingabefelder usw. in px. 0 = ganz eckig."
-panel_shadow:
-  type: bool
-  default: true
-  description: "Weicher Schatten um die Forenfläche (nur außen, nicht auf dem Handy)."
-shadow_opacity:
-  type: integer
-  default: 18
-  min: 0
-  max: 60
-  description: "Stärke des Schattens in Prozent."
 
-# Kopfzeile
-header_height:
-  type: integer
-  default: 80
-  min: 56
-  max: 140
-  description: "Höhe der schwarzen Kopfzeile in px (Desktop). Das Logo wird darin senkrecht zentriert."
-
-# Avatare
-avatar_radius:
-  type: integer
-  default: 3
-  min: 0
-  max: 50
-  description: "Eckenradius der Avatare in px. 0 = ganz eckig, 3 = leicht abgerundet (wie im alten Theme), 50 = rund."
-
-# Rote Leiste und Hauptbutton
-bar_height:
-  type: integer
-  default: 52
-  min: 36
-  max: 80
-  description: "Höhe der roten Navigationsleiste in px."
-cta_overhang:
-  type: integer
-  default: 8
-  min: 0
-  max: 24
-  description: "Wie weit der Button 'Neues Thema' oben und unten über die rote Leiste hinausragt, in px."
-hide_nav_dropdowns:
-  type: bool
-  default: true
-  description: "Die Auswahlfelder 'Kategorien' und 'Schlagwörter' links in der Leiste ausblenden."
-
-# Willkommensbanner – leer lassen = bisherige aForum-Standardfarbe
-banner_subtitle_color_light:
-  type: string
-  default: ""
-  description: "Slogan im Willkommensbanner (Hell). Hex mit #, z. B. #0F7EC9. Leer = aForum-Logoblau (#0F7EC9)."
-banner_subtitle_color_dark:
-  type: string
-  default: ""
-  description: "Slogan im Willkommensbanner (Dunkel). Hex mit #. Leer = aForum-Logoblau (#0F7EC9)."
-banner_border_color_light:
-  type: string
-  default: ""
-  description: "1-px-Rahmen um den Willkommensbanner (Hell). Hex mit #. Leer = Sponsorenrot (#d81c1c)."
-banner_border_color_dark:
-  type: string
-  default: ""
-  description: "1-px-Rahmen um den Willkommensbanner (Dunkel). Hex mit #. Leer = Sponsorenrot (#d81c1c)."
-
-# Banner
-banner_selector:
-  type: string
-  default: ""
-  description: "CSS-Selektor deines Hero-Banners, z. B. .mein-banner (siehe README). Leer = kein Schatten am Banner."
-banner_shadow_opacity:
-  type: integer
-  default: 30
-  min: 0
-  max: 80
-  description: "Stärke des Schattens unter dem Banner in Prozent."
-
-# Listen
 compact_lists:
   type: bool
   default: true
   description: "Dichtere Kategorietabelle: kleinere Schrift, Beschreibungen auf zwei Zeilen gekürzt."
-mute_category_colors:
-  type: bool
-  default: false
-  description: "Kategoriefarben in Listen grau darstellen. Die Farbe bleibt nur als dünner Streifen links an den Kategorien."
 
-latest_avatar_size:
-  type: integer
-  default: 48
-  min: 24
-  max: 80
-  description: "Größe der Avatare in der Liste 'Aktuell' in px."
-
-# Kategorien
 lock_parent_category_links:
   type: bool
   default: true
   description: "Links der Überkategorien auf der Kategorien-Startseite für Mausklicks deaktivieren. Unterkategorien bleiben anklickbar. Tastatur-Links bleiben technisch erhalten."
+
 subcategory_tiles:
   type: bool
   default: true
   description: "Unterkategorien als gleich große Link-Kacheln darstellen. Aus = bisherige kompakte Textlinks."
+
 subcategory_columns:
   type: integer
   default: 2
   min: 1
   max: 3
   description: "Spalten für die Unterkategorien unter jeder Kategorie (Listenansicht)."
-subcategory_column_width:
-  type: integer
-  default: 180
-  min: 100
-  max: 400
-  description: "Breite jeder Unterkategorie-Spalte in px. Bestimmt, wo die zweite Spalte beginnt (in allen Kategorien gleich)."
-tile_size:
-  type: integer
-  default: 72
-  min: 40
-  max: 120
-  description: "Kantenlänge der quadratischen Kategoriekachel in px (Desktop). Auf dem Handy wird sie kleiner."
-tile_background:
-  type: bool
-  default: false
-  description: "Akzentfarbe hinter dem Kategoriebild (sinnvoll für Icons mit transparentem Hintergrund)."
-show_subcategories:
-  type: bool
-  default: false
-  description: "Unterkategorien in der Kategorieliste anzeigen."
+
 hide_sidebar_categories:
   type: bool
   default: true
   description: "Abschnitt 'Kategorien' in der Sidebar ausblenden (die Kategorien stehen als Kacheln in der Mitte)."
-
-# Buttons
-button_uppercase:
-  type: bool
-  default: true
-  description: "Hauptbuttons (z. B. Neues Thema) in Großbuchstaben."
-button_italic:
-  type: bool
-  default: true
-  description: "Hauptbuttons kursiv."
