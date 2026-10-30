@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.62
+
+- Nativer Dropdown-Modus reagiert dank Discourse TrackedMediaQuery beim Ueberschreiten von 725 px ohne Neuladen.
+- Keine DOM-Manipulation; Layout-CSS unveraendert.
+
 ## Beta 1.61
 
 - Native Discourse-Kompaktnavigation bis einschliesslich 725 px ueber den offiziellen Value Transformer aktiviert; keine zweite Navigation oder kopierten Links.
