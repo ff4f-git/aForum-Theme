@@ -705,6 +705,35 @@ img.avatar,
       width: 100%;
     }
 
+    // Alpha 42: Featured topic rows have two cells (title and reply count).
+    // Give them explicit columns so the wide subcategory grid cannot push
+    // the reply-count cell beyond the mobile viewport.
+    .mobile-view .category-list-item > table.topic-list tr.category-topic-link {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 3.25em;
+      align-items: start;
+      box-sizing: border-box;
+      width: calc(100vw - 48px);
+      max-width: calc(100vw - 48px);
+
+      > td.main-link {
+        display: block;
+        box-sizing: border-box;
+        min-width: 0;
+        width: auto;
+      }
+
+      > td.num.posts {
+        display: block;
+        box-sizing: border-box;
+        min-width: 0;
+        width: auto;
+        padding-inline: 0.25em;
+        text-align: right;
+        white-space: nowrap;
+      }
+    }
+
     // Alpha 40: The table cell is still intrinsically narrow on mobile.
     // Let the row keep its natural width; size the actual tile grid against
     // the viewport so its 100% does not inherit the narrow table column.
