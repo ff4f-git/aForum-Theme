@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.51
+
+- Fehler bei nachträglich aktualisierten Kategorie-Badgefarben behoben: Themenzeilen synchronisieren die echte Discourse-Farbe zusätzlich unmittelbar beim Hover und Tastaturfokus.
+- Veraltete feste Kategorie-Farbzuordnungen aus den Desktop- und 700–767-px-Hoverregeln entfernt.
+- Kartenlayout, Abstände, Typografie und 3-px-Hoverstreifen unverändert.
+
 ## Beta 1.50
 
 - Hoverfarben der Themenkarten auf der Startseite und in Aktuell/Neu/Heiß (ab 700 px) lesen die aktuelle Farbe direkt aus dem Discourse-Kategorie-Badge.

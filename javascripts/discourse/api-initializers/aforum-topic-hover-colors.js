@@ -1,43 +1,48 @@
 import { apiInitializer } from "discourse/lib/api";
 
-// Beta 1.50: Discourse bleibt die einzige Quelle fuer Kategoriefarben.
-// CSS kann die Variable eines Badge-Kindes nicht auf dessen Elternkarte
-// vererben; deshalb wird die Badgefarbe auf die Karte uebertragen.
+// Beta 1.51: Badgefarben auch bei nachtraeglichen Discourse-Updates
+// und unmittelbar beim Betreten einer Themenkarte synchronisieren.
 export default apiInitializer("1.8.0", (api) => {
   const selector =
     ".categories-and-latest .latest-topic-list .latest-topic-list-item, " +
     "#list-area .topic-list:not(.category-list) > tbody > tr.topic-list-item";
   let scheduled = false;
 
-  function syncTopicColors() {
-    scheduled = false;
-    document.querySelectorAll(selector).forEach((row) => {
-      const badge = row.querySelector(".badge-category__wrapper");
-      const color = badge
-        ? getComputedStyle(badge).getPropertyValue("--category-badge-color").trim()
-        : "";
+  function syncRow(row) {
+    const badge = row.querySelector(".badge-category__wrapper");
+    const color = badge
+      ? getComputedStyle(badge).getPropertyValue("--category-badge-color").trim()
+      : "";
+    const current = row.style.getPropertyValue("--af-topic-hover-color").trim();
 
-      if (color) {
-        if (row.style.getPropertyValue("--af-topic-hover-color") !== color) {
-          row.style.setProperty("--af-topic-hover-color", color);
-        }
-      } else {
-        row.style.removeProperty("--af-topic-hover-color");
-      }
-    });
+    if (color && current !== color) {
+      row.style.setProperty("--af-topic-hover-color", color);
+    } else if (!color && current) {
+      row.style.removeProperty("--af-topic-hover-color");
+    }
+  }
+
+  function syncAll() {
+    scheduled = false;
+    document.querySelectorAll(selector).forEach(syncRow);
   }
 
   function scheduleSync() {
     if (scheduled) return;
     scheduled = true;
-    requestAnimationFrame(syncTopicColors);
+    requestAnimationFrame(syncAll);
   }
 
   api.onPageChange(scheduleSync);
 
+  // Capture mouse entry before the hover appearance is painted.
+  // Also covers rows whose badge color changed without a DOM mutation.
+  function syncHovered(event) {
+    const row = event.target.closest?.(selector);
+    if (row) syncRow(row);
+  }
+
   const observer = new MutationObserver((mutations) => {
-    // React to new/replaced topic cards and badge color changes, but
-    // ignore the inline variable writes on topic rows themselves.
     if (mutations.some((mutation) =>
       mutation.type === "childList" ||
       (mutation.type === "attributes" &&
@@ -54,8 +59,10 @@ export default apiInitializer("1.8.0", (api) => {
         childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ["style"],
+        attributeFilter: ["style", "class"],
       });
+      root.addEventListener("pointerover", syncHovered, true);
+      root.addEventListener("focusin", syncHovered, true);
     }
     scheduleSync();
   }

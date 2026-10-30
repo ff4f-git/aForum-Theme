@@ -1576,39 +1576,6 @@ a:not([class]) {
 // ======================================================
 @media (min-width: 768px) {
   .categories-and-latest .latest-topic-list {
-    // Verified against the category badges in the live topic list.
-    .latest-topic-list-item.category-community-stammtisch {
-      --af-topic-hover-color: var(--category-37-color, #0f7ec9);
-    }
-
-    .latest-topic-list-item.category-marktplatz-biete {
-      --af-topic-hover-color: var(--category-23-color, #1f8a4c);
-    }
-
-    .latest-topic-list-item.category-rsv4-tuono-v4-technik-hilfe {
-      --af-topic-hover-color: var(--category-21-color, #6f36ae);
-    }
-
-    .latest-topic-list-item.category-rsv4-tuono-v4-bilder-umbau {
-      --af-topic-hover-color: var(--category-20-color, #6f36ae);
-    }
-
-    .latest-topic-list-item.category-community-newsletter {
-      --af-topic-hover-color: var(--category-12-color, #0f7ec9);
-    }
-
-    .latest-topic-list-item.category-community-wiki {
-      --af-topic-hover-color: var(--category-50-color, #0f7ec9);
-    }
-
-    .latest-topic-list-item.category-downloads-guzzidiag-ecu-tools {
-      --af-topic-hover-color: var(--category-51-color, #12a89d);
-    }
-
-    .latest-topic-list-item.category-boxengasse-offtopic {
-      --af-topic-hover-color: var(--category-47-color, #ff0000);
-    }
-
     .latest-topic-list-item:hover,
     .latest-topic-list-item:focus-within {
       box-shadow: inset 3px 0 0
@@ -1721,29 +1688,6 @@ a:not([class]) {
 @media (min-width: 768px) {
   #list-area .topic-list:not(.category-list) > tbody > tr.topic-list-item {
     --af-topic-hover-color: var(--af-accent);
-
-    &.category-community-stammtisch,
-    &.category-community-newsletter,
-    &.category-community-wiki {
-      --af-topic-hover-color: var(--category-37-color, #0f7ec9);
-    }
-
-    &.category-marktplatz-biete {
-      --af-topic-hover-color: var(--category-23-color, #1f8a4c);
-    }
-
-    &.category-boxengasse-offtopic {
-      --af-topic-hover-color: var(--category-47-color, #ff0000);
-    }
-
-    &.category-rsv4-tuono-v4-technik-hilfe,
-    &.category-rsv4-tuono-v4-bilder-umbau {
-      --af-topic-hover-color: var(--category-21-color, #6f36ae);
-    }
-
-    &.category-downloads-guzzidiag-ecu-tools {
-      --af-topic-hover-color: var(--category-51-color, #12a89d);
-    }
 
     &:hover,
     &:focus-within {
@@ -1974,31 +1918,6 @@ a:not([class]) {
       box-shadow: inset 3px 0 0 transparent;
       transition: background-color 180ms ease, box-shadow 180ms ease;
 
-      &.category-community-stammtisch {
-        --af-topic-hover-color: var(--category-37-color, #0f7ec9);
-      }
-      &.category-marktplatz-biete {
-        --af-topic-hover-color: var(--category-23-color, #1f8a4c);
-      }
-      &.category-rsv4-tuono-v4-technik-hilfe {
-        --af-topic-hover-color: var(--category-21-color, #6f36ae);
-      }
-      &.category-rsv4-tuono-v4-bilder-umbau {
-        --af-topic-hover-color: var(--category-20-color, #6f36ae);
-      }
-      &.category-community-newsletter {
-        --af-topic-hover-color: var(--category-12-color, #0f7ec9);
-      }
-      &.category-community-wiki {
-        --af-topic-hover-color: var(--category-50-color, #0f7ec9);
-      }
-      &.category-downloads-guzzidiag-ecu-tools {
-        --af-topic-hover-color: var(--category-51-color, #12a89d);
-      }
-      &.category-boxengasse-offtopic {
-        --af-topic-hover-color: var(--category-47-color, #ff0000);
-      }
-
       &:hover,
       &:focus-within {
         background: var(--af-hover);
@@ -2092,29 +2011,6 @@ a:not([class]) {
       --af-topic-hover-color: var(--af-accent);
       box-shadow: none;
 
-      &.category-community-stammtisch,
-      &.category-community-newsletter,
-      &.category-community-wiki {
-        --af-topic-hover-color: var(--category-37-color, #0f7ec9);
-      }
-
-      &.category-marktplatz-biete {
-        --af-topic-hover-color: var(--category-23-color, #1f8a4c);
-      }
-
-      &.category-boxengasse-offtopic {
-        --af-topic-hover-color: var(--category-47-color, #ff0000);
-      }
-
-      &.category-rsv4-tuono-v4-technik-hilfe,
-      &.category-rsv4-tuono-v4-bilder-umbau {
-        --af-topic-hover-color: var(--category-21-color, #6f36ae);
-      }
-
-      &.category-downloads-guzzidiag-ecu-tools {
-        --af-topic-hover-color: var(--category-51-color, #12a89d);
-      }
-
       > td {
         background-color: var(--af-surface);
         border-top: 1px solid var(--af-border);
@@ -2165,6 +2061,6 @@ a:not([class]) {
 }
 
 
-// Beta 1.50 – Themen-Hoverfarbe wird vom Discourse-Badge per
-// Initializer als Inline-CSS-Variable gesetzt. Die bestehenden
-// Hover-Regeln nutzen diese Variable ohne Layout-Aenderungen.
+// Beta 1.51 – Feste Kategorie-Farbtabellen aus Beta 1.29, 1.36,
+// 1.45 und 1.49 entfernt. Die Badgefarbe ist alleinige Quelle;
+// fehlende Badges verwenden weiterhin den Akzent-Fallback.
