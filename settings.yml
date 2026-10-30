@@ -82,3 +82,18 @@ banner_subtitle_color_dark:
   type: string
   default: "#0f7ec9"
   description: "Banner-Untertitel im dunklen Modus: HEX-Farbcode mit # (z. B. #0F7EC9)."
+
+nav_background_enabled:
+  type: bool
+  default: true
+  description: "Hintergrundfläche der horizontalen Navigationsleiste anzeigen (Navigation und Neues Thema bleiben sichtbar)."
+
+color_nav_light:
+  type: string
+  default: ""
+  description: "Hintergrundfarbe der Navigationsleiste im hellen Modus als HEX-Code (#RRGGBB). Leer = bisherige Header-Hintergrundfarbe."
+
+color_nav_dark:
+  type: string
+  default: ""
+  description: "Hintergrundfarbe der Navigationsleiste im dunklen Modus als HEX-Code (#RRGGBB). Leer = bisherige Header-Hintergrundfarbe."
