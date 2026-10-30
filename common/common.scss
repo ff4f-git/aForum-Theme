@@ -1907,3 +1907,104 @@ a:not([class]) {
     }
   }
 }
+
+
+
+// ======================================================
+// Beta 1.45 – Zwischenansicht 700–767 px: kompakte CTA
+// und Kartenoptik fuer die rechte Aktuell-Spalte.
+// Keine Aenderung an Desktop >=768 px oder schmalem Mobile.
+// ======================================================
+@media (min-width: 700px) and (max-width: 767px) {
+  .navigation-container {
+    #create-topic.btn,
+    #create-topic.btn-primary {
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 0 0 52px;
+      width: 52px;
+      min-width: 52px;
+      max-width: 52px;
+      height: calc(var(--af-bar-h) + 4px);
+      min-height: calc(var(--af-bar-h) + 4px);
+      max-height: none;
+      margin-block: -2px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      font-size: 0;
+      white-space: nowrap;
+      border-radius: 3px;
+      overflow: hidden;
+
+      .d-button-label {
+        display: none;
+      }
+
+      > .d-icon,
+      > svg.d-icon {
+        display: block;
+        flex: 0 0 auto;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        margin-inline: 0;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .categories-and-latest {
+    .latest-topic-list > .table-heading,
+    .latest-topic-list .table-heading,
+    .latest-topic-list > :first-child:not(.latest-topic-list-item):not(.topic-list-body) {
+      box-sizing: border-box;
+      background: var(--af-hover);
+      border-bottom: 0;
+    }
+
+    .latest-topic-list .latest-topic-list-item {
+      box-sizing: border-box;
+      margin: 0 0 10px;
+      padding: 14px 12px;
+      border: 1px solid color-mix(in srgb, var(--af-border) 55%, transparent);
+      border-radius: 3px;
+      background: var(--af-surface);
+      box-shadow: inset 3px 0 0 transparent;
+      transition: background-color 180ms ease, box-shadow 180ms ease;
+
+      &.category-community-stammtisch {
+        --af-topic-hover-color: var(--category-37-color, #0f7ec9);
+      }
+      &.category-marktplatz-biete {
+        --af-topic-hover-color: var(--category-23-color, #1f8a4c);
+      }
+      &.category-rsv4-tuono-v4-technik-hilfe {
+        --af-topic-hover-color: var(--category-21-color, #6f36ae);
+      }
+      &.category-rsv4-tuono-v4-bilder-umbau {
+        --af-topic-hover-color: var(--category-20-color, #6f36ae);
+      }
+      &.category-community-newsletter {
+        --af-topic-hover-color: var(--category-12-color, #0f7ec9);
+      }
+      &.category-community-wiki {
+        --af-topic-hover-color: var(--category-50-color, #0f7ec9);
+      }
+      &.category-downloads-guzzidiag-ecu-tools {
+        --af-topic-hover-color: var(--category-51-color, #12a89d);
+      }
+      &.category-boxengasse-offtopic {
+        --af-topic-hover-color: var(--category-47-color, #ff0000);
+      }
+
+      &:hover,
+      &:focus-within {
+        background: var(--af-hover);
+        border-color: var(--af-border);
+        box-shadow: inset 3px 0 0 var(--af-topic-hover-color, var(--af-accent));
+      }
+    }
+  }
+}

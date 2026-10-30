@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.45
+
+- Zwischenansicht 700–767 px: „Neues Thema“ als 52-px-Icon-Button mit zentriertem Symbol, 3-px-Radius und 2-px-Überstand.
+- Rechte „Aktuell“-Spalte: einzelne Themenkarten mit 10-px-Abstand, dezentem Rahmen und Kategorie-Hoverfarbe; rote Kopf-Unterstreichung entfernt.
+- Navigationselemente, Antwortzahlen, Desktop ab 768 px und kleinere Mobilansichten bleiben unangetastet.
+
 ## Beta 1.44
 
 - Schmale Zwischenansicht (700–767 px): Kategorie-Icons wieder 44 × 44 px mit Kategorie-Farbvariable und 3-px-Ecken.
