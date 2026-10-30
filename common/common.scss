@@ -699,10 +699,22 @@ img.avatar,
 // ======================================================
 @media (orientation: portrait) and (max-width: 767px) {
   @if af-on($subcategory_tiles) {
+    // The mobile subcategory row contains a single <td> without colspan.
+    // Let this row span the entire topic table instead of its first column.
+    .mobile-view .category-list-item > table.topic-list {
+      width: 100%;
+    }
+
     .mobile-view .category-list-item tr.subcategories-list {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+
       > td {
+        display: block;
         box-sizing: border-box;
         width: 100%;
+        max-width: 100%;
         padding-inline: 0.75em;
       }
 
