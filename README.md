@@ -1,285 +1,172 @@
-## Beta 1.1 – Einheitlicher Hover-Effekt
+<div align="center">
 
-- Themenlisten in Unterkategorien zeigen beim Hover wie „Aktuell“ auf der Startseite nur noch einen 3 px breiten roten Streifen links (`#ff0000`), statt des umlaufenden roten Rahmens.
-- Die dezente Hintergrundaufhellung bleibt erhalten.
+# aForum Theme
 
-## Beta 1.1 – Navigationsleiste individuell gestalten
+### Motorsport im Auftritt. Forum im Mittelpunkt.
 
-- Neuer Schalter `nav_background_enabled` (Standard: an) zeigt oder verbirgt nur die Hintergrundfläche der horizontalen Leiste „Kategorien / Aktuell / Neu / Heiß“. Links und „Neues Thema“ bleiben erhalten.
-- `color_nav_light` und `color_nav_dark` sind unabhängige HEX-Farbfelder. Leere Felder übernehmen wie bisher `header_background` der jeweiligen Discourse-Farbpalette, damit der aktuelle Look unverändert bleibt.
-- Der bestehende Regler `bar_height` bleibt bestehen.
+**Das Discourse-Haupttheme für die Aprilia-Community.**
 
-## Beta 1.1 – finale KISS-Einstellungen
+![Version](https://img.shields.io/badge/Version-Beta_1.1-ff0000?style=flat-square)
+![Plattform](https://img.shields.io/badge/Plattform-Discourse-0f7ec9?style=flat-square)
+![Darstellung](https://img.shields.io/badge/Darstellung-Light_%26_Dark-20242a?style=flat-square)
 
-- Visuelle Feinabstimmung wieder möglich: Forenflächenschatten ein/aus und Stärke 0–60 %, Header-Höhe 56–140 px (Desktop), Avatar-Radius 0–50 px (forumweit), horizontale Navigationsleisten-Höhe 36–80 px.
-- Banner-Untertitelfarbe mit eigenem HEX-Eingabefeld für hellen und dunklen Modus (Standard jeweils #0f7ec9).
-- Den überflüssigen Schalter „Sidebar-Kategorien ausblenden“ und seine Ausblenderegel entfernt; das Discourse-Hamburger-/Pop-up-Panel bleibt unangetastet.
-- Avatargröße in „Aktuell“ bleibt fest bei 48 px. Die Mobil-Headerhöhe bleibt bewusst bei 56 px.
-- Die Discourse-Theme-Administration zeigt für Integer-Werte abhängig von der Discourse-Version ggf. Zahlenfelder statt grafischer Slider. Wertebereiche sind hinterlegt.
-- Bei individuell gesetzten Werten früher entfernter Einstellungen gilt weiterhin: Sie werden nicht automatisch übernommen.
+[**Live ansehen →**](https://aforum.net) · [Installation](#installation) · [Einstellungen](#einstellungen) · [Änderungen](CHANGELOG.md)
 
-## Beta 1.1: KISS – Theme-Einstellungen aufräumen
+</div>
 
-- Admin-Einstellungen von 46 auf 8 Felder reduziert (7 Funktionsbereiche, Akzent Hell/Dunkel getrennt).
-- Behalten: Akzentfarben Hell/Dunkel, maximale Breite, kompakte Listen, Unterkategorie-Kacheln und Spalten, Sidebar-Kategorien ausblenden, Überkategorie-Links sperren.
-- Entfernte Schalter verwenden ihre bisherigen Standardwerte; übrige Farben kommen aus Discourse-Farbpaletten.
-- Achtung: Individuelle Werte entfernter Einstellungen werden nicht automatisch übernommen. Gegebenenfalls vorher sichern.
-- Mobilstruktur bleibt unverändert; beide Farbmodi und Geräteansichten nach dem Update prüfen.
+---
 
-## Beta 1: Überkategorie-Links optional sperren
+![aForum-Startseite: schwarzer Header, Motorsport-Banner, Sponsorbereich sowie Kategorien und aktuelle Themen in zwei Spalten](docs/images/aforum-homepage-beta-1-1.jpg)
 
-- Neue Theme-Einstellung `lock_parent_category_links` (standardmäßig an): Hauptkategorie-Titel in der Kategorien-Startansicht reagieren nicht mehr auf Mausklicks. Unterkategorien bleiben anklickbar.
-- Rein CSS-basiert (`pointer-events: none`); Tastaturbedienung und direkte URLs bleiben technisch möglich. Keine Änderung an Kategorie-Berechtigungen.
-- Erste Beta-Version nach Alpha 51; übriges Layout unverändert.
+*Die öffentliche Startseite von [aForum.net](https://aforum.net), aufgenommen am 30. Oktober 2026 im hellen Modus. Die Gastansicht zeigt nur öffentlich zugängliche Kategorien und keine Schaltfläche zum Erstellen neuer Themen. Banner, Sponsoren und weitere Seitenelemente stammen teilweise aus separat eingerichteten Komponenten.*
 
-## Alpha 51: Einheitliches Aprilia-Rot
+## Gebaut für eine Community mit Charakter
 
-- Linker Hover-Streifen in „Aktuell“ von `#d81c1c` auf `#ff0000` umgestellt, passend zum „NEUES THEMA“-Button.
-- Alle übrigen Farben und Hover-Effekte unverändert.
+aForum verbindet eine klassische Forenübersicht mit einer klaren Motorsport-Optik: Schwarz als Rahmen, Blau für Orientierung und Rot für Aktionen. Kantige Unterkategorie-Kacheln führen direkt in die passenden Bereiche; gut lesbare Themenlisten rücken die Diskussionen in den Mittelpunkt.
 
-## Alpha 50: Dezenter Hover in „Aktuell“
+**Beta 1.1 folgt dem KISS-Prinzip:** eine abgestimmte Gestaltung und wenige Einstellungen mit sichtbarem Nutzen.
 
-- Vollständigen roten Hover-Rahmen der rechten Themenliste durch einen 3-Pixel-Streifen links ersetzt.
-- Bestehende dezente Hover-Fläche bleibt erhalten; keine Layoutverschiebung.
-- Andere Themenlisten und mobile Kacheln unverändert.
+## Was das Theme ausmacht
 
-## Alpha 49: Gerader Antworten-Button
+| Bereich | Gestaltung |
+| --- | --- |
+| **Startseite** | Kategorien links, aktuelle Themen rechts – mit klaren Bereichsüberschriften und farbigen Linien. |
+| **Unterkategorien** | Flexible Kacheln mit Kategorienfarbe, Hover- und Fokuszuständen; auf schmalen Ansichten einspaltig. |
+| **Typografie** | Inter für Beiträge, Thementitel und Beschreibungen. Die in Discourse gewählte Basisschrift bleibt für Navigation und Kategorien erhalten; aForum verwendet dort Oxanium. |
+| **Navigation** | Gestaltbare Hintergrundfläche, blauer aktiver Tab und ein bündiger, eckiger „Neues Thema“-Button auf Desktop. |
+| **Themenlisten** | Dezenter Flächenwechsel und ein roter, 3 px breiter Hover-Streifen links – ohne umlaufenden Rahmen. |
+| **Diskussionen** | Kräftigere Bedienelemente und Zeitleisten-Beschriftungen im hellen Modus; gerader Antworten-Button. |
+| **Hell & Dunkel** | Zwei mitgelieferte Farbpaletten und getrennte Farboptionen für beide Modi. |
+| **Feinabstimmung** | Forenbreite, Schatten, Header- und Leistenhöhe sowie ein gemeinsamer Avatar-Eckenradius. |
 
-- Der rote Antworten-Button am Ende eines Themas verwendet keine kursive Schrift mehr.
-- Andere Buttons und Layout unverändert.
+### Desktop, Querformat, Hochformat
 
-## Alpha 48: Kontrast in Diskussionen
+- **Desktop:** Kategorien und „Aktuell“ nebeneinander, standardmäßig zwei Unterkategorie-Spalten.
+- **Smartphone quer:** einspaltige Unterkategorie-Kacheln innerhalb der Kategorienseite und ein kompakter Symbol-Button für neue Themen.
+- **Mobile Kategorienansicht hochkant:** Hauptkategorie → aktuelle Themen → Unterkategorie-Kacheln. Die Themen bleiben vor der Navigation zu den Unterkategorien.
 
-- Beitragsaktionen und Zeitleisten-Beschriftungen im Light Mode etwas kräftiger.
-- Dark Mode, Textlayout und Beitragsabstände unverändert.
-
-## Alpha 47: Eckiger Neues-Thema-Button
-
-- Roter Desktop-Button jetzt eckig und bündig zur schwarzen Navigationsleiste, passend zum blauen Kategorien-Tab.
-- Gerade Schrift, kompakte Breite und mobile Darstellung bleiben erhalten.
-
-## Alpha 46: Ruhigerer Neues-Thema-Button
-
-- Desktop-CTA ohne kursive Schrift und ohne vertikalen Überstand.
-- Etwas weniger Innenabstand, Schriftgröße und Schatten; Rot bleibt erhalten.
-- Mobile Kompaktansicht und übrige Buttons unverändert.
-
-## Alpha 45: Unterkategorie-Beschriftungen
-
-- Beschriftungen in Desktop- und Querformat-Kacheln vertikal mittig, weiterhin linksbündig.
-- Keine Änderungen an Kachelgrößen, Abständen oder Hochkant-Layout.
-
-# aForum · Beta 1.1
-
-**Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
-
-Beta 1.1 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
-
-## Einheitliches Markenblau
-
-Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
-
-**Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
-
-## Alpha 44: Inter für Lesetexte
-
-- Inter wird für Beiträge, Thementitel, Auszüge und längere Beschreibungen geladen und gezielt zugewiesen.
-- Oxanium bleibt in Discourse als Basis- und Überschriftenschrift eingestellt und wird für Kategorien, Navigation und Buttons beibehalten.
-- Kachel- und Tabellenlayouts bleiben unverändert.
-
-## Alpha 43: Tabellenlayout der mobilen Kategorien entkoppelt
-
-- `table.topic-list` und `tbody` werden nur in der mobilen Hochkantansicht als Block dargestellt, damit die einspaltigen Unterkategorien die zweispaltigen Themenzeilen nicht mehr in der Tabellenbreite beeinflussen.
-- Die Themenzeilen behalten ihr eigenes zweispaltiges Grid; das Kachelraster bleibt breit.
-
-## Alpha 42: Antwortzahlen in eigener mobiler Rasterspalte
-
-- Die drei mobilen Themenzeilen erhalten ein zweispaltiges CSS-Grid mit einer begrenzten Titelspalte und 3,25em für die Antwortzahlen.
-- Breite Unterkategorie-Kacheln und ihre Reihenfolge bleiben unverändert.
-
-## Alpha 41: Antwortzahlen neben Themen erhalten
-
-- `contain: inline-size` verhindert, dass das breite Kachelraster die intrinsische Spaltenbreite der mobilen Thementabelle aufzieht.
-- Kachelbreite und Themenreihenfolge bleiben unverändert.
-
-## Alpha 40: Kachelraster direkt auf Bildschirmbreite
-
-- Das Kachelraster erhält die viewportbezogene Breite direkt, statt `100%` von der schmalen Tabellenzelle zu erben.
-- Die Tabellenzeile bleibt bei 100%; Desktop und Querformat bleiben unverändert.
-
-## Alpha 39: Kachelbreite unabhängig von der Thementabelle
-
-- Die mobile Unterkategorie-Zeile bekommt eine viewportbezogene Breite (`100vw - 48px`), damit die mehrspaltige Themen-Tabelle die Kacheln nicht länger auf die erste Spalte begrenzt.
-- Reihenfolge der Themen und Kacheln sowie Desktop/Querformat bleiben unverändert.
-
-## Alpha 38: volle Kachelbreite im Hochformat
-
-- Die mobile Unterkategorie-Tabellenzeile und ihre Zelle nutzen die volle Tabellenbreite, statt auf die erste Spalte beschränkt zu bleiben.
-- Die drei aktuellen Themen, Desktop und Querformat bleiben unverändert.
-
-## Alpha 37: Hochkant-Unterkategorien
-
-- In der Discourse-Mobilansicht bleiben die drei aktuellen Themen oberhalb der Unterkategorien (Variante B).
-- Die Unterkategorien erhalten darunter einspaltige Kacheln über die volle Breite mit der jeweiligen Kategorienfarbe am linken Rand.
-- Die Option `subcategory_tiles` steuert auch diese Mobilansicht. Desktop und Querformat bleiben unverändert.
-
-## Alpha 36: Button im Querformat wie Hochkant
-
-- Die große Desktop-CTA hat negative vertikale Außenabstände; diese werden im Smartphone-Querformat zurückgesetzt.
-- `#create-topic` wird auf 44 × 44 px gesetzt, ohne Text, mit zentriertem Icon.
-- Kacheln und die beiden Hauptspalten bleiben unverändert.
-
-## Alpha 35: kompakter Neuer-Thema-Button
-
-- Smartphone-Querformat: Der rote Button wird auf 48 × 48 px begrenzt und vertikal mittig ausgerichtet, nur das Icon bleibt sichtbar.
-- Kategorie- und Aktuell-Spalten sowie Kachellayout bleiben unverändert.
-
-## Alpha 34: Smartphone-Querformat
-
-- Bei Querformat auf kleinen Bildschirmen (max. 1200 px breit und max. 600 px hoch) stehen Unterkategorie-Kacheln in einer Spalte.
-- Der Button „Neues Thema“ wird in dieser Ansicht auf ein kompaktes Symbol reduziert.
-- Kategorien und Aktuell werden untereinander angeordnet.
-- Desktop bleibt unverändert. Die Hochkantansicht nutzt möglicherweise anderes Discourse-Markup; ohne DOM-Nachweis können dort fehlende Unterkategorien nicht per CSS ergänzt werden.
-
-## Alpha 33: responsive Kacheln in voller Breite
-
-- Die Kategorietabelle und ihr Tabellenkörper werden im aktivierten Kachelmodus als Block dargestellt, damit die Zeilen nicht länger auf die alte Themen-Spaltenbreite begrenzt sind.
-- Desktop: zwei flexible, gleich breite Kachelspalten; unter 768 px: eine Kachelspalte über die volle verfügbare Breite.
-- Themenzahl bleibt oben rechts, Tabellenkopf bleibt sichtbar; CSS gilt nur für `.categories-and-latest` bei aktivierten Kacheln.
-- Nach Update bitte Desktop, Mobilansicht, Tabellenkopf und den Ein-/Ausschalter prüfen.
-
-## Alpha 32: Korrektur anhand der echten Discourse-Struktur
-
-- Die tatsächlich verwendete Kategoriezeile ist `tr.has-description.no-logo` mit `td.category` und `td.topics`; Alpha 31 hatte irrtümlich `tr.category-list-item` angenommen.
-- Die volle Zeilenbreite wird nun über den vorhandenen Kategorie-Tabellenkörper und die realen Zellen hergestellt; die Themenanzahl wird rechts oben platziert.
-- Die Regel greift nur bei aktivierten Unterkategorie-Kacheln und vorhandener `.subcategories`-Struktur.
-- Bitte nach dem Update besonders den Themenzähler, den rechten Rand der Kacheln sowie Mobilansicht prüfen.
-
-## Alpha 31: volle Breite der Unterkategorie-Kacheln
-
-- Nur auf der Startseite mit Kategorien links und Aktuell rechts nehmen die Unterkategorie-Kacheln die volle Breite der linken Kategoriezeile ein, auch unterhalb der Themenanzahl.
-- Themenanzahl bleibt rechts oben; der Kategorietitel erhält Abstand zum Zähler.
-- Nur aktiv, wenn `subcategory_tiles` eingeschaltet ist. Bei ausgeschaltetem Modus bleibt das Tabellenlayout unverändert.
-- Nach Git-Update bitte die Darstellung in Discourse auf Desktop und Mobilgeräten prüfen; die Tabellenzellen werden gezielt für diese Ansicht umgestellt.
-
-## Alpha 30: Unterkategorie-Kacheln mit Feinschliff
-
-- Zwei gleich breite, flexible Kachelspalten füllen die Kategorie-Zelle aus, ohne die Themenanzahl-Spalte zu beanspruchen.
-- Lange Unterkategorienamen dürfen umbrechen statt abgeschnitten zu werden.
-- Neue Theme-Einstellung `subcategory_tiles` (Standard: aktiv) schaltet zwischen Kacheln und kompakten Textlinks um.
-- Bei deaktivierten Kacheln greifen wieder die vorhandenen festen Spaltenbreiten (`subcategory_column_width`).
-- Die Farblinien und der Hover-Effekt bleiben erhalten.
-
-## Alpha 29: Unterkategorie-Kacheln
-
-- Gleich große, kantige Link-Kacheln mit dezentem Hintergrund und Hover-/Fokuszustand.
-- Die linke Farblinie übernimmt die echte Kategoriefarbe aus der Kategorienliste; kein manuelles Farbmapping.
-- Zwei Spalten auf Desktop (bestehende Einstellungen), eine auf schmalen Bildschirmen.
-- Umsetzung in `common/common.scss` und `javascripts/discourse/api-initializers/aforum-subcategory-tiles.js`.
-- Nach Theme-Update Desktop, Mobilgeräte und beide Farbmodi prüfen; insbesondere die tatsächliche Discourse-DOM-Struktur.
-
-## Highlights
-
-- **Klassische Kategorienübersicht:** Kategorien links, aktuelle Themen rechts. Statuszähler „neu“ und „ungelesen“ werden nur neben Unterkategorien in der Kategorienliste ausgeblendet, damit deren Namen lesbar bleiben.
-- **Klare Navigation:** Kategorien, Aktuell, Neu und Heiß mit markiertem aktivem Bereich. Die Kopfzeilen der vollständigen Themenlisten erhalten eine 3-px-Linie im aForum-Blau `#0F7EC9`, passend zur Kategorienübersicht.
-- **aForum-Akzente:** schwarzer Header, blaue Navigationsmarkierung, rote Akzentlinie und auffälliger „Neues Thema“-Button.
-- **Dezenter Hover-Rahmen:** 1 px rote Innenkontur (`#d81c1c`) für Themenzeilen rechts auf der Kategorienseite sowie in den Listen **Aktuell**, **Neu** und **Heiß**. Kantige Ecken (`border-radius: 0`), 180 ms Übergang, keine Layoutverschiebung.
-- **Willkommensbanner:** Slogan „Die Aprilia Community von Biker für Biker“ in aForum-Blau (`#0F7EC9`); Begrüßung, Suchfeld und Hintergrund bleiben unverändert. Der Banner wird weiterhin von einer separaten Komponente bereitgestellt. Eine dauerhaft sichtbare, kantige 1-px-Kontur in Sponsorenrot (`#d81c1c`) fasst ihn ein. Beide Farben sind ab Alpha 25 je Farbmodus über die Theme-Einstellungen anpassbar.
-- **Light & Dark:** zwei mitgelieferte Farbschemata und palettenabhängige Feinabstimmungen.
-- **Konfigurierbar:** zentrale Farben und weitere Designparameter über `settings.yml`.
-- **Native Discourse-Navigation:** keine eigene Sidebar-Nachbildung und kein zusätzliches „Mehr“-Popup.
+Die mobile Kategorienansicht verwendet eigenes Discourse-Markup. Die Darstellung hängt deshalb auch vom gewählten Kategorien-Seitenstil und den aktiven Komponenten ab.
 
 ## Installation
 
-### Neues Theme
+1. In der Discourse-Administration **Darstellung / Erscheinungsbild → Themes & Komponenten** öffnen.
+2. **Installieren → Aus einem Git-Repository** wählen.
+3. Diese Repository-URL eintragen:
 
-1. Repository in GitHub bereitstellen.
-2. In Discourse **Admin → Darstellung → Themes & Komponenten** öffnen.
-3. **Installieren → Aus einem Git-Repository** auswählen.
-4. Repository-URL eingeben und das Theme installieren.
-5. Theme aktivieren und die Darstellung auf Desktop und Mobilgeräten prüfen.
+   ```text
+   https://github.com/ff4f-git/aForum-Theme
+   ```
 
-### Bestehendes Alpha-Theme aktualisieren
+4. **aForum Beta 1.1** als Haupttheme aktivieren und die gewünschten hellen und dunklen Farbpaletten zuweisen.
+5. Für die gezeigte Desktop-Startseite den Kategorien-Seitenstil **Kategorien und aktuelle Themen** auswählen.
+6. Für den aForum-Schriftmix **Oxanium** als Discourse-Basisschrift einstellen. Inter wird vom Theme über Google Fonts geladen.
+7. Gewünschte zusätzliche Komponenten zuweisen und die Darstellung auf Desktop und Smartphone prüfen.
 
-1. Die Dateien dieses Releases in das **Stammverzeichnis** des bestehenden Theme-Repositories übernehmen – nicht in einen zusätzlichen Unterordner.
-2. Änderungen committen und nach GitHub übertragen.
-3. In Discourse das Git-Theme aktualisieren.
-4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
+> Das Repository ist ein **Haupttheme**, keine Theme-Komponente. Ein exaktes Abbild der Live-Seite erfordert zusätzlich deren Banner, Logos, Inhalte, Farbpaletten und Komponenten.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 29` und die Version `alpha-29` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+### Ein installiertes Theme aktualisieren
 
-## Bannerfarben einstellen
+In der Discourse-Administration das installierte Git-Theme öffnen und aktualisieren. Danach die Seite neu laden und Startseite, Themenlisten und einen geöffneten Thread in beiden Farbmodi prüfen.
 
-Unter **Admin → Erscheinungsbild → Themes & Komponenten → aForum Alpha 28 → Einstellungen** stehen vier zusätzliche Textfelder bereit:
+Beim Wechsel von älteren Alpha-Versionen wurden viele Detailoptionen entfernt. Individuelle Werte dieser entfernten Optionen werden nicht automatisch übernommen; bei Bedarf vor dem Update sichern. Der lokal vergebene Theme-Anzeigename kann nach einem Update bestehen bleiben.
 
-| Einstellung | Standard, wenn leer |
+## Einstellungen
+
+Alle aktuellen Optionen stehen in [`settings.yml`](settings.yml). Zahlenwerte besitzen feste Wertebereiche; ob Discourse sie als Zahlenfeld oder grafischen Regler darstellt, hängt von der Admin-Oberfläche ab.
+
+### Übersicht & Navigation
+
+| Einstellung | Standard | Wirkung |
+| --- | --- | --- |
+| `max_width` | `1320` px | Maximale Desktop-Forenbreite; 900–2000 px. |
+| `compact_lists` | An | Kompaktere Kategorietabelle; Beschreibungen auf zwei Zeilen begrenzt. |
+| `subcategory_tiles` | An | Unterkategorien als Kacheln statt kompakter Textlinks. |
+| `subcategory_columns` | `2` | 1–3 Unterkategorie-Spalten; mobile Regeln wechseln auf eine Spalte. |
+| `lock_parent_category_links` | An | Deaktiviert Mausklicks auf die Hauptkategorie-Titel der Kategorien-Startansicht. |
+| `nav_background_enabled` | An | Zeigt die Hintergrundfläche der horizontalen Navigation. |
+| `bar_height` | `52` px | Höhe der Navigationsleiste; 36–80 px. |
+
+**Überkategorie-Sperre:** Die Umsetzung ist bewusst rein CSS-basiert. Unterkategorie-Links bleiben bedienbar; Tastaturaktivierung und direkte Kategorie-URLs bleiben möglich. Die Einstellung verändert keine Discourse-Berechtigungen.
+
+### Proportionen & Schatten
+
+| Einstellung | Standard | Wirkung |
+| --- | --- | --- |
+| `panel_shadow` | An | Schatten um die Forenfläche. |
+| `shadow_opacity` | `18` % | Schattenstärke; 0–60 %. |
+| `header_height` | `80` px | Desktop-Kopfzeile; 56–140 px. Mobil bleibt sie bei 56 px. |
+| `avatar_radius` | `3` px | Gemeinsamer Avatar-Eckenradius; 0–50 px. 0 = eckig, große Werte runden übliche Avatargrößen ab. |
+
+### Farben
+
+HEX-Farbwerte mit `#` eingeben, beispielsweise `#0F7EC9`. Hell und Dunkel lassen sich getrennt einstellen.
+
+| Einstellung | Standard | Wirkung |
+| --- | --- | --- |
+| `color_accent_light` / `color_accent_dark` | Leer | Allgemeine Theme-Akzente; leer übernimmt `quaternary` aus der jeweiligen Palette. |
+| `color_nav_light` / `color_nav_dark` | Leer | Hintergrund der Navigationsleiste; leer übernimmt `header_background`. |
+| `banner_subtitle_color_light` / `banner_subtitle_color_dark` | `#0f7ec9` | Untertitel des separat eingerichteten Willkommensbanners. |
+
+**Welche Farbe kommt woher?**
+
+| Element | Farbquelle |
 | --- | --- |
-| Sloganfarbe Hell | `#0F7EC9` |
-| Sloganfarbe Dunkel | `#0F7EC9` |
-| Bannerrahmen Hell | `#d81c1c` |
-| Bannerrahmen Dunkel | `#d81c1c` |
+| Aktiver Tab „Kategorien“, „Aktuell“ usw. | `tertiary` der Discourse-Farbpalette |
+| „Neues Thema“-Button | `quaternary` der Discourse-Farbpalette |
+| Allgemeine primäre Buttons und bestimmte Zähler | Theme-Akzentfarbe, ersatzweise `quaternary` |
+| Navigationshintergrund | Theme-Navigationsfarbe, ersatzweise `header_background` |
+| Kategorien und ihre farbigen Markierungen | Discourse-Kategorieeinstellungen |
+| Linker Hover-Streifen der Themenlisten | Festes `#FF0000`, 3 px |
+| Markenblaue Bereichsakzente | Festes `#0F7EC9` |
 
-Eine gewünschte Farbe als **Hexwert mit `#`** eingeben, zum Beispiel `#0088cc`. **Leere Felder** behalten die bisherige aForum-Farbe bei. Die Werte werden für die jeweilige helle oder dunkle Farbpalette separat verwendet. Rahmenstärke (1 px), eckige Kanten (0 px) und Layout bleiben unverändert. Ungültige Farbwerte vermeiden.
+Damit lassen sich die schwarze Leiste, der blaue aktive Tab und der rote „Neues Thema“-Button unabhängig voneinander zuordnen. Die Akzentfelder überschreiben nicht automatisch die Farbe dieses Buttons.
 
-## Theme-Komponenten
+## Was separat eingerichtet wird
 
-Das Theme ist das **Haupttheme**. Folgende Erweiterungen werden separat verwaltet und sind **nicht** Bestandteil dieses Repositories:
+Der Screenshot zeigt das Zusammenspiel des Hauptthemes mit der aForum-Installation. Diese Bestandteile werden außerhalb dieses Repositories verwaltet:
 
-- **aForum Premium Sponsors:** Sponsor-Kacheln und deren Konfiguration.
-- **Category Badge Styles EVO:** unabhängig konfigurierbare Kategorie-Badges.
-- **Force Mobile Homepage:** mobile Startseitensteuerung, sofern installiert.
-
-Diese Komponenten müssen bei Bedarf separat installiert und dem aktiven Theme zugewiesen sein. Das Willkommens-/Suchbanner wird ebenfalls über die jeweilige Discourse-Einrichtung verwaltet.
-
-## Projektstruktur
-
-| Datei | Zweck |
+| Bestandteil | Einrichtung |
 | --- | --- |
-| `about.json` | Theme-Metadaten, Farbpaletten und SVG-Icon-Registrierung |
-| `settings.yml` | Konfigurierbare Farben und Designoptionen |
-| `common/color_definitions.scss` | Zentrale Farbdefinitionen |
-| `common/common.scss` | Layout, Navigation, Themenlisten und Hover-Effekte |
-| `javascripts/discourse/api-initializers/aforum-section-icons.js` | Icons und Markierung der Bereichsüberschriften |
-| `javascripts/discourse/api-initializers/aforum-subscribe-glow.js` | Darstellung des schlichten Bronze-Abonnieren-Links; Dateiname aus Kompatibilitätsgründen beibehalten |
+| Willkommensbanner mit Suche und Motorradmotiv | Separate Banner-Komponente und deren Inhalte |
+| Sponsor-Kacheln | **aForum Premium Sponsors** |
+| Zusätzliche Badge-Gestaltung | **Category Badge Styles EVO**, sofern verwendet |
+| Mobile Startseitensteuerung | **Force Mobile Homepage**, sofern verwendet |
+| Logo, Kategorien, Berechtigungen und Inhalte | Discourse-Administration |
+| Weitere Seitenelemente, etwa der Footer | Jeweilige zusätzliche Einrichtung der Live-Seite |
 
-## Versionsverlauf
+Die nativen Discourse-Navigationsfunktionen bleiben die Grundlage. Das Theme ersetzt keine Kategorie-Berechtigungen oder redaktionelle Konfiguration.
 
-| Version | Wesentliche Änderung |
+## Aufbau des Repositories
+
+| Pfad | Aufgabe |
 | --- | --- |
-| **Alpha 28** | Blendet Neu-/Ungelesen-Zähler bei Unterkategorien in der Kategorienübersicht aus; Themenlisten und übrige Benachrichtigungen bleiben unverändert |
-| **Alpha 27** | Blaue Trennlinie unter den Tabellenkopfzeilen in Aktuell, Neu und Heiß, passend zur Kategorienübersicht |
-| **Alpha 25** | Vereinheitlichung der Theme-Blautöne auf das Logoblau `#0F7EC9` |
-| **Alpha 24** | Vier optionale Hex-Farbwerte für Slogan und Bannerrahmen, separat für Hell und Dunkel; leer = bisheriger Standard |
-| **Alpha 23** | Dauerhafte 1-px-Rotkontur um den Willkommensbanner, eckig und ohne Layoutverschiebung |
-| **Alpha 22** | Blaue Unterzeile im Willkommensbanner, gezielt über `.welcome-banner__subheader` |
-| **Alpha 21** | Rote, kantige 1-px-Hover-Kontur auch in den vollständigen Themenlisten Aktuell, Neu und Heiß |
-| **Alpha 20** | Einführung der feinen roten Hover-Kontur für die aktuellen Themen auf der Kategorienseite; anschließend Eckenradius auf 0 gesetzt |
-| **Alpha 19** | Dezenter, palettenbasierter Dark-Mode-Feinschliff für Zeilenflächen und Lesbarkeit |
-| **Alpha 18** | Rückkehr zur nativen Discourse-Navigation; Discourse-konforme SVG-Icon-Registrierung |
-| **Alpha 17** | Zwischenstand mit eigener „Mehr“-Navigation, später wieder entfernt |
-| **Alpha 16** | Zwischenstand mit angepasster Sidebar, später wieder entfernt |
-| **Alpha 14** | Bereinigung der Metadaten und Dokumentation |
-| **Alpha 13** | Verbesserte Erkennung der Bereichsüberschriften |
-| **Alpha 12** | Überarbeitete Erkennung der rechten Kopfzeile |
-| **Alpha 11** | Anpassungen an Icons und Schriftgrößen |
-| **Alpha 10** | Bronze-Abonnieren-Link sowie blaue und rote Bereichsakzente |
+| [`about.json`](about.json) | Theme-Metadaten, Farbpaletten und SVG-Icons |
+| [`settings.yml`](settings.yml) | Alle konfigurierbaren Optionen |
+| [`common/common.scss`](common/common.scss) | Layout, Typografie, Kacheln, Navigation und Themenlisten |
+| [`common/color_definitions.scss`](common/color_definitions.scss) | Farbvariablen und Zuordnung zu Discourse-Paletten |
+| [`javascripts/discourse/api-initializers/`](javascripts/discourse/api-initializers/) | Ergänzungen für Bereichsüberschriften, Kategoriefarben und Navigation |
+| [`docs/images/`](docs/images/) | Screenshots für die Dokumentation |
+| [`CHANGELOG.md`](CHANGELOG.md) | Zusammengefasste Versionsgeschichte |
 
-## Hinweise
+## Entwicklung & Rückmeldungen
 
-Die tatsächliche Darstellung hängt von der verwendeten Discourse-Version, den aktiven Farbpaletten und weiteren Theme-Komponenten ab. Besonders nach Updates sollten Kategorienübersicht, Themenlisten, Mobilansicht und beide Farbmodi geprüft werden.
+Das Theme wird für aForum entwickelt. Es ist als **Beta 1.1** gekennzeichnet; eine konkrete Mindestversion von Discourse ist derzeit nicht dokumentiert. Nach Discourse-Updates sollten insbesondere die Kategorienansichten geprüft werden, da das Theme gezielt deren HTML-Struktur gestaltet.
 
-**Projekt:** [aForum.net](https://aforum.net) · Entwickelt und erprobt für die Aprilia-Community.
+Für einen hilfreichen Fehlerbericht bitte angeben:
 
+- Discourse-Version und verwendete Theme-Version beziehungsweise Commit.
+- Betroffene Seite, Farbmodus, Gerät und Ausrichtung.
+- Aktive zusätzliche Theme-Komponenten.
+- Screenshot sowie eine kurze Beschreibung des erwarteten Verhaltens.
 
-### Alpha 27
+Die Schrift Inter wird extern über Google Fonts angefordert. Bei einer Einrichtung ohne externe Schriftabrufe muss die Einbindung entsprechend angepasst werden; im Theme sind Arial und Sans-Serif als Rückfall vorgesehen.
 
-- Harmonisiert Hover-, Fokus- und Aktivzustände im Hamburger-Menü und in der Sidebar.
-- Verhindert einen hellen aktiven Menühintergrund im Dunkelmodus und erhält die rote aktive Markierung.
-- Verwendet die vorhandene Theme-Farbvariable `--af-hover` statt zusätzlicher externer CSS-Overrides.
+---
 
-### Alpha 28
+<div align="center">
 
-- Ergänzt in `common/common.scss` eine auf `.category-list .subcategory` begrenzte CSS-Regel für `.badge-notification`, `.unread-new` und `.category-unread`.
-- Unterkategorienamen sollen dadurch nicht mehr von Statusangaben wie „1 ungelesenes“ und „2 neue“ verdrängt werden.
-- Keine Änderung an Discourse-Einstellungen, JavaScript, Themenstatus oder der Anzeige außerhalb der Kategorienliste.
-- Nach Installation mit einem Benutzerkonto mit neuen/ungelesenen Unterkategorie-Themen auf Desktop und Mobilgerät prüfen; je nach Discourse-Version können zusätzliche CSS-Klassen relevant sein.
+**Von Bikern für Biker.**
+
+Entwickelt für [aForum.net – die Aprilia-Community](https://aforum.net).
+
+</div>
