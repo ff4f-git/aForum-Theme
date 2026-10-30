@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.46
+
+- Zwischenansicht 700–767 px: zusätzliches vertikales Padding der älteren Mobile-Navigationsregel entfernt.
+- Höhe der schwarzen Navigationsleiste an Desktop angepasst; roter Icon-Button und dessen 2-px-Überstand bleiben unverändert.
+- Keine Änderungen an Menüelementen, Kategorien, Themenkarten oder anderen Breakpoints.
+
 ## Beta 1.45
 
 - Zwischenansicht 700–767 px: „Neues Thema“ als 52-px-Icon-Button mit zentriertem Symbol, 3-px-Radius und 2-px-Überstand.
