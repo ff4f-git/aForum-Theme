@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.29
+
+- CSS-only: Der 3-px-Hover-Streifen in der Desktop-Spalte „Aktuell“ folgt bei den bestätigten Themenkategorien Stammtisch (Discourse-Kategoriefarbe) und Biete (grüne Theme-Erfolgsfarbe) ihrer Kategorie.
+- Keine neue JavaScript-Datei; unbekannte Kategorien behalten vorerst den bisherigen Akzent. Weitere Zuordnungen benötigen bestätigte Kategorie-IDs.
+- Mobilansicht, Normalzustand und Kartenlayout bleiben unverändert.
+
 ## Beta 1.28
 
 - Desktop-Unterkategorien: deutlich sichtbarer Hover mit Kategoriefarb-Tönung, farbigem Rahmen und Pointer-Cursor.

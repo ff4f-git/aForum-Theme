@@ -1567,3 +1567,27 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.29 – CSS-only category hover for confirmed
+// Discourse topic-row classes. No JavaScript initializer.
+// Other categories retain the existing accent until their
+// category ID/color mapping has been verified.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .latest-topic-list {
+    .latest-topic-list-item.category-community-stammtisch {
+      --af-topic-hover-color: var(--category-37-color, #0f7ec9);
+    }
+
+    .latest-topic-list-item.category-marktplatz-biete {
+      --af-topic-hover-color: var(--success, #1f8a4c);
+    }
+
+    .latest-topic-list-item:hover,
+    .latest-topic-list-item:focus-within {
+      box-shadow: inset 3px 0 0
+        var(--af-topic-hover-color, var(--af-accent));
+    }
+  }
+}
