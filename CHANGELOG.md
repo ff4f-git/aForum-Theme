@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.38
+
+- Rückbau der optischen Navigationsänderungen aus Beta 1.37: ursprüngliche klare Tab-Markierung, Abstände und Button-Darstellung wiederhergestellt.
+- Keine Änderungen an Themenkarten, Banner, Werbung, JavaScript oder Mobilansicht.
+
 ## Beta 1.37
 
 - Desktop-Navigation optisch verfeinert: dezente untere Kontur, 3-px-Tab-Ecken, etwas mehr Tab-Innenabstand und zurückhaltende Hoverfarben.
