@@ -1,14 +1,21 @@
-# aForum · Alpha 32
+# aForum · Alpha 33
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 32 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 33 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 33: responsive Kacheln in voller Breite
+
+- Die Kategorietabelle und ihr Tabellenkörper werden im aktivierten Kachelmodus als Block dargestellt, damit die Zeilen nicht länger auf die alte Themen-Spaltenbreite begrenzt sind.
+- Desktop: zwei flexible, gleich breite Kachelspalten; unter 768 px: eine Kachelspalte über die volle verfügbare Breite.
+- Themenzahl bleibt oben rechts, Tabellenkopf bleibt sichtbar; CSS gilt nur für `.categories-and-latest` bei aktivierten Kacheln.
+- Nach Update bitte Desktop, Mobilansicht, Tabellenkopf und den Ein-/Ausschalter prüfen.
 
 ## Alpha 32: Korrektur anhand der echten Discourse-Struktur
 
