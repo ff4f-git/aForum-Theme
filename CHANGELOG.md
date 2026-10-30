@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.42
+
+- Schmaler Desktop (768–979 px): Standardabstand des Icons im kompakten „Neues Thema“-Button entfernt, damit es trotz ausgeblendeter Beschriftung mittig sitzt.
+- Quadratische 48-px-Schaltfläche und Mobilansicht bleiben unverändert.
+
 ## Beta 1.41
 
 - Schmaler Desktop (768–979 px): Der kompakte „Neues Thema“-Icon-Button ist jetzt exakt 48 × 48 px statt höher als breit.

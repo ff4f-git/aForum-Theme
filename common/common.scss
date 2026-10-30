@@ -1809,6 +1809,15 @@ a:not([class]) {
       .d-button-label {
         display: none;
       }
+
+      // Discourse reserves right-hand spacing for the hidden text label.
+      // Remove that offset so the remaining pen icon sits at true center.
+      > .d-icon,
+      > svg.d-icon {
+        margin: 0;
+        margin-inline: 0;
+        flex: 0 0 auto;
+      }
     }
   }
 }
