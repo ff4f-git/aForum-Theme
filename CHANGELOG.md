@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.40
+
+- Desktop 768–979 px: Unterkategorien wechseln von zwei auf eine Kachelspalte, bevor Bezeichnungen unschön umbrechen.
+- Desktop 768–979 px: „Neues Thema“ bleibt als roter, 48 px breiter Icon-Button erhalten; nur die sichtbare Beschriftung wird ausgeblendet.
+- Die zwei Hauptspalten, Admin-Werkzeuge und die Discourse-Mobilansicht bleiben unverändert. Kein JavaScript.
+
 ## Beta 1.39
 
 - Desktop: „Neues Thema“ als wichtigste Aktion dezent betont – 2 px Überstand oben und unten, 3-px-Ecken und leichter Schatten.

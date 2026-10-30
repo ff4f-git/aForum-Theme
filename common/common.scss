@@ -1774,3 +1774,37 @@ a:not([class]) {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 }
+
+// ======================================================
+// Beta 1.40 – Narrow desktop (768–979px).
+// Preserve Discourse desktop markup and the two main columns.
+// ======================================================
+@media (min-width: 768px) and (max-width: 979px) {
+  @if af-on($subcategory_tiles) {
+    .category-list .subcategories,
+    .categories-and-latest .category-list .subcategories,
+    .categories-and-latest .category-list tbody > tr:has(> td.category > .subcategories) .subcategories {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .navigation-container {
+    #create-topic {
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 0 0 48px;
+      width: 48px;
+      min-width: 48px;
+      max-width: 48px;
+      padding-inline: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      border-radius: 3px;
+
+      .d-button-label {
+        display: none;
+      }
+    }
+  }
+}
