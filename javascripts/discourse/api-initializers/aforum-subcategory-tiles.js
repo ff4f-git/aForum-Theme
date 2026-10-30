@@ -17,6 +17,29 @@ export default apiInitializer("1.8.0", (api) => {
     });
   };
 
+  // Beta 1.58: Mobile category cards use a different DOM from desktop rows.
+  // Read Discourse's category badge color first, then its native category
+  // border. Do not copy the theme's neutral card border as a category color.
+  const syncMobileColors = () => {
+    document.querySelectorAll(".mobile-view .category-list-item").forEach((card) => {
+      const badge = card.querySelector(
+        ".category-title-link .badge-category__wrapper, .category-text-title .badge-category__wrapper, .badge-category__wrapper"
+      );
+      const badgeColor = badge
+        ? getComputedStyle(badge).getPropertyValue("--category-badge-color").trim()
+        : "";
+      const nativeCategory = card.querySelector(".category");
+      const nativeColor = nativeCategory
+        ? getComputedStyle(nativeCategory).borderLeftColor
+        : "";
+      const color = badgeColor || (nativeColor && nativeColor !== "transparent"
+        && nativeColor !== "rgba(0, 0, 0, 0)" ? nativeColor : "");
+      if (!color) return;
+      card.style.setProperty("--af-category-icon-color", color);
+      card.style.setProperty("--af-subcategory-accent", color);
+    });
+  };
+
   // Beta 1.52: Use the existing, proven category initializer for topic
   // cards as well. The separate topic initializer did not run reliably.
   const topicSelector =
@@ -38,6 +61,7 @@ export default apiInitializer("1.8.0", (api) => {
 
   const syncAll = () => {
     syncColors();
+    syncMobileColors();
     document.querySelectorAll(topicSelector).forEach(syncTopic);
   };
 

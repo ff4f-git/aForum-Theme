@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.58
+
+- Mobile Kategorie-Karten: dynamische Kategoriefarbe aus Discourse-Badge bzw. Kategorie-Rand auf die Icon-Kacheln uebertragen.
+- Unterkategorie-Hover unter 715 px: farbiger Hintergrund, Rahmen und Tastaturfokus wie auf Desktop.
+- Keine Aenderung an Themen, Navigation und Desktop-Layout.
+
 ## Beta 1.57
 
 - Kategorie-/Aktuell-Zweispaltenansicht bei 640–714 px auf eine Spalte umgestellt; ab 715 px bleibt die bisherige Aufteilung.
