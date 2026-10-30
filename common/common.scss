@@ -1,3 +1,32 @@
+// Alpha 44: Oxanium remains the Discourse base/headline font.
+// Load Inter separately for reading-heavy content only.
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --af-reading-font: "Inter", Arial, sans-serif;
+}
+
+// Long-form posts, topic titles, excerpts and descriptions use Inter.
+// Category labels, navigation, headings and buttons keep Oxanium.
+.cooked,
+.d-editor-preview,
+.topic-body .cooked,
+.topic-list .main-link a.title,
+.latest-topic-list-item .main-link a.title,
+.category-topic-link a.title,
+.topic-list .main-link .topic-excerpt,
+.topic-excerpt,
+.category-description,
+.category-description .category-description-text,
+.category-box .description,
+.category-list .category-description,
+.category-list .category-description-text,
+.category-list .category-text .category-description,
+.topic-post .post-notice,
+.topic-post .post-actions .post-action-menu__description {
+  font-family: var(--af-reading-font);
+}
+
 // aForum alpha-9. Farben nur über --af-* (siehe color_definitions.scss).
 
 // Schalter robust auslesen: funktioniert, egal ob die Einstellung als Bool oder als Text ankommt.
