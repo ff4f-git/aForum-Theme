@@ -1,3 +1,9 @@
+## Beta 1: Überkategorie-Links optional sperren
+
+- Neue Theme-Einstellung `lock_parent_category_links` (standardmäßig an): Hauptkategorie-Titel in der Kategorien-Startansicht reagieren nicht mehr auf Mausklicks. Unterkategorien bleiben anklickbar.
+- Rein CSS-basiert (`pointer-events: none`); Tastaturbedienung und direkte URLs bleiben technisch möglich. Keine Änderung an Kategorie-Berechtigungen.
+- Erste Beta-Version nach Alpha 51; übriges Layout unverändert.
+
 ## Alpha 51: Einheitliches Aprilia-Rot
 
 - Linker Hover-Streifen in „Aktuell“ von `#d81c1c` auf `#ff0000` umgestellt, passend zum „NEUES THEMA“-Button.
