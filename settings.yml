@@ -178,6 +178,10 @@ latest_avatar_size:
   description: "Größe der Avatare in der Liste 'Aktuell' in px."
 
 # Kategorien
+lock_parent_category_links:
+  type: bool
+  default: true
+  description: "Links der Überkategorien auf der Kategorien-Startseite für Mausklicks deaktivieren. Unterkategorien bleiben anklickbar. Tastatur-Links bleiben technisch erhalten."
 subcategory_tiles:
   type: bool
   default: true
