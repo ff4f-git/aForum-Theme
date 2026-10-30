@@ -39,10 +39,9 @@ $af-page-bg-default: dark-light-choose(
   --af-header-bg: #{$header_background};
   --af-header-text: #{$header_primary};
 
-  // Willkommensbanner: unabhängig je Farbmodus einstellbar.
-  // Leere Felder behalten die bisherigen Alpha-23-Farben bei.
-  --af-banner-subtitle: #{#0f7ec9};
-  --af-banner-border: #{#d81c1c};
+  // Bewährte Bannerfarben als feste Theme-Standards.
+  --af-banner-subtitle: #0f7ec9;
+  --af-banner-border: #d81c1c;
 
   // Linien, Hover, gedämpfter Text
   --af-border: #{mix($primary, $secondary, 14%)};
