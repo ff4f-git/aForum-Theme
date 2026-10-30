@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.36
+
+- Desktop-Themenkarten: 3-px-Hoverstreifen links in der Kategoriefarbe (u. a. Stammtisch blau, Biete grün, Boxengasse rot, RSV4/Tuono violett).
+- CSS-only mit vorhandenen Discourse-Kategorieklassen; unbekannte Kategorien verwenden die Akzentfarbe.
+- Tabellenstruktur, Markierung „letzter Besuch“, Mobilansicht und JavaScript unverändert.
+
 ## Beta 1.35
 
 - Desktop: Themenzeilen der vollständigen Themenliste als dezente Karten mit 10 px Abstand, 3-px-Ecken, Rahmen und mehr Innenabstand.

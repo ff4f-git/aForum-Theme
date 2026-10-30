@@ -1712,3 +1712,51 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.36 – Category-colored hover stripe on full topic cards.
+// Only the first table cell receives the stripe; native table
+// structure and the last-visit separator remain untouched.
+// ======================================================
+@media (min-width: 768px) {
+  #list-area .topic-list:not(.category-list) > tbody > tr.topic-list-item {
+    --af-topic-hover-color: var(--af-accent);
+
+    &.category-community-stammtisch,
+    &.category-community-newsletter,
+    &.category-community-wiki {
+      --af-topic-hover-color: var(--category-37-color, #0f7ec9);
+    }
+
+    &.category-marktplatz-biete {
+      --af-topic-hover-color: var(--category-23-color, #1f8a4c);
+    }
+
+    &.category-boxengasse-offtopic {
+      --af-topic-hover-color: var(--category-47-color, #ff0000);
+    }
+
+    &.category-rsv4-tuono-v4-technik-hilfe,
+    &.category-rsv4-tuono-v4-bilder-umbau {
+      --af-topic-hover-color: var(--category-21-color, #6f36ae);
+    }
+
+    &.category-downloads-guzzidiag-ecu-tools {
+      --af-topic-hover-color: var(--category-51-color, #12a89d);
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: none;
+
+      > td:first-child {
+        box-shadow: inset 3px 0 0 var(--af-topic-hover-color);
+      }
+    }
+
+    > td:first-child {
+      box-shadow: inset 3px 0 0 transparent;
+      transition: background-color 180ms ease, box-shadow 180ms ease;
+    }
+  }
+}
