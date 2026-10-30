@@ -1,4 +1,4 @@
-# aForum · Alpha 28
+# aForum · Alpha 29
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
@@ -9,6 +9,14 @@ Alpha 28 verbindet eine klassische, übersichtliche Forenansicht mit einer eigen
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 29: Unterkategorie-Kacheln
+
+- Gleich große, kantige Link-Kacheln mit dezentem Hintergrund und Hover-/Fokuszustand.
+- Die linke Farblinie übernimmt die echte Kategoriefarbe aus der Kategorienliste; kein manuelles Farbmapping.
+- Zwei Spalten auf Desktop (bestehende Einstellungen), eine auf schmalen Bildschirmen.
+- Umsetzung in `common/common.scss` und `javascripts/discourse/api-initializers/aforum-subcategory-tiles.js`.
+- Nach Theme-Update Desktop, Mobilgeräte und beide Farbmodi prüfen; insbesondere die tatsächliche Discourse-DOM-Struktur.
 
 ## Highlights
 
@@ -38,7 +46,7 @@ Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Da
 3. In Discourse das Git-Theme aktualisieren.
 4. Kategorienübersicht, Aktuell, Neu und Heiß sowie Light/Dark prüfen.
 
-**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 28` und die Version `alpha-28` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
+**Hinweis:** Discourse kann den lokal vergebenen Anzeigenamen eines bereits installierten Themes beibehalten. In `about.json` sind der Name `aForum Alpha 29` und die Version `alpha-29` hinterlegt; bei Bedarf den Anzeigenamen in der Discourse-Administration anpassen.
 
 ## Bannerfarben einstellen
 
