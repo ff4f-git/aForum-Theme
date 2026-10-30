@@ -1,3 +1,9 @@
+## Alpha 50: Dezenter Hover in „Aktuell“
+
+- Vollständigen roten Hover-Rahmen der rechten Themenliste durch einen 3-Pixel-Streifen links ersetzt.
+- Bestehende dezente Hover-Fläche bleibt erhalten; keine Layoutverschiebung.
+- Andere Themenlisten und mobile Kacheln unverändert.
+
 ## Alpha 49: Gerader Antworten-Button
 
 - Der rote Antworten-Button am Ende eines Themas verwendet keine kursive Schrift mehr.
