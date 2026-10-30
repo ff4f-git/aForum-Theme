@@ -701,8 +701,33 @@ img.avatar,
   @if af-on($subcategory_tiles) {
     // The mobile subcategory row contains a single <td> without colspan.
     // Let this row span the entire topic table instead of its first column.
+    // Alpha 43: The one-cell subcategory row and two-cell topic rows
+    // cannot share intrinsic table column sizing reliably. Remove this
+    // mobile-only category table from the table formatting context.
     .mobile-view .category-list-item > table.topic-list {
+      display: block;
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+
+      > tbody {
+        display: block;
+        width: 100%;
+        min-width: 0;
+
+        > tr:not(.category-topic-link):not(.subcategories-list) {
+          display: block;
+          width: 100%;
+
+          > th,
+          > td {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+          }
+        }
+      }
     }
 
     // Alpha 42: Featured topic rows have two cells (title and reply count).
