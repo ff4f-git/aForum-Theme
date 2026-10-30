@@ -1,3 +1,8 @@
+## Alpha 51: Einheitliches Aprilia-Rot
+
+- Linker Hover-Streifen in „Aktuell“ von `#d81c1c` auf `#ff0000` umgestellt, passend zum „NEUES THEMA“-Button.
+- Alle übrigen Farben und Hover-Effekte unverändert.
+
 ## Alpha 50: Dezenter Hover in „Aktuell“
 
 - Vollständigen roten Hover-Rahmen der rechten Themenliste durch einen 3-Pixel-Streifen links ersetzt.
