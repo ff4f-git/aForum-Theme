@@ -34,5 +34,8 @@
       "fire",
       "list"
     ]
-  }
+  },
+  "screenshots": [
+    "screenshots/aforum-light.jpg"
+  ]
 }
