@@ -459,27 +459,70 @@ img.avatar,
     border-bottom: 1px solid var(--af-border);
   }
 
-  // Unterkategorien: Spalten mit fester Breite
+  // Alpha 29: gleich grosse, kantige Unterkategorie-Kacheln.
+  // Die Kategorie-Akzentfarbe wird durch den kleinen Initializer
+  // von der bereits vorhandenen linken Kategorie-Kante uebernommen.
   .subcategories {
     display: grid;
-    // Feste Spaltenbreite: die zweite Spalte beginnt in jeder Kategorie an derselben Stelle
     grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
+    grid-auto-rows: minmax(42px, auto);
     justify-content: start;
-    gap: 0.35em 0;
+    gap: 7px 8px;
     margin-top: 0.7em;
     font-size: 0.93em;
 
     @media (max-width: 767px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 
   .subcategory {
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
     min-width: 0;
+    width: 100%;
+    min-height: 42px;
     margin: 0;
+    padding: 0;
+    background: var(--af-hover);
+    border-left: 3px solid var(--af-subcategory-accent, var(--af-brand-blue));
+    border-radius: 0;
+    transition: background-color 160ms ease, box-shadow 160ms ease;
 
-    // Alpha 28: Nur Statuszähler an Unterkategorien ausblenden.
-    // Neue/ungelesene Themen bleiben in den Themenlisten sichtbar.
+    &:hover,
+    &:focus-within {
+      background: color-mix(in srgb, var(--af-hover) 78%, var(--primary));
+      box-shadow: inset 0 0 0 1px var(--af-border);
+    }
+
+    // Discourse rendert je nach Version badge-wrapper und Links unterschiedlich.
+    // Die gesamte Kachel bleibt die sichtbare und klickbare Flaeche.
+    > a,
+    > .badge-wrapper,
+    > .badge-category__wrapper {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 7px 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      text-transform: uppercase;
+      line-height: 1.25;
+
+      &:focus-visible {
+        outline: 2px solid var(--af-brand-blue);
+        outline-offset: -2px;
+      }
+    }
+
     .badge-notification,
     .unread-new,
     .category-unread {
