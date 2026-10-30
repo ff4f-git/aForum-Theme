@@ -739,6 +739,18 @@ img.avatar,
   }
 }
 
+// Alpha 47: Match the square, flush active category tab on desktop.
+@media (min-width: 768px) {
+  .navigation-container #create-topic {
+    border-radius: 0;
+    box-shadow: none;
+    align-self: stretch;
+    height: var(--af-bar-h);
+    min-height: var(--af-bar-h);
+    margin-block: 0;
+  }
+}
+
 // Alpha 46: Calm the prominent new-topic CTA on desktop.
 // Keep the existing red palette and mobile compact-button rules.
 @media (min-width: 768px) {
