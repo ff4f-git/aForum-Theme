@@ -2,6 +2,13 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.21
+
+- Linke Desktop-Kategoriespalte in eigenständige, dezent umrandete Karten gegliedert.
+- Icon, Titel, Beschreibung und Themenanzahl als zusammenhängender Kopfbereich mit abgestimmten Abständen.
+- Unterkategorien als ruhige, leicht abgesetzte Flächen ohne dominante Seitenstreifen, mit 3 px Eckenrundung.
+- Mobile-Sonderlayout und rechte Themenliste bleiben unverändert.
+
 ## Beta 1.2
 
 - Native Hauptkategorie-Symbole als 36 × 36 px große Farbkacheln mit 3 px Eckenrundung und weißem Icon.

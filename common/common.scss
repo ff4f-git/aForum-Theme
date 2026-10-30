@@ -1289,3 +1289,77 @@ a:not([class]) {
     margin-right: 0.4em;
   }
 }
+
+// ======================================================
+// Beta 1.21 – ruhige Kategorie-Karten auf der Startseite.
+// Bewusst auf die linke Desktop-Kategoriespalte begrenzt:
+// Mobile-Portrait verwendet eine eigene Tabellenstruktur.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .category-list {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    > tbody {
+      display: block;
+
+      > tr:has(> td.category) {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 0 12px;
+        padding: 14px 14px 12px;
+        background: var(--af-surface);
+        border: 1px solid var(--af-border);
+        border-radius: 3px;
+
+        > td.category {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+          border-left: 0;
+        }
+
+        > td.topics {
+          top: 22px;
+          right: 14px;
+        }
+
+        > td.category > h3 {
+          display: flex;
+          align-items: center;
+          min-height: 36px;
+          margin: 0 0 8px;
+
+          .category-text-title {
+            padding-right: 5.5em;
+          }
+        }
+
+        .category-description {
+          margin: 0 0 12px;
+        }
+
+        .subcategories {
+          gap: 8px;
+          margin-top: 10px;
+        }
+
+        .subcategories .subcategory {
+          min-height: 44px;
+          background: var(--af-hover);
+          border-left: 0;
+          border-radius: 3px;
+
+          &:hover,
+          &:focus-within {
+            background: color-mix(in srgb, var(--af-hover) 85%, var(--primary));
+          }
+        }
+      }
+    }
+  }
+}
