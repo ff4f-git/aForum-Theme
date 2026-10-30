@@ -250,7 +250,10 @@ img.avatar,
 .navigation-container {
   position: relative;
   z-index: 2;
-  background: var(--af-nav-bg);
+  background: transparent;
+  @if af-on($nav_background_enabled) {
+    background: var(--af-nav-bg);
+  }
   box-sizing: border-box;
   width: 100%;
   min-height: var(--af-bar-h);
