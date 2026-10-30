@@ -20,29 +20,29 @@ $af-page-bg-default: dark-light-choose(
   --af-accent: #{af-pick($color_accent_light, $color_accent_dark, $quaternary)};
   --af-accent-hover: #{"color-mix(in srgb, var(--af-accent) 82%, #000)"};
   --af-on-accent: #fff;
-  --af-nav-bg: #{af-pick($color_nav_light, $color_nav_dark, $header_background)};
+  --af-nav-bg: #{$header_background};
 
   // Aktiver Tab in der Navigationsleiste
-  --af-active: #{af-pick($color_active_light, $color_active_dark, $tertiary)};
+  --af-active: #{$tertiary};
 
   // Hauptbutton (Neues Thema)
-  --af-cta: #{af-pick($color_cta_light, $color_cta_dark, $quaternary)};
+  --af-cta: #{$quaternary};
   --af-cta-hover: #{"color-mix(in srgb, var(--af-cta) 82%, #000)"};
 
   // Link = Information
-  --af-link: #{af-pick($color_link_light, $color_link_dark, $tertiary)};
+  --af-link: #{$tertiary};
   --af-link-hover: #{"color-mix(in srgb, var(--af-link) 75%, var(--primary))"};
 
   // Flächen
-  --af-page-bg: #{af-pick($color_page_bg_light, $color_page_bg_dark, $af-page-bg-default)};
-  --af-surface: #{af-pick($color_surface_light, $color_surface_dark, $secondary)};
-  --af-header-bg: #{af-pick($color_header_bg_light, $color_header_bg_dark, $header_background)};
-  --af-header-text: #{af-pick($color_header_text_light, $color_header_text_dark, $header_primary)};
+  --af-page-bg: #{$af-page-bg-default};
+  --af-surface: #{$secondary};
+  --af-header-bg: #{$header_background};
+  --af-header-text: #{$header_primary};
 
   // Willkommensbanner: unabhängig je Farbmodus einstellbar.
   // Leere Felder behalten die bisherigen Alpha-23-Farben bei.
-  --af-banner-subtitle: #{af-pick($banner_subtitle_color_light, $banner_subtitle_color_dark, #0f7ec9)};
-  --af-banner-border: #{af-pick($banner_border_color_light, $banner_border_color_dark, #d81c1c)};
+  --af-banner-subtitle: #{#0f7ec9};
+  --af-banner-border: #{#d81c1c};
 
   // Linien, Hover, gedämpfter Text
   --af-border: #{mix($primary, $secondary, 14%)};
