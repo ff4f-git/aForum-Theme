@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.54
+
+- Banner und Neues-Thema-Icon-Button der Zwischenansicht auf 600–699 px erweitert.
+- Keine Aenderungen an Themenkarten und Smartphone-Hochkantansicht.
+
 ## Beta 1.53
 
 - Nachgeladene Themenlisten: MutationObserver am stabilen document.body statt am austauschbaren #main-outlet.

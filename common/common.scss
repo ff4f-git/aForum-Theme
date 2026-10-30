@@ -1859,7 +1859,7 @@ a:not([class]) {
 // und Kartenoptik fuer die rechte Aktuell-Spalte.
 // Keine Aenderung an Desktop >=768 px oder schmalem Mobile.
 // ======================================================
-@media (min-width: 700px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .navigation-container {
     #create-topic.btn,
     #create-topic.btn-primary {
@@ -1948,7 +1948,7 @@ a:not([class]) {
 // Beta 1.47 – Willkommensbanner in der Zwischenansicht.
 // Nur 700–767 px; Bild und übrige Layouts bleiben unverändert.
 // ======================================================
-@media (min-width: 700px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .welcome-banner .custom-search-banner-wrap.welcome-banner__wrap {
     .welcome-banner__title {
       box-sizing: border-box;
