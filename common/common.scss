@@ -617,17 +617,32 @@ img.avatar,
 }
 
 // ======================================================
-// Alpha 32: verified Discourse markup:
-// <tr class="has-description no-logo"><td class="category">...subcategories...</td>
-// <td class="topics topic-list-data num">...count...</td></tr>
-// Turn the body rows into full-width blocks and overlay the count at top right.
-// Only enabled with subcategory_tiles; the standard table remains untouched otherwise.
+// Alpha 33: responsive full-width category cards. The original table grid
+// reserves a topics column even when its cells are visually repositioned.
+// Make the table and its body block-level so rows can span the entire width.
+// This applies only to the category+latest homepage with tiles enabled.
 // ======================================================
 @if af-on($subcategory_tiles) {
-  .category-list {
+  .categories-and-latest .category-list {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    thead {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    thead th:last-child {
+      text-align: right;
+    }
+
     tbody {
       display: block;
       width: 100%;
+      max-width: 100%;
     }
 
     tbody > tr:has(> td.category > .subcategories) {
@@ -635,6 +650,7 @@ img.avatar,
       position: relative;
       box-sizing: border-box;
       width: 100%;
+      max-width: 100%;
 
       > td.category {
         display: block;
@@ -648,6 +664,7 @@ img.avatar,
         position: absolute;
         top: 0.7em;
         right: 0.75em;
+        box-sizing: border-box;
         width: auto;
         min-width: 0;
         padding: 0;
@@ -656,14 +673,19 @@ img.avatar,
         white-space: nowrap;
       }
 
-      // Leave room for the overlaid count, without narrowing the tile grid.
       .category-text-title {
         padding-right: 5.5em;
       }
 
       .subcategories {
+        box-sizing: border-box;
         width: 100%;
         max-width: 100%;
+        grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 1fr));
+
+        @media (max-width: 767px) {
+          grid-template-columns: minmax(0, 1fr);
+        }
       }
     }
   }
