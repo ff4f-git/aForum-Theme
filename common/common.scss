@@ -36,19 +36,19 @@
 
 :root {
   --af-max-width: #{$max_width}px;
-  --af-tile-size: #{$tile_size}px;
-  --af-header-h: #{$header_height}px;
-  --af-avatar-radius: #{$avatar_radius}px;
-  --af-bar-h: #{$bar_height}px;
-  --af-cta-over: #{$cta_overhang}px;
-  --d-border-radius: #{$border_radius}px;
-  --d-border-radius-large: #{$border_radius}px;
-  @if af-on($panel_shadow) {
-    --af-shadow: #{unquote("0 0 32px color-mix(in srgb, #000 " + $shadow_opacity + "%, transparent)")};
+  --af-tile-size: 72px;
+  --af-header-h: 80px;
+  --af-avatar-radius: 3px;
+  --af-bar-h: 52px;
+  --af-cta-over: 8px;
+  --d-border-radius: 0px;
+  --d-border-radius-large: 0px;
+  @if true {
+    --af-shadow: #{unquote("0 0 32px color-mix(in srgb, #000 " + 18 + "%, transparent)")};
   } @else {
     --af-shadow: none;
   }
-  --af-banner-shadow: #{unquote("0 6px 18px color-mix(in srgb, #000 " + $banner_shadow_opacity + "%, transparent)")};
+  --af-banner-shadow: #{unquote("0 6px 18px color-mix(in srgb, #000 " + 30 + "%, transparent)")};
 }
 
 // ======================================================
@@ -206,8 +206,8 @@ html {
   background: var(--af-accent);
   color: var(--af-on-accent);
   font-weight: 700;
-  @if af-on($button_uppercase) { text-transform: uppercase; letter-spacing: 0.03em; }
-  @if af-on($button_italic) { font-style: italic; }
+  @if true { text-transform: uppercase; letter-spacing: 0.03em; }
+  @if true { font-style: italic; }
 
   .d-icon { color: var(--af-on-accent); }
 
@@ -356,7 +356,7 @@ img.avatar,
     }
   }
 
-  @if af-on($hide_nav_dropdowns) {
+  @if true {
     .category-breadcrumb,
     .category-drop,
     .tag-drop {
@@ -368,14 +368,6 @@ img.avatar,
 // ======================================================
 // 6. Banner (deine Hero-Komponente) hebt sich mit eigenem Schatten ab
 // ======================================================
-@if $banner_selector != "" {
-  #{$banner_selector} {
-    position: relative;
-    z-index: 1;
-    box-shadow: var(--af-banner-shadow);
-  }
-}
-
 // ======================================================
 // 7. Kategorieliste als zweispaltige Kachelreihe
 //    Voraussetzung: Kategorien-Seitenstil auf "Boxen" (siehe README)
@@ -417,7 +409,7 @@ img.avatar,
       width: var(--af-tile-size);
       height: var(--af-tile-size);
       margin: 0;
-      @if af-on($tile_background) { background: var(--af-accent); }
+      @if false { background: var(--af-accent); }
 
       img {
         display: block;
@@ -452,7 +444,7 @@ img.avatar,
       color: var(--af-muted);
     }
 
-    @if not af-on($show_subcategories) {
+    @if not false {
       .subcategories {
         display: none;
       }
@@ -582,7 +574,7 @@ img.avatar,
   } @else {
     // Previous compact link layout, including the configurable fixed columns.
     .subcategories {
-      grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
+      grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 180px));
       justify-content: start;
       gap: 0.35em 0;
     }
@@ -615,8 +607,8 @@ img.avatar,
 
 // Avatare in der Liste "Aktuell"
 .latest-topic-list-item img.avatar {
-  width: #{$latest_avatar_size}px;
-  height: #{$latest_avatar_size}px;
+  width: 48px;
+  height: 48px;
 }
 
 // Überschrift der Liste "Aktuell" im selben Stil wie "Kategorie / Themen"
@@ -633,7 +625,7 @@ img.avatar,
 }
 
 // Kategoriefarben in Listen dämpfen
-@if af-on($mute_category_colors) {
+@if false {
   .category-list .badge-wrapper,
   .category-list .badge-category__wrapper,
   .category-list .badge-category,
