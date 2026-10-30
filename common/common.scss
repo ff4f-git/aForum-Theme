@@ -2196,3 +2196,15 @@ a:not([class]) {
     border-right: 1px solid var(--af-border) !important;
   }
 }
+
+
+// Beta 1.60 – Geschlossener, 1 px starker Kategorie-Farbrahmen
+// fuer mobile Hauptkategorie-Karten. Farbe aus Beta 1.58 Sync;
+// Innenlinien, Unterkategorien und Hover bleiben unveraendert.
+@media (max-width: 714px) {
+  .mobile-view .categories-list .category-list-item,
+  .mobile-view .category-list-item {
+    border: 1px solid var(--af-category-icon-color, var(--af-border)) !important;
+    border-radius: 3px;
+  }
+}

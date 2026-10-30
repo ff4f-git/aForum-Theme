@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.60
+
+- Mobile Hauptkategorie-Karten unter 715 px mit einem geschlossenen 1-px-Aussenrahmen in der dynamischen Discourse-Kategoriefarbe versehen.
+- Keine zusaetzlichen Seitenstreifen; innere Trennlinien, Unterkategorien, Hover und Abstaende bleiben unveraendert.
+
 ## Beta 1.59
 
 - Farbige linke und rechte Randlinien der mobilen Hauptkategorie-Karten unter 715 px durch neutrale 1-px-Rahmen ersetzt.
