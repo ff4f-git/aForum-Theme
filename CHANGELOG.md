@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.30
+
+- Desktop-Spalte „Aktuell“: CSS-Hoverfarben für die zusätzlich verifizierten Kategorien Technik | Hilfe, Newsletter, Wiki, Guzzi-Diag, Benzingespräche und Bilder | Umbau ergänzt.
+- Zuordnung anhand der tatsächlichen Discourse-Kategorieklassen und -IDs aus der Browserkonsole; vorhandene Kategorie-Farbvariablen mit den gemessenen Farben als Fallback.
+- Stammtisch und Biete bleiben erhalten. Unbekannte Kategorien behalten den bisherigen Hover-Akzent. Kein JavaScript und keine Änderungen an der Mobilansicht.
+
 ## Beta 1.29
 
 - CSS-only: Der 3-px-Hover-Streifen in der Desktop-Spalte „Aktuell“ folgt bei den bestätigten Themenkategorien Stammtisch (Discourse-Kategoriefarbe) und Biete (grüne Theme-Erfolgsfarbe) ihrer Kategorie.

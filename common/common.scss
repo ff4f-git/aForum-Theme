@@ -1571,17 +1571,42 @@ a:not([class]) {
 // ======================================================
 // Beta 1.29 – CSS-only category hover for confirmed
 // Discourse topic-row classes. No JavaScript initializer.
-// Other categories retain the existing accent until their
-// category ID/color mapping has been verified.
+// Verified category classes use Discourse color variables with
+// observed badge colors as fallbacks; other rows retain accent.
 // ======================================================
 @media (min-width: 768px) {
   .categories-and-latest .latest-topic-list {
+    // Verified against the category badges in the live topic list.
     .latest-topic-list-item.category-community-stammtisch {
       --af-topic-hover-color: var(--category-37-color, #0f7ec9);
     }
 
     .latest-topic-list-item.category-marktplatz-biete {
-      --af-topic-hover-color: var(--success, #1f8a4c);
+      --af-topic-hover-color: var(--category-23-color, #1f8a4c);
+    }
+
+    .latest-topic-list-item.category-rsv4-tuono-v4-technik-hilfe {
+      --af-topic-hover-color: var(--category-21-color, #6f36ae);
+    }
+
+    .latest-topic-list-item.category-rsv4-tuono-v4-bilder-umbau {
+      --af-topic-hover-color: var(--category-20-color, #6f36ae);
+    }
+
+    .latest-topic-list-item.category-community-newsletter {
+      --af-topic-hover-color: var(--category-12-color, #0f7ec9);
+    }
+
+    .latest-topic-list-item.category-community-wiki {
+      --af-topic-hover-color: var(--category-50-color, #0f7ec9);
+    }
+
+    .latest-topic-list-item.category-downloads-guzzidiag-ecu-tools {
+      --af-topic-hover-color: var(--category-51-color, #12a89d);
+    }
+
+    .latest-topic-list-item.category-boxengasse-offtopic {
+      --af-topic-hover-color: var(--category-47-color, #ff0000);
     }
 
     .latest-topic-list-item:hover,
