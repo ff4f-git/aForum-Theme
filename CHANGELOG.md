@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.34
+
+- Desktop-Willkommensbanner: Suchfeldbreite von 55 % auf 48 % reduziert.
+- Ausrichtung, Hintergrundbild, Bannerhöhe, Kontur und Mobilansicht unverändert.
+
 ## Beta 1.33
 
 - Desktop-Willkommensbanner: Begrüßung und Untertitel linksbündig mit 32 px Innenabstand.
