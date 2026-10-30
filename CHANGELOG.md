@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.61
+
+- Bei 600–725 px kompakte Kategorien-Dropdown-Navigation statt der platzintensiven ausgeschriebenen Tabs.
+- Dropdown verwendet die vorhandenen Discourse-Navigationslinks und zeigt den aktiven Bereich an.
+- Roter 52-px-Erstellen-Button bleibt rechts innerhalb der Leiste; oberhalb 725 px bleibt die bisherige Navigation.
+
 ## Beta 1.60
 
 - Mobile Hauptkategorie-Karten unter 715 px mit einem geschlossenen 1-px-Aussenrahmen in der dynamischen Discourse-Kategoriefarbe versehen.
