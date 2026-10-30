@@ -2055,3 +2055,24 @@ a:not([class]) {
     }
   }
 }
+
+
+// ======================================================
+// Beta 1.48 – Aktuell-Karten bei 700–767 px typografisch
+// kompakter. Avatare, Zahlen, Hover und Kartenabstand bleiben.
+// ======================================================
+@media (min-width: 700px) and (max-width: 767px) {
+  .categories-and-latest .latest-topic-list .latest-topic-list-item {
+    .main-link a.title {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .link-bottom-line,
+    .link-bottom-line .badge-category__wrapper,
+    .link-bottom-line .badge-wrapper {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+}

@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.48
+
+- Zwischenansicht 700–767 px: Thementitel in der rechten „Aktuell“-Spalte auf 18 px und 1,3 Zeilenhöhe abgestimmt.
+- Kategoriezeile auf 13 px und 1,3 Zeilenhöhe reduziert.
+- Avatare, Antwortzahlen, Kartenabstand (10 px), Hoverfarben und alle anderen Ansichten unverändert.
+
 ## Beta 1.47
 
 - Willkommensbanner bei 700–767 px: Begrüßung und Untertitel linksbündig statt zentriert.
