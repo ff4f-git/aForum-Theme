@@ -720,6 +720,25 @@ img.avatar,
   }
 }
 
+// Alpha 45: Center labels vertically in desktop and landscape subcategory tiles.
+// Keep horizontal left alignment, existing tile dimensions and portrait rules.
+@if af-on($subcategory_tiles) {
+  .category-list .subcategories .subcategory {
+    align-items: center;
+
+    > a,
+    > .badge-wrapper,
+    > .badge-category__wrapper {
+      align-items: center;
+    }
+
+    .badge-category__wrapper,
+    .badge-wrapper {
+      align-items: center;
+    }
+  }
+}
+
 // ======================================================
 // Alpha 37: Portrait mobile uses a separate Discourse DOM:
 // .category-list-item > table.topic-list > tbody > tr.subcategories-list
