@@ -2,6 +2,13 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.47
+
+- Willkommensbanner bei 700–767 px: Begrüßung und Untertitel linksbündig statt zentriert.
+- Begrüßungsschrift in der Zwischenansicht verkleinert, um die Überschneidung mit dem Motorrad zu verringern.
+- Suchleiste links ausgerichtet und auf 62 % Bannerbreite begrenzt.
+- Hintergrundbild, Navigation, Desktop ab 768 px und schmalere Mobilansichten unverändert.
+
 ## Beta 1.46
 
 - Zwischenansicht 700–767 px: zusätzliches vertikales Padding der älteren Mobile-Navigationsregel entfernt.

@@ -2023,3 +2023,35 @@ a:not([class]) {
     row-gap: 0;
   }
 }
+
+
+// ======================================================
+// Beta 1.47 – Willkommensbanner in der Zwischenansicht.
+// Nur 700–767 px; Bild und übrige Layouts bleiben unverändert.
+// ======================================================
+@media (min-width: 700px) and (max-width: 767px) {
+  .welcome-banner .custom-search-banner-wrap.welcome-banner__wrap {
+    .welcome-banner__title {
+      box-sizing: border-box;
+      width: calc(100% - 48px);
+      max-width: calc(100% - 48px);
+      margin-left: 24px;
+      margin-right: 24px;
+      text-align: left;
+      font-size: 1.65em;
+      line-height: 1.2;
+    }
+
+    .welcome-banner__subheader {
+      text-align: left;
+    }
+
+    .welcome-banner__search-menu {
+      box-sizing: border-box;
+      width: 62%;
+      max-width: 62%;
+      margin-left: 24px;
+      margin-right: auto;
+    }
+  }
+}
