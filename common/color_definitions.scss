@@ -40,7 +40,7 @@ $af-page-bg-default: dark-light-choose(
   --af-header-text: #{$header_primary};
 
   // Bewährte Bannerfarben als feste Theme-Standards.
-  --af-banner-subtitle: #0f7ec9;
+  --af-banner-subtitle: #{af-pick($banner_subtitle_color_light, $banner_subtitle_color_dark, #0f7ec9)};
   --af-banner-border: #d81c1c;
 
   // Linien, Hover, gedämpfter Text
