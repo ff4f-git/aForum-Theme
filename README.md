@@ -1,14 +1,19 @@
-# aForum · Alpha 38
+# aForum · Alpha 39
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 38 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 39 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 39: Kachelbreite unabhängig von der Thementabelle
+
+- Die mobile Unterkategorie-Zeile bekommt eine viewportbezogene Breite (`100vw - 48px`), damit die mehrspaltige Themen-Tabelle die Kacheln nicht länger auf die erste Spalte begrenzt.
+- Reihenfolge der Themen und Kacheln sowie Desktop/Querformat bleiben unverändert.
 
 ## Alpha 38: volle Kachelbreite im Hochformat
 
