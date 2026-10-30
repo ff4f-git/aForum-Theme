@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.57
+
+- Kategorie-/Aktuell-Zweispaltenansicht bei 640–714 px auf eine Spalte umgestellt; ab 715 px bleibt die bisherige Aufteilung.
+- Native Discourse-Inhalte und Links bleiben erhalten; die vollstaendige mobile DOM-Struktur folgt weiterhin dem Discourse-Breakpoint.
+- Feinschliff der Mobilansicht folgt separat.
+
 ## Beta 1.56
 
 - Unterkategorie-Kacheln bei 600–767 px an Desktop angeglichen: 10 px Abstand, 3 px Radius, einspaltig.

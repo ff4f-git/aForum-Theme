@@ -2111,3 +2111,41 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.57 – Einspaltiger Uebergang bereits unter 715 px.
+// Discourse wechselt sein Kategorie-DOM erst bei seinem eigenen
+// Breakpoint; in der Zwischenzone wird die Desktop-Struktur
+// einspaltig angeordnet, ohne Themen/Links zu entfernen.
+@media (min-width: 640px) and (max-width: 714px) {
+  .categories-and-latest {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+
+    > .column,
+    > .column.categories,
+    > .column.latest,
+    > .categories,
+    > .latest,
+    > .categories-column,
+    > .latest-column {
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .category-list {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .latest-topic-list {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
