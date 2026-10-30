@@ -1629,3 +1629,19 @@ a:not([class]) {
     flex-shrink: 0;
   }
 }
+
+// ======================================================
+// Beta 1.32 – Desktop category icons: 44 x 44 px tiles.
+// Preserve 20px glyph, category colors and 3px corners.
+// ======================================================
+@media (min-width: 768px) {
+  .categories-and-latest .category-list > tbody > tr > td.category > h3 {
+    min-height: 44px;
+
+    .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+      width: 20px;
+      height: 20px;
+      padding: 12px;
+    }
+  }
+}

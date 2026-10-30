@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.32
+
+- Desktop-Startseite: Hauptkategorie-Icon-Kacheln links von 36 × 36 auf 44 × 44 px vergrößert, bei unveränderter Symbolgröße.
+- Kategorie-Farben, weiße Icons, 3-px-Ecken, Unterkategorien, rechte Themenliste und Mobilansicht bleiben unverändert.
+
 ## Beta 1.31
 
 - Desktop-Startseite: vorhandene Discourse-Benutzeravatare in der rechten Spalte „Aktuell“ von 48 × 48 auf 52 × 52 px vergrößert.
