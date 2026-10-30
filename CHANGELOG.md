@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.44
+
+- Schmale Zwischenansicht (700–767 px): Kategorie-Icons wieder 44 × 44 px mit Kategorie-Farbvariable und 3-px-Ecken.
+- Linke Kategorien als neutrale Karten; Unterkategorien einspaltig mit dezenten Rahmen statt dauerhafter farbiger Seitenstreifen.
+- Sowohl Tabellen- als auch mobile Kategorie-Struktur gezielt berücksichtigt; Navigation, rechte Themenliste und Banner unverändert.
+
 ## Beta 1.43
 
 - Schmaler Desktop (768–979 px): Roter Icon-Button wieder mit 2 px Überstand oben und unten (insgesamt 4 px), passend zur Desktop-CTA.

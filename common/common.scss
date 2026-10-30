@@ -1821,3 +1821,89 @@ a:not([class]) {
     }
   }
 }
+
+
+// ======================================================
+// Beta 1.44 – Schmale Zwischenansicht (700–767 px):
+// linke Kategorien im etablierten Kartenstil.
+// Nur Kategorie-Bereich, keine Navigation, Themen oder Hero.
+// Discourse kann hier noch die Tabellenstruktur der Startseite
+// oder bereits die mobile Kategorie-Struktur rendern.
+// ======================================================
+@media (min-width: 700px) and (max-width: 767px) {
+  // Tabellenbasierte Kategorien-Startseite: vorhandene DOM-Struktur
+  // beibehalten, damit Themenzaehler und Links intakt bleiben.
+  .categories-and-latest .category-list {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    > tbody > tr:has(> td.category) {
+      position: relative;
+      box-sizing: border-box;
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+
+      > td.category {
+        border-left-width: 0;
+      }
+
+      > td.category > h3 .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+        box-sizing: content-box;
+        width: 20px;
+        height: 20px;
+        padding: 12px;
+        border-radius: 3px;
+        background-color: var(--af-category-icon-color, var(--category-badge-color, var(--af-brand-blue)));
+        color: #fff;
+        fill: currentColor;
+      }
+
+      .subcategories {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .subcategories .subcategory {
+        min-height: 48px;
+        border: 1px solid var(--af-border);
+        border-left: 1px solid var(--af-border);
+        border-radius: 3px;
+        background: color-mix(in srgb, var(--af-hover) 88%, var(--af-surface));
+
+        &:hover,
+        &:focus-within {
+          background: var(--af-hover);
+        }
+      }
+    }
+  }
+
+  // Wenn Discourse bereits mobile Kategorie-Karten ausgibt:
+  // nur Optik angleichen, keine Tabellen- oder Grid-Geometrie aendern.
+  .mobile-view .categories-list .category-list-item,
+  .mobile-view .category-list-item {
+    border: 1px solid var(--af-border);
+    border-radius: 3px;
+    background: var(--af-surface);
+
+    .category-title-link .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid),
+    .category-text-title > .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+      box-sizing: content-box;
+      width: 20px;
+      height: 20px;
+      padding: 12px;
+      border-radius: 3px;
+      background-color: var(--af-category-icon-color, var(--category-badge-color, var(--af-brand-blue)));
+      color: #fff;
+      fill: currentColor;
+    }
+
+    tr.subcategories-list .subcategories > a,
+    tr.subcategories-list .subcategories > .badge-category__wrapper {
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+      background: var(--af-hover);
+    }
+  }
+}
