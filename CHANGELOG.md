@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.33
+
+- Desktop-Willkommensbanner: Begrüßung und Untertitel linksbündig mit 32 px Innenabstand.
+- Suchfeld linksbündig mit 55 % Bannerbreite; Suchfunktion unverändert.
+- Hintergrundbild, Bannerhöhe, rote Kontur und Mobilansicht bleiben unverändert.
+
 ## Beta 1.32
 
 - Desktop-Startseite: Hauptkategorie-Icon-Kacheln links von 36 × 36 auf 44 × 44 px vergrößert, bei unveränderter Symbolgröße.
