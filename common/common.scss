@@ -39,7 +39,7 @@
   --af-tile-size: 72px;
   --af-header-h: #{$header_height}px;
   --af-avatar-radius: #{$avatar_radius}px;
-  --af-bar-h: #{$bar_height}px;
+  --af-bar-h: 52px;
   --af-cta-over: 8px;
   --d-border-radius: 0px;
   --d-border-radius-large: 0px;
@@ -201,8 +201,8 @@ html {
   background: var(--af-accent);
   color: var(--af-on-accent);
   font-weight: 700;
-  @if true { text-transform: uppercase; letter-spacing: 0.03em; }
-  @if true { font-style: italic; }
+   text-transform: uppercase; letter-spacing: 0.03em; 
+   font-style: italic; 
 
   .d-icon { color: var(--af-on-accent); }
 
@@ -250,10 +250,8 @@ img.avatar,
 .navigation-container {
   position: relative;
   z-index: 2;
-  background: transparent;
-  @if af-on($nav_background_enabled) {
-    background: var(--af-nav-bg);
-  }
+  background: var(--af-nav-bg);
+  
   box-sizing: border-box;
   width: 100%;
   min-height: var(--af-bar-h);
@@ -354,13 +352,13 @@ img.avatar,
     }
   }
 
-  @if true {
+  
     .category-breadcrumb,
     .category-drop,
     .tag-drop {
       display: none;
     }
-  }
+  
 }
 
 // ======================================================
@@ -407,7 +405,7 @@ img.avatar,
       width: var(--af-tile-size);
       height: var(--af-tile-size);
       margin: 0;
-      @if false { background: var(--af-accent); }
+      
 
       img {
         display: block;
@@ -442,11 +440,11 @@ img.avatar,
       color: var(--af-muted);
     }
 
-    @if not false {
+    
       .subcategories {
         display: none;
       }
-    }
+    
   }
 }
 
@@ -507,7 +505,7 @@ img.avatar,
     }
   }
 
-  @if af-on($subcategory_tiles) {
+  
     .subcategories {
       grid-auto-rows: minmax(42px, auto);
     }
@@ -569,17 +567,10 @@ img.avatar,
         overflow-wrap: anywhere;
       }
     }
-  } @else {
-    // Previous compact link layout, including the configurable fixed columns.
-    .subcategories {
-      grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 180px));
-      justify-content: start;
-      gap: 0.35em 0;
-    }
-  }
+  
 }
 
-@if af-on($compact_lists) {
+
   .category-list {
     font-size: 0.94em;
 
@@ -601,7 +592,7 @@ img.avatar,
       color: var(--af-muted);
     }
   }
-}
+
 
 // Avatare in der Liste "Aktuell"
 .latest-topic-list-item img.avatar {
@@ -623,17 +614,7 @@ img.avatar,
 }
 
 // Kategoriefarben in Listen dämpfen
-@if false {
-  .category-list .badge-wrapper,
-  .category-list .badge-category__wrapper,
-  .category-list .badge-category,
-  .latest-topic-list .badge-wrapper,
-  .latest-topic-list .badge-category__wrapper,
-  .topic-list .badge-wrapper,
-  .topic-list .badge-category__wrapper {
-    filter: grayscale(1);
-  }
-}
+
 
 // ======================================================
 // Alpha 33: responsive full-width category cards. The original table grid
@@ -641,7 +622,7 @@ img.avatar,
 // Make the table and its body block-level so rows can span the entire width.
 // This applies only to the category+latest homepage with tiles enabled.
 // ======================================================
-@if af-on($subcategory_tiles) {
+
   .categories-and-latest .category-list {
     display: block;
     width: 100%;
@@ -708,11 +689,11 @@ img.avatar,
       }
     }
   }
-}
+
 
 // Alpha 45: Center labels vertically in desktop and landscape subcategory tiles.
 // Keep horizontal left alignment, existing tile dimensions and portrait rules.
-@if af-on($subcategory_tiles) {
+
   .category-list .subcategories .subcategory {
     align-items: center;
 
@@ -727,7 +708,7 @@ img.avatar,
       align-items: center;
     }
   }
-}
+
 
 // Alpha 47: Match the square, flush active category tab on desktop.
 @media (min-width: 768px) {
@@ -766,7 +747,7 @@ img.avatar,
 // Keep the three featured topics before the subcategory links (variant B).
 // ======================================================
 @media (orientation: portrait) and (max-width: 767px) {
-  @if af-on($subcategory_tiles) {
+  
     // The mobile subcategory row contains a single <td> without colspan.
     // Let this row span the entire topic table instead of its first column.
     // Alpha 43: The one-cell subcategory row and two-cell topic rows
@@ -900,7 +881,7 @@ img.avatar,
         }
       }
     }
-  }
+  
 }
 
 // Alpha 34: Phone landscape can exceed Discourse's 767px mobile breakpoint.
@@ -910,13 +891,13 @@ img.avatar,
 // missing subcategory links via CSS.
 // ======================================================
 @media (orientation: landscape) and (max-height: 600px) and (max-width: 1200px) {
-  @if af-on($subcategory_tiles) {
+  
     .category-list .subcategories,
     .categories-and-latest .category-list .subcategories,
     .categories-and-latest .category-list tbody > tr:has(> td.category > .subcategories) .subcategories {
       grid-template-columns: minmax(0, 1fr);
     }
-  }
+  
 
   // Alpha 36: Match the compact portrait CTA in phone landscape.
   // Important: the main navigation CTA normally inherits negative margins
@@ -1724,13 +1705,13 @@ a:not([class]) {
 // Preserve Discourse desktop markup and the two main columns.
 // ======================================================
 @media (min-width: 768px) and (max-width: 979px) {
-  @if af-on($subcategory_tiles) {
+  
     .category-list .subcategories,
     .categories-and-latest .category-list .subcategories,
     .categories-and-latest .category-list tbody > tr:has(> td.category > .subcategories) .subcategories {
       grid-template-columns: minmax(0, 1fr);
     }
-  }
+  
 
   .navigation-container {
     #create-topic {
