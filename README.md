@@ -1,3 +1,11 @@
+## Beta 1.1: KISS – Theme-Einstellungen aufräumen
+
+- Admin-Einstellungen von 46 auf 8 Felder reduziert (7 Funktionsbereiche, Akzent Hell/Dunkel getrennt).
+- Behalten: Akzentfarben Hell/Dunkel, maximale Breite, kompakte Listen, Unterkategorie-Kacheln und Spalten, Sidebar-Kategorien ausblenden, Überkategorie-Links sperren.
+- Entfernte Schalter verwenden ihre bisherigen Standardwerte; übrige Farben kommen aus Discourse-Farbpaletten.
+- Achtung: Individuelle Werte entfernter Einstellungen werden nicht automatisch übernommen. Gegebenenfalls vorher sichern.
+- Mobilstruktur bleibt unverändert; beide Farbmodi und Geräteansichten nach dem Update prüfen.
+
 ## Beta 1: Überkategorie-Links optional sperren
 
 - Neue Theme-Einstellung `lock_parent_category_links` (standardmäßig an): Hauptkategorie-Titel in der Kategorien-Startansicht reagieren nicht mehr auf Mausklicks. Unterkategorien bleiben anklickbar.
@@ -41,11 +49,11 @@
 - Beschriftungen in Desktop- und Querformat-Kacheln vertikal mittig, weiterhin linksbündig.
 - Keine Änderungen an Kachelgrößen, Abständen oder Hochkant-Layout.
 
-# aForum · Alpha 44
+# aForum · Beta 1.1
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 44 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Beta 1.1 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
