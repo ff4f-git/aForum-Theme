@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.31
+
+- Desktop-Startseite: vorhandene Discourse-Benutzeravatare in der rechten Spalte „Aktuell“ von 48 × 48 auf 52 × 52 px vergrößert.
+- Kartenlayout, Kategorie-Hoverfarben, Titelstatus, Antwortzahlen und Mobilansicht unverändert.
+
 ## Beta 1.30
 
 - Desktop-Spalte „Aktuell“: CSS-Hoverfarben für die zusätzlich verifizierten Kategorien Technik | Hilfe, Newsletter, Wiki, Guzzi-Diag, Benzingespräche und Bilder | Umbau ergänzt.
