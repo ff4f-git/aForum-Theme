@@ -1214,3 +1214,31 @@ a:not([class]) {
   outline-offset: -1px;
   border-radius: 0;
 }
+
+// ======================================================
+// Alpha 48: Slightly stronger contrast for post actions and topic timeline
+// in the light palette only. Dark palette retains its existing colors.
+// ======================================================
+.topic-post .post-controls .actions .btn,
+.topic-post .post-controls .actions .btn .d-icon,
+.topic-post .post-controls .actions .btn .d-button-label,
+.topic-post .post-controls .actions .post-action-menu__trigger,
+.topic-post .post-controls .actions .post-action-menu__trigger .d-icon {
+  color: dark-light-choose(mix($primary, $secondary, 58%), inherit);
+}
+
+.topic-post .post-controls .actions .btn:hover,
+.topic-post .post-controls .actions .btn:focus-visible {
+  color: dark-light-choose(mix($primary, $secondary, 82%), inherit);
+}
+
+.topic-timeline .timeline-date-wrapper,
+.topic-timeline .timeline-date-wrapper .start-date,
+.topic-timeline .timeline-date-wrapper .now-date,
+.topic-timeline .timeline-scrollarea,
+.topic-timeline .timeline-controls .btn,
+.topic-timeline .timeline-controls .btn .d-icon,
+.topic-timeline .timeline-replies,
+.topic-timeline .timeline-ago {
+  color: dark-light-choose(mix($primary, $secondary, 62%), inherit);
+}
