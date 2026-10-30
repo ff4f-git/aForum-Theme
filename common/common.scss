@@ -731,19 +731,8 @@ img.avatar,
     }
   }
 
-  // A landscape phone should not squeeze two homepage panels side by side.
-  .categories-and-latest {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    > * {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-    }
-  }
+  // Preserve Discourse's two-column categories/latest layout in landscape.
+  // Only the subcategory tile grid switches to one column above.
 }
 
 // ======================================================
