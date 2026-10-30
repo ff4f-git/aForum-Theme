@@ -178,6 +178,10 @@ latest_avatar_size:
   description: "Größe der Avatare in der Liste 'Aktuell' in px."
 
 # Kategorien
+subcategory_tiles:
+  type: bool
+  default: true
+  description: "Unterkategorien als gleich große Link-Kacheln darstellen. Aus = bisherige kompakte Textlinks."
 subcategory_columns:
   type: integer
   default: 2
