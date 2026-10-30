@@ -40,44 +40,6 @@ export default apiInitializer("1.8.0", (api) => {
     });
   };
 
-  // Beta 1.61: Reuse the real navigation links in a compact dropdown.
-  // Only the 600–725 px intermediate layout needs this: below it,
-  // Discourse already renders its native compact navigation.
-  const syncCompactNavigation = () => {
-    const nav = document.querySelector(".navigation-container");
-    const pills = nav?.querySelector(".nav-pills");
-    if (!nav || !pills) return;
-    let dropdown = nav.querySelector(".af-compact-navigation");
-    if (!dropdown) {
-      dropdown = document.createElement("details");
-      dropdown.className = "af-compact-navigation";
-      dropdown.innerHTML =
-        '<summary><span class="af-compact-navigation-label"></span><span aria-hidden="true" class="af-compact-navigation-chevron">⌄</span></summary><div class="af-compact-navigation-links"></div>';
-      pills.before(dropdown);
-      dropdown.addEventListener("click", (event) => {
-        if (event.target.closest("a")) dropdown.open = false;
-      });
-    }
-    const links = [...pills.querySelectorAll("li > a")];
-    const active = links.find((link) => link.classList.contains("active") ||
-      link.getAttribute("aria-current") === "page");
-    const label = dropdown.querySelector(".af-compact-navigation-label");
-    const activeText = active?.textContent.trim() || "Kategorien";
-    if (label.textContent !== activeText) label.textContent = activeText;
-    const target = dropdown.querySelector(".af-compact-navigation-links");
-    const signature = links.map((link) =>
-      [link.textContent.trim(), link.getAttribute("href"), link.className].join("|")
-    ).join(";");
-    if (target.dataset.signature !== signature) {
-      target.replaceChildren(...links.map((link) => {
-        const clone = link.cloneNode(true);
-        clone.removeAttribute("id");
-        return clone;
-      }));
-      target.dataset.signature = signature;
-    }
-  };
-
   // Beta 1.52: Use the existing, proven category initializer for topic
   // cards as well. The separate topic initializer did not run reliably.
   const topicSelector =
@@ -100,7 +62,6 @@ export default apiInitializer("1.8.0", (api) => {
   const syncAll = () => {
     syncColors();
     syncMobileColors();
-    syncCompactNavigation();
     document.querySelectorAll(topicSelector).forEach(syncTopic);
   };
 
