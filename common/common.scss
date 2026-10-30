@@ -1760,3 +1760,17 @@ a:not([class]) {
     }
   }
 }
+
+// ======================================================
+// Beta 1.39 – Desktop primary action: subtle 2px overhang.
+// Keep navigation tabs, admin controls and mobile untouched.
+// ======================================================
+@media (min-width: 768px) {
+  .navigation-container #create-topic {
+    height: calc(var(--af-bar-h) + 4px);
+    min-height: calc(var(--af-bar-h) + 4px);
+    margin-block: -2px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}

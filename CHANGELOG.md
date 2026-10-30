@@ -2,6 +2,11 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.39
+
+- Desktop: „Neues Thema“ als wichtigste Aktion dezent betont – 2 px Überstand oben und unten, 3-px-Ecken und leichter Schatten.
+- Keine Änderungen an Navigationstabs, Werkzeugen, JavaScript oder Mobilansicht.
+
 ## Beta 1.38
 
 - Rückbau der optischen Navigationsänderungen aus Beta 1.37: ursprüngliche klare Tab-Markierung, Abstände und Button-Darstellung wiederhergestellt.
