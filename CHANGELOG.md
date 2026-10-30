@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.28
+
+- Desktop-Unterkategorien: deutlich sichtbarer Hover mit Kategoriefarb-Tönung, farbigem Rahmen und Pointer-Cursor.
+- Tastaturfokus erhält zusätzlich eine gut sichtbare Kontur; Light/Dark nutzen dieselben Theme-Farbvariablen.
+- Normalzustand, 3-px-Rundung, Inhalte und Mobilansicht bleiben unverändert.
+
 ## Beta 1.27
 
 - Desktop: roten Unterstrich unter „Aktuell“ entfernt und die Spaltenüberschriften „Kategorie / Themen“ und „Aktuell“ mit identischem neutralem Hintergrund ohne Farblinie gestaltet.
