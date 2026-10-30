@@ -459,15 +459,15 @@ img.avatar,
     border-bottom: 1px solid var(--af-border);
   }
 
-  // Alpha 29: gleich grosse, kantige Unterkategorie-Kacheln.
-  // Die Kategorie-Akzentfarbe wird durch den kleinen Initializer
-  // von der bereits vorhandenen linken Kategorie-Kante uebernommen.
+  // Alpha 30: full-width grid within the category cell, never the topics cell.
   .subcategories {
     display: grid;
-    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
-    grid-auto-rows: minmax(42px, auto);
-    justify-content: start;
+    grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, 1fr));
+    justify-content: stretch;
     gap: 7px 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     margin-top: 0.7em;
     font-size: 0.93em;
 
@@ -477,56 +477,85 @@ img.avatar,
   }
 
   .subcategory {
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
     min-width: 0;
-    width: 100%;
-    min-height: 42px;
     margin: 0;
-    padding: 0;
-    background: var(--af-hover);
-    border-left: 3px solid var(--af-subcategory-accent, var(--af-brand-blue));
-    border-radius: 0;
-    transition: background-color 160ms ease, box-shadow 160ms ease;
 
-    &:hover,
-    &:focus-within {
-      background: color-mix(in srgb, var(--af-hover) 78%, var(--primary));
-      box-shadow: inset 0 0 0 1px var(--af-border);
-    }
-
-    // Discourse rendert je nach Version badge-wrapper und Links unterschiedlich.
-    // Die gesamte Kachel bleibt die sichtbare und klickbare Flaeche.
-    > a,
-    > .badge-wrapper,
-    > .badge-category__wrapper {
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      flex: 1 1 auto;
-      min-width: 0;
-      padding: 7px 8px;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      min-width: 0;
-      overflow-wrap: anywhere;
-      text-transform: uppercase;
-      line-height: 1.25;
-
-      &:focus-visible {
-        outline: 2px solid var(--af-brand-blue);
-        outline-offset: -2px;
-      }
-    }
-
+    // Alpha 28: suppress counters, not the actual unread status.
     .badge-notification,
     .unread-new,
     .category-unread {
       display: none;
+    }
+  }
+
+  @if af-on($subcategory_tiles) {
+    .subcategories {
+      grid-auto-rows: minmax(42px, auto);
+    }
+
+    .subcategory {
+      box-sizing: border-box;
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      min-height: 42px;
+      padding: 0;
+      background: var(--af-hover);
+      border-left: 3px solid var(--af-subcategory-accent, var(--af-brand-blue));
+      border-radius: 0;
+      transition: background-color 160ms ease, box-shadow 160ms ease;
+
+      &:hover,
+      &:focus-within {
+        background: color-mix(in srgb, var(--af-hover) 78%, var(--primary));
+        box-shadow: inset 0 0 0 1px var(--af-border);
+      }
+
+      > a,
+      > .badge-wrapper,
+      > .badge-category__wrapper {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        min-width: 0;
+        padding: 7px 8px;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        white-space: normal;
+        text-overflow: clip;
+        text-transform: uppercase;
+        line-height: 1.25;
+
+        &:focus-visible {
+          outline: 2px solid var(--af-brand-blue);
+          outline-offset: -2px;
+        }
+      }
+
+      // Override Discourse's one-line badge labels when names are long.
+      .badge-category__name,
+      .category-name,
+      .badge-wrapper .badge-category {
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        overflow-wrap: anywhere;
+      }
+    }
+  } @else {
+    // Previous compact link layout, including the configurable fixed columns.
+    .subcategories {
+      grid-template-columns: repeat(#{$subcategory_columns}, minmax(0, #{$subcategory_column_width}px));
+      justify-content: start;
+      gap: 0.35em 0;
     }
   }
 }
