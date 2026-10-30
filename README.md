@@ -1,14 +1,22 @@
-# aForum · Alpha 29
+# aForum · Alpha 30
 
 **Ein eigenständiges Discourse-Haupttheme für [aForum.net](https://aforum.net) – die Aprilia-Community.**
 
-Alpha 28 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
+Alpha 30 verbindet eine klassische, übersichtliche Forenansicht mit einer eigenständigen aForum-Gestaltung. Der Schwerpunkt liegt auf klarer Navigation, gut lesbaren Themenlisten und einer konsistenten Darstellung in hellen und dunklen Farbpaletten.
 
 ## Einheitliches Markenblau
 
 Als zentraler Blauton wird jetzt **`#0F7EC9`** aus dem aForum-Logo verwendet. Das gilt für die mitgelieferten hellen und dunklen Farbpaletten (Tertiärfarbe), den aktiven Kategorien-Tab, die blaue Bereichslinie und das Listen-Icon sowie den Slogan im Willkommensbanner, sofern kein individueller Farbwert eingetragen ist. Bestehende manuelle Farbeinstellungen in Discourse haben weiterhin Vorrang.
 
 **Wichtig:** Die Farbe der Kategorie **Community** und anderer Kategorie-Badges wird separat in den jeweiligen Discourse-Kategorieeinstellungen gepflegt und nicht durch das Theme überschrieben. Für Community dort `#0F7EC9` einstellen. Das Logo selbst ist eine Bilddatei und bleibt unverändert.
+
+## Alpha 30: Unterkategorie-Kacheln mit Feinschliff
+
+- Zwei gleich breite, flexible Kachelspalten füllen die Kategorie-Zelle aus, ohne die Themenanzahl-Spalte zu beanspruchen.
+- Lange Unterkategorienamen dürfen umbrechen statt abgeschnitten zu werden.
+- Neue Theme-Einstellung `subcategory_tiles` (Standard: aktiv) schaltet zwischen Kacheln und kompakten Textlinks um.
+- Bei deaktivierten Kacheln greifen wieder die vorhandenen festen Spaltenbreiten (`subcategory_column_width`).
+- Die Farblinien und der Hover-Effekt bleiben erhalten.
 
 ## Alpha 29: Unterkategorie-Kacheln
 
