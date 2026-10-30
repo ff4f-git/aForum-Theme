@@ -1,3 +1,8 @@
+## Alpha 47: Eckiger Neues-Thema-Button
+
+- Roter Desktop-Button jetzt eckig und bündig zur schwarzen Navigationsleiste, passend zum blauen Kategorien-Tab.
+- Gerade Schrift, kompakte Breite und mobile Darstellung bleiben erhalten.
+
 ## Alpha 46: Ruhigerer Neues-Thema-Button
 
 - Desktop-CTA ohne kursive Schrift und ohne vertikalen Überstand.
