@@ -1796,6 +1796,10 @@ a:not([class]) {
       width: 48px;
       min-width: 48px;
       max-width: 48px;
+      height: 48px;
+      min-height: 48px;
+      max-height: 48px;
+      margin-block: 0;
       padding-inline: 0;
       align-items: center;
       justify-content: center;
