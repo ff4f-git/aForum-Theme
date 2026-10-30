@@ -2,6 +2,13 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.52
+
+- Die Hover-Farbübertragung für Themenkarten in den bereits funktionierenden Kategorie-Initializer integriert.
+- Den separaten, offenbar nicht zuverlässig gestarteten Themenfarben-Initializer entfernt, um doppelte Logik zu vermeiden.
+- Farben werden beim Laden, nach DOM-Nachladen, beim Hover und bei Tastaturfokus direkt aus dem Discourse-Badge übernommen.
+- Keine Änderungen an Karten, Abständen, Typografie oder Hover-Geometrie.
+
 ## Beta 1.51
 
 - Fehler bei nachträglich aktualisierten Kategorie-Badgefarben behoben: Themenzeilen synchronisieren die echte Discourse-Farbe zusätzlich unmittelbar beim Hover und Tastaturfokus.
