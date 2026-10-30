@@ -9,6 +9,8 @@ export default apiInitializer("1.8.0", (api) => {
       if (!category) return;
       const color = getComputedStyle(category).borderLeftColor;
       if (!color || color === "transparent" || color === "rgba(0, 0, 0, 0)") return;
+      category.style.setProperty("--af-category-icon-color", color);
+      row.style.setProperty("--af-category-icon-color", color);
       row.querySelectorAll(".subcategories").forEach((list) => {
         list.style.setProperty("--af-subcategory-accent", color);
       });

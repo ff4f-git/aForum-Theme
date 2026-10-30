@@ -1268,3 +1268,24 @@ a:not([class]) {
 .topic-footer-main-buttons .btn-primary .d-icon {
   font-style: normal;
 }
+
+// ======================================================
+// Beta 1.2 – Hauptkategorie-Icons als farbige Kacheln.
+// Nur die native Kategorien-Startliste, nicht Unterkategorien,
+// Schloss-Symbole oder Icons in Themenlisten.
+// ======================================================
+.categories-and-latest .category-list > tbody > tr > td.category > h3,
+.categories-list .category-list-item[data-category-id] > table.topic-list > tbody > tr:first-child > th.main-link > h3 {
+  .d-icon:not(.d-icon-lock):not(.d-icon-lock-solid) {
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: var(--af-category-icon-color, var(--af-brand-blue));
+    color: #fff;
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: 0.4em;
+  }
+}

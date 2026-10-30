@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.2
+
+- Native Hauptkategorie-Symbole als 36 × 36 px große Farbkacheln mit 3 px Eckenrundung und weißem Icon.
+- Kachelfarbe wird aus dem vorhandenen Kategoriefarb-Streifen übernommen; keine manuelle Farbliste.
+- Unterkategorien, Schloss-Symbole, Themenlisten und Navigation bleiben unverändert.
+
 ## Beta 1.1
 
 - Theme-Einstellungen nach dem KISS-Prinzip bereinigt und auf ausgewählte Funktionen konzentriert.
