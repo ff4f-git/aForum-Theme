@@ -2,6 +2,12 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## Beta 1.53
+
+- Nachgeladene Themenlisten: MutationObserver am stabilen document.body statt am austauschbaren #main-outlet.
+- Hover- und Fokus-Ereignisse werden zentral am document abgefangen; dadurch erhalten auch später hinzugefügte Themenzeilen ihre Badgefarbe.
+- DOM-Aktualisierungen pro Animationsframe gebündelt, bestehende Kategorie-Kacheln und Layout unverändert.
+
 ## Beta 1.52
 
 - Die Hover-Farbübertragung für Themenkarten in den bereits funktionierenden Kategorie-Initializer integriert.

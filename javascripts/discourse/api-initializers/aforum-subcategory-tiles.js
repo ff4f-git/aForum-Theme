@@ -47,15 +47,25 @@ export default apiInitializer("1.8.0", (api) => {
     if (row) syncTopic(row);
   };
 
-  api.onPageChange(() => requestAnimationFrame(syncAll));
-  const observer = new MutationObserver(() => requestAnimationFrame(syncAll));
+  // Beta 1.53: Discourse can replace #main-outlet or append topic rows
+  // after the initial render. Observe the persistent document body and
+  // delegate interactions from document, not a replaceable outlet node.
+  let pending = false;
+  const scheduleSync = () => {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(() => {
+      pending = false;
+      syncAll();
+    });
+  };
+
+  api.onPageChange(scheduleSync);
+  const observer = new MutationObserver(scheduleSync);
   const start = () => {
-    const root = document.querySelector("#main-outlet");
-    if (root) {
-      observer.observe(root, { childList: true, subtree: true });
-      root.addEventListener("pointerover", syncOnInteraction, true);
-      root.addEventListener("focusin", syncOnInteraction, true);
-    }
+    observer.observe(document.body, { childList: true, subtree: true });
+    document.addEventListener("pointerover", syncOnInteraction, true);
+    document.addEventListener("focusin", syncOnInteraction, true);
     syncAll();
   };
   if (document.readyState === "loading") {
