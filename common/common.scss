@@ -2493,3 +2493,34 @@ a:not([class]) {
   }
   .product-list > .product { padding: 22px; }
 }
+
+
+// aForum Abonnieren – Entwurf 2: zentrierter Kartenkopf.
+// Die Preis-/Laufzeitangabe bleibt als Plugin-Text erhalten.
+.product-list > .product {
+  &::before {
+    align-self: center;
+    margin: 0 auto 18px;
+  }
+
+  h2, h3, .product-title {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2.7em;
+    margin: 0 0 22px;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .product-description {
+    margin-top: 0;
+  }
+
+  .product-purchase {
+    justify-content: center;
+    align-items: center;
+    .btn { text-align: center; }
+  }
+}
