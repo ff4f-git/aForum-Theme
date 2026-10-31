@@ -2562,3 +2562,32 @@ a:not([class]) {
     line-height: 1.4;
   }
 }
+
+
+// Original-Gruppenflair über Discourse-Gruppendaten, SVG-Fallback bleibt bestehen.
+.product-list > .product.aforum-has-group-flair {
+  &::before { display: none; }
+
+  > .aforum-group-flair {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #000;
+
+    svg, img {
+      display: block;
+      width: 30px;
+      height: 30px;
+      max-width: 30px;
+      max-height: 30px;
+    }
+    svg { fill: currentColor; }
+  }
+}
