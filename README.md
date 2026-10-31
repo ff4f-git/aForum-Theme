@@ -146,7 +146,6 @@ Die nativen Discourse-Navigationsfunktionen bleiben die Grundlage. Das Theme ers
 | [`common/color_definitions.scss`](common/color_definitions.scss) | Farbvariablen und Zuordnung zu Discourse-Paletten |
 | [`javascripts/discourse/api-initializers/`](javascripts/discourse/api-initializers/) | Ergänzungen für Bereichsüberschriften, Kategoriefarben und Navigation |
 | [`docs/images/`](docs/images/) | Screenshots für die Dokumentation |
-| [`CHANGELOG.md`](CHANGELOG.md) | Zusammengefasste Versionsgeschichte |
 
 ## Entwicklung & Rückmeldungen
 
