@@ -2344,3 +2344,48 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.66 – Mobile Themenkarten: Innenabstand und sichtbarer
+// Kategorie-Akzent bei Hover sowie Tastaturfokus.
+// Kein Eingriff in die Desktop- oder Zwischenansicht ab 700 px.
+@media (max-width: 699px) {
+  #list-area .topic-list:not(.category-list) > tbody > tr.topic-list-item {
+    > td:first-child {
+      padding-left: 12px;
+    }
+
+    > td:last-child {
+      padding-right: 12px;
+    }
+
+    // Discourse stellt die Kategorie-Badgefarbe als CSS-Variable bereit,
+    // wenn sie am Eintrag vererbt wird; sonst gilt der Theme-Akzent.
+    &:hover > td:first-child,
+    &:focus-within > td:first-child {
+      box-shadow: inset 3px 0 0 var(--af-topic-hover-color, var(--category-badge-color, var(--af-accent))) !important;
+    }
+  }
+
+  // Mobile Kategorien-Uebersicht: nur die drei Themen unterhalb
+  // der Kategorie-Beschreibung, nicht Titel oder Unterkategorien.
+  .mobile-view .category-list-item {
+    .category-topic-link {
+      display: block;
+      box-sizing: border-box;
+      margin: 6px 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--af-border);
+      border-radius: 3px;
+      background: var(--af-surface);
+      box-shadow: inset 3px 0 0 transparent;
+      transition: background-color 180ms ease, box-shadow 180ms ease;
+
+      &:hover,
+      &:focus-visible {
+        background: var(--af-hover);
+        box-shadow: inset 3px 0 0 var(--af-category-icon-color, var(--category-badge-color, var(--af-accent)));
+      }
+    }
+  }
+}
