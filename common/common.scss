@@ -2294,3 +2294,53 @@ a:not([class]) {
     }
   }
 }
+
+
+// Beta 1.65 – Themenkarten auch unter 700 px.
+// Aktuell, Neu, Heiss sowie Kategorie-Themenlisten verwenden weiterhin
+// das native Discourse-Tabellenlayout (Desktop- und Mobile-Markup).
+// Die vorhandenen Regeln ab 700 px bleiben unveraendert.
+@media (max-width: 699px) {
+  #list-area .topic-list:not(.category-list) {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    > tbody > tr.topic-list-item {
+      --af-topic-hover-color: var(--af-accent);
+      box-shadow: none;
+
+      > td {
+        box-sizing: border-box;
+        background-color: var(--af-surface);
+        border-top: 1px solid var(--af-border);
+        border-bottom: 1px solid var(--af-border);
+        transition: background-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      > td:first-child {
+        border-left: 1px solid var(--af-border);
+        border-radius: 3px 0 0 3px;
+        box-shadow: inset 3px 0 0 transparent;
+        transition: background-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      > td:last-child {
+        border-right: 1px solid var(--af-border);
+        border-radius: 0 3px 3px 0;
+      }
+
+      &:hover,
+      &:focus-within {
+        box-shadow: none;
+
+        > td {
+          background-color: var(--af-hover);
+        }
+
+        > td:first-child {
+          box-shadow: inset 3px 0 0 var(--af-topic-hover-color);
+        }
+      }
+    }
+  }
+}
