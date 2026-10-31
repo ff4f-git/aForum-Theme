@@ -2495,6 +2495,18 @@ a:not([class]) {
 }
 
 
+// aForum Abonnieren – Seitentitel mittig über den beiden Produktkarten.
+body:has(.product-list) .container > .title-wrapper {
+  justify-content: center;
+  text-align: center;
+
+  h1, h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 // aForum Abonnieren – Entwurf 2: zentrierter Kartenkopf.
 // Die Preis-/Laufzeitangabe bleibt als Plugin-Text erhalten.
 .product-list > .product {
