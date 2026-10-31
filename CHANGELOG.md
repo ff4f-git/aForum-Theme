@@ -2,6 +2,20 @@
 
 Die folgende Übersicht beschreibt die wesentlichen Entwicklungsschritte. Die vollständige Historie einschließlich einzelner Korrekturen steht in den [Git-Commits](https://github.com/ff4f-git/aForum-Theme/commits/main/).
 
+## 1.0.0 – Erste stabile Version (31. Oktober 2026)
+
+- Beta-Phase abgeschlossen: aForum als stabiles Discourse-Haupttheme mit Light- und Dark-Palette veröffentlicht.
+- Einheitliche, responsive Themenkacheln für „Aktuell“, „Neu“, „Heiß“ und Kategorie-Themenlisten bis hin zur Smartphone-Ansicht.
+- Mobile Kategorienübersicht mit eigenen Kacheln für die angezeigten Themen, konsistenten Abständen und Kategorie-Akzenten.
+- Kategorieabhängiger 3-px-Hover- und Fokusstreifen auch für nachgeladene Themen; dynamische Farbübernahme aus Discourse.
+- Mobilen Discourse-Sprunglink korrigiert: kein blauer Reststreifen oberhalb des Headers, Tastaturfokus bleibt nutzbar.
+- Dokumentation auf Installation, Konfiguration und aktuellen Funktionsumfang ausgerichtet; keine Änderungen an den 17 Theme-Einstellungen.
+
+## Beta 1.64
+
+- Theme-Einstellungen auf 17 Felder reduziert und vier optionale Farboptionen für Navigation und „Neues Thema“ ergänzt.
+- README und Screenshots des damaligen Beta-Stands aktualisiert.
+
 ## Beta 1.63
 
 - Nativen Dropdown-Ausloeser bei 640–725 px fett und mit gut sichtbarem Pfeil formatiert.
