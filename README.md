@@ -6,11 +6,11 @@
 
 **Das Discourse-Haupttheme für die Aprilia-Community.**
 
-![Version](https://img.shields.io/badge/Version-Beta_1.64-ff0000?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.0.0-ff0000?style=flat-square)
 ![Plattform](https://img.shields.io/badge/Plattform-Discourse-0f7ec9?style=flat-square)
 ![Darstellung](https://img.shields.io/badge/Darstellung-Light_%26_Dark-20242a?style=flat-square)
 
-[**Live ansehen →**](https://aforum.net) · [Installation](#installation) · [Einstellungen](#einstellungen) · [Änderungen](CHANGELOG.md)
+[**Live ansehen →**](https://aforum.net) · [Installation](#installation) · [Einstellungen](#einstellungen)
 
 </div>
 
@@ -24,7 +24,7 @@
 
 aForum verbindet eine klassische Forenübersicht mit einer klaren Motorsport-Optik: Schwarz als Rahmen, Blau für Orientierung und Rot für Aktionen. Kantige Unterkategorie-Kacheln führen direkt in die passenden Bereiche; gut lesbare Themenlisten rücken die Diskussionen in den Mittelpunkt.
 
-**Beta 1.64 folgt dem KISS-Prinzip:** eine abgestimmte Gestaltung und wenige Einstellungen mit sichtbarem Nutzen.
+**aForum 1.0 folgt dem KISS-Prinzip:** eine abgestimmte Gestaltung und wenige Einstellungen mit sichtbarem Nutzen.
 
 ## Was das Theme ausmacht
 
@@ -34,8 +34,8 @@ aForum verbindet eine klassische Forenübersicht mit einer klaren Motorsport-Opt
 | **Unterkategorien** | Flexible Kacheln mit Kategorienfarbe, Hover- und Fokuszuständen; auf schmalen Ansichten einspaltig. |
 | **Typografie** | Inter für Beiträge, Thementitel und Beschreibungen. Die in Discourse gewählte Basisschrift bleibt für Navigation und Kategorien erhalten; aForum verwendet dort Oxanium. |
 | **Navigation** | Dauerhaft aktive Hintergrundfläche, separat einstellbare aktive Tabfarbe und ein bündiger, eckiger „Neues Thema“-Button auf Desktop. |
-| **Themenlisten** | Dezenter Flächenwechsel und ein roter, 3 px breiter Hover-Streifen links – ohne umlaufenden Rahmen. |
-| **Diskussionen** | Kräftigere Bedienelemente und Zeitleisten-Beschriftungen im hellen Modus; gerader Antworten-Button. |
+| **Themenlisten** | Einzelne, dezent umrandete Themenkacheln mit 3-px-Ecken und abgestimmten Abständen in „Aktuell“, „Neu“, „Heiß“ und Kategorie-Themenlisten. Der linke 3-px-Streifen erscheint bei Hover oder Tastaturfokus in der jeweiligen Discourse-Kategoriefarbe; auch nachgeladene Themen werden berücksichtigt. |
+| **Mobile Kategorien** | Hauptkategorien mit farbigem Außenrahmen und Icon; die angezeigten Themen als eigene kompakte Kacheln, darunter die Unterkategorien. |\n| **Barrierefreiheit** | Discourse-Sprunglinks bleiben bei Tastaturfokus zugänglich und werden auf schmalen Displays im Normalzustand vollständig ausgeblendet. |\n| **Diskussionen** | Kräftigere Bedienelemente und Zeitleisten-Beschriftungen im hellen Modus; gerader Antworten-Button. |
 | **Hell & Dunkel** | Zwei mitgelieferte Farbpaletten und getrennte Farboptionen für beide Modi. |
 | **Feinabstimmung** | Forenbreite, Schatten, Desktop-Headerhöhe sowie ein gemeinsamer Avatar-Eckenradius. |
 
@@ -57,7 +57,7 @@ Die mobile Kategorienansicht verwendet eigenes Discourse-Markup. Die Darstellung
    https://github.com/ff4f-git/aForum-Theme
    ```
 
-4. **aForum Beta 1.64** als Haupttheme aktivieren und die gewünschten hellen und dunklen Farbpaletten zuweisen.
+4. **aForum 1.0** als Haupttheme aktivieren und die gewünschten hellen und dunklen Farbpaletten zuweisen.
 5. Für die gezeigte Desktop-Startseite den Kategorien-Seitenstil **Kategorien und aktuelle Themen** auswählen.
 6. Für den aForum-Schriftmix **Oxanium** als Discourse-Basisschrift einstellen. Inter wird vom Theme über Google Fonts geladen.
 7. Gewünschte zusätzliche Komponenten zuweisen und die Darstellung auf Desktop und Smartphone prüfen.
@@ -68,13 +68,9 @@ Die mobile Kategorienansicht verwendet eigenes Discourse-Markup. Die Darstellung
 
 In der Discourse-Administration das installierte Git-Theme öffnen und aktualisieren. Danach die Seite neu laden und Startseite, Themenlisten und einen geöffneten Thread in beiden Farbmodi prüfen.
 
-Beim Update von Beta 1.63 auf Beta 1.64 entfallen die vier Schalter für kompakte Listen, Unterkategorie-Kacheln, Leistenhöhe und Navigationshintergrund. Ihre bisherigen Standardwerte gelten jetzt fest; abweichende eigene Werte werden nicht weiter verwendet. Dafür kommen vier optionale Farbfelder für den „Neues Thema“-Button und die aktive Navigation hinzu.
-
-Beim Wechsel von älteren Alpha-Versionen wurden viele Detailoptionen entfernt. Individuelle Werte dieser entfernten Optionen werden nicht automatisch übernommen; bei Bedarf vor dem Update sichern. Der lokal vergebene Theme-Anzeigename kann nach einem Update bestehen bleiben.
-
 ## Einstellungen
 
-**Beta 1.64 bietet 17 Einstellungsfelder.** Kompakte Listen und Unterkategorie-Kacheln sind dauerhaft aktiv, die Navigationsleiste bleibt 52 px hoch und ihr Hintergrund eingeschaltet. Der äußere Seitenhintergrund bleibt an die Discourse-Farben gekoppelt.
+**aForum 1.0 bietet 17 Einstellungsfelder.** Kompakte Listen und Unterkategorie-Kacheln sind dauerhaft aktiv, die Navigationsleiste bleibt 52 px hoch und ihr Hintergrund eingeschaltet. Der äußere Seitenhintergrund bleibt an die Discourse-Farben gekoppelt.
 
 Alle aktuellen Optionen stehen in [`settings.yml`](settings.yml). Zahlenwerte besitzen feste Wertebereiche; ob Discourse sie als Zahlenfeld oder grafischen Regler darstellt, hängt von der Admin-Oberfläche ab.
 
@@ -118,10 +114,10 @@ HEX-Farbwerte mit `#` eingeben, beispielsweise `#0F7EC9`. Hell und Dunkel lassen
 | Allgemeine primäre Buttons und bestimmte Zähler | Theme-Akzentfarbe, ersatzweise `quaternary` |
 | Navigationshintergrund | Theme-Navigationsfarbe, ersatzweise `header_background` |
 | Kategorien und ihre farbigen Markierungen | Discourse-Kategorieeinstellungen |
-| Linker Hover-Streifen der Themenlisten | Festes `#FF0000`, 3 px |
+| Linker Hover-/Fokusstreifen der Themenkarten | 3 px, dynamisch aus der jeweiligen Discourse-Kategoriefarbe; Akzentfarbe als Rückfall |
 | Markenblaue Bereichsakzente | Festes `#0F7EC9` |
 
-Die vier neuen Farbfelder sind standardmäßig leer: Ohne eigene Werte bleiben die bisherigen Palettenfarben erhalten. Bei eigenen Button- und Navigationsfarben auf ausreichenden Kontrast zu den weißen Beschriftungen achten.
+Die optionalen Farboptionen sind standardmäßig leer: Ohne eigene Werte bleiben die bisherigen Palettenfarben erhalten. Bei eigenen Button- und Navigationsfarben auf ausreichenden Kontrast zu den weißen Beschriftungen achten.
 
 Damit lassen sich die schwarze Leiste, der blaue aktive Tab und der rote „Neues Thema“-Button unabhängig voneinander zuordnen. Die Akzentfelder überschreiben nicht automatisch die Farbe dieses Buttons.
 
@@ -154,7 +150,7 @@ Die nativen Discourse-Navigationsfunktionen bleiben die Grundlage. Das Theme ers
 
 ## Entwicklung & Rückmeldungen
 
-Das Theme wird für aForum entwickelt. Es ist als **Beta 1.64** gekennzeichnet; eine konkrete Mindestversion von Discourse ist derzeit nicht dokumentiert. Nach Discourse-Updates sollten insbesondere die Kategorienansichten geprüft werden, da das Theme gezielt deren HTML-Struktur gestaltet.
+Das Theme wird für aForum entwickelt und als **Version 1.0.0** bereitgestellt. Eine konkrete Mindestversion von Discourse ist derzeit nicht dokumentiert. Nach Discourse-Updates sollten insbesondere die Kategorienansichten geprüft werden, da das Theme gezielt deren HTML-Struktur gestaltet.
 
 Für einen hilfreichen Fehlerbericht bitte angeben:
 
