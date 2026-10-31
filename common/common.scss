@@ -2426,7 +2426,7 @@ a:not([class]) {
     padding: clamp(22px, 3vw, 32px);
     background: var(--secondary);
     border: 1px solid var(--primary-low-mid);
-    border-top: 3px solid var(--af-plan-accent);
+    border: 2px solid var(--af-plan-accent);
     border-radius: 4px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: border-color 180ms ease, box-shadow 180ms ease;
