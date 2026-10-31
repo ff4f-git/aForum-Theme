@@ -2279,3 +2279,18 @@ a:not([class]) {
     }
   }
 }
+
+
+// Mobile: Discourse-Sprunglink bei Zeilenumbruch vollstaendig ausblenden.
+// Der feste Core-Offset (-75px) kann bei langen Texten einen Streifen zeigen.
+// Tastaturfokus bleibt weiterhin sichtbar und bedienbar.
+@media (max-width: 767px) {
+  #skip-links__container a {
+    top: 0 !important;
+    transform: translateY(-100%) !important;
+
+    &:focus {
+      transform: translateY(0) !important;
+    }
+  }
+}
