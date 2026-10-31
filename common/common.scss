@@ -1089,15 +1089,39 @@ a:not([class]) {
     font-weight: 700;
     text-decoration: none;
 
+    // Premium-Krone statt Stern; einfarbig wie der Abo-Link.
     &::before {
-      content: "★";
+      content: "";
       display: inline-block;
-      color: #d6b36a;
-      font-size: 0.95em;
-      line-height: 1;
+      flex: 0 0 1em;
+      width: 1em;
+      height: 1em;
+      background: currentColor;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m2 8 5 4 5-7 5 7 5-4-2 11H4L2 8Zm3 13h14v2H5v-2Z'/%3E%3C/svg%3E") center / contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m2 8 5 4 5-7 5 7 5-4-2 11H4L2 8Zm3 13h14v2H5v-2Z'/%3E%3C/svg%3E") center / contain no-repeat;
     }
-    &::after { content: none !important; }
-    &:hover { color: #f1d49a !important; background: transparent !important; }
+    // Gleiche Unterstrich-Logik wie die Tabs, aber in Abo-Gold.
+    &::after {
+      content: "" !important;
+      position: absolute;
+      left: 0.9em;
+      right: 0.9em;
+      bottom: 0;
+      height: 3px;
+      background: #d6b36a;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 160ms ease;
+    }
+    &:hover,
+    &:focus-visible {
+      color: #f1d49a !important;
+      background: transparent !important;
+    }
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(1);
+    }
     &:focus-visible { outline: 2px solid #d6b36a; outline-offset: 3px; }
   }
 }
