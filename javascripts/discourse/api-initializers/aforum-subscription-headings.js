@@ -9,8 +9,8 @@ export default apiInitializer("1.8.0", (api) => {
         return;
       }
 
-      const original = heading.textContent.trim().replace(/\\s+/g, " ");
-      const match = original.match(/^(Premium|Sponsoren)\\s+(\\d[\\d.,]*\\s*€)\\s+(pro\\s+Jahr)$/i);
+      const original = heading.textContent.trim().replace(/\s+/g, " ");
+      const match = original.match(/^(Premium|Sponsoren)\s+(\d[\d.,]*\s*€)\s+(pro\s+Jahr)$/i);
       if (!match) {
         return; // Unbekannte Produkte oder Formate niemals verändern.
       }
@@ -22,7 +22,7 @@ export default apiInitializer("1.8.0", (api) => {
       name.textContent = match[1];
       const price = document.createElement("span");
       price.className = "aforum-plan-price";
-      price.textContent = match[2].replace(/\\s*€$/, " €");
+      price.textContent = match[2].replace(/\s*€$/, " €");
       const interval = document.createElement("span");
       interval.className = "aforum-plan-interval";
       interval.textContent = match[3];
