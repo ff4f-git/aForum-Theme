@@ -2530,7 +2530,7 @@ a:not([class]) {
 .product-list > .product > h2:has(.aforum-plan-heading) {
   display: block;
   min-height: 0;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   text-align: center;
 
   .aforum-plan-heading {
@@ -2583,10 +2583,10 @@ a:not([class]) {
 
     svg, img {
       display: block;
-      width: 30px;
-      height: 30px;
-      max-width: 30px;
-      max-height: 30px;
+      width: 40px;
+      height: 40px;
+      max-width: 40px;
+      max-height: 40px;
     }
     svg { fill: currentColor; }
   }
