@@ -44,7 +44,7 @@
   --d-border-radius: 0px;
   --d-border-radius-large: 0px;
   @if af-on($panel_shadow) {
-    --af-shadow: 0 0 32px rgba(0, 0, 0, #{$shadow_opacity * 0.01});
+    --af-shadow: 0 0 32px color-mix(in srgb, #000 #{$shadow_opacity}%, transparent);
   } @else {
     --af-shadow: none;
   }
