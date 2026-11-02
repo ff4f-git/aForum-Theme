@@ -2675,6 +2675,8 @@ body:has(.product-list) .container > .title-wrapper {
 // Discourse: Kategorie-Verwaltung und Massenauswahl.
 @media (max-width: 400px) {
   .navigation-container {
+    // Native Discourse select-kit: „Kategorie verwalten“
+    details.categories-admin-dropdown,
     .category-admin-menu,
     .category-admin-controls,
     .category-admin-dropdown,
