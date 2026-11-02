@@ -2668,3 +2668,24 @@ body:has(.product-list) .container > .title-wrapper {
     }
   }
 }
+
+
+// Beta – Admin-/Moderationswerkzeuge auf sehr schmalen Smartphones
+// aus der Navigationsleiste nehmen. Keine Funktion wird deaktiviert.
+// Discourse: Kategorie-Verwaltung und Massenauswahl.
+@media (max-width: 400px) {
+  .navigation-container {
+    .category-admin-menu,
+    .category-admin-controls,
+    .category-admin-dropdown,
+    .bulk-select,
+    .bulk-select-button,
+    .bulk-select-container,
+    .topic-bulk-select,
+    .topic-list-bulk-select,
+    .list-controls__bulk-select,
+    .list-controls__category-admin {
+      display: none !important;
+    }
+  }
+}
