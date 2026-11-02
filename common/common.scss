@@ -291,6 +291,14 @@ img.avatar,
     }
   }
 
+  // "Ungelesen" als festen Tab zeigen, auch wenn aktuell 0 Themen offen sind.
+  // Discourse blendet den nativen Tab sonst mit .hidden aus.
+  // Die vorhandene Reihenfolge, Aktivmarkierung und responsive Navigation
+  // bleiben nativ (Neu | Ungelesen | Heiß).
+  .nav-pills > li.unread.hidden {
+    display: flex !important;
+  }
+
   .nav-pills > li > a,
   .nav-pills > li > button {
     color: var(--af-on-accent);
