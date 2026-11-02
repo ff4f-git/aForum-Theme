@@ -2605,3 +2605,66 @@ body:has(.product-list) .container > .title-wrapper {
     svg { fill: currentColor; }
   }
 }
+
+
+// ======================================================
+// Beta – Entwurfsmenü als flacher blauer Navigationstab.
+// Nur der zweite Button der nativen Discourse-Kombination;
+// #create-topic und die übrige Navigation bleiben unverändert.
+// ======================================================
+.navigation-container .topic-create-button__combo {
+  // Discourse rendert Hauptaktion und Entwurfsmenü als zwei Buttons.
+  // Die direkte Geschwisterauswahl verhindert Treffer im geöffneten Menü.
+  > button#create-topic ~ button,
+  > #create-topic + button,
+  > .d-combo-button__menu-button {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 52px;
+    width: 52px;
+    min-width: 44px;
+    max-width: 52px;
+    height: var(--af-bar-h);
+    min-height: var(--af-bar-h);
+    max-height: var(--af-bar-h);
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--af-active);
+    color: var(--af-on-accent);
+
+    .d-icon {
+      color: var(--af-on-accent);
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: var(--af-link-hover);
+      color: var(--af-on-accent);
+      box-shadow: none;
+    }
+  }
+}
+
+// Bei schmalen Ansichten die vorhandene 44px-CTA-Regel übernehmen,
+// ohne die Hauptaktion oder den Discourse-Dropdown zu verändern.
+@media (max-width: 599px) {
+  .navigation-container .topic-create-button__combo {
+    > button#create-topic ~ button,
+    > #create-topic + button,
+    > .d-combo-button__menu-button {
+      flex-basis: 44px;
+      width: 44px;
+      min-width: 44px;
+      max-width: 44px;
+      height: 44px;
+      min-height: 44px;
+      max-height: 44px;
+    }
+  }
+}
