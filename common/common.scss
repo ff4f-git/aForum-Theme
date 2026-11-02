@@ -2731,3 +2731,30 @@ body:has(.product-list) .container > .title-wrapper {
   }
 
 }
+
+
+// Beta 1.0 – 980px-Grenzfall: kompakte CTA unabhaengig vom
+// gleichzeitig wechselnden nativen Discourse-Navigationsmodus.
+// Absichtlich nach allen bisherigen Breakpoint-Regeln platziert.
+@media (max-width: 1100px) {
+  .navigation-container #create-topic,
+  .navigation-container .d-combo-button #create-topic {
+    box-sizing: border-box;
+    flex: 0 0 52px;
+    width: 52px;
+    min-width: 52px;
+    max-width: 52px;
+    padding-inline: 0;
+    justify-content: center;
+    gap: 0;
+
+    .d-button-label {
+      display: none !important;
+    }
+
+    > .d-icon,
+    > svg.d-icon {
+      margin-inline: 0;
+    }
+  }
+}
