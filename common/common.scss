@@ -2691,3 +2691,43 @@ body:has(.product-list) .container > .title-wrapper {
     }
   }
 }
+
+
+// Beta 1.0 – Zwischenstufe: Ab 1100px und darunter nur das Stiftsymbol.
+// 768–979px werden bereits von Beta 1.40 abgedeckt; hier ausschliesslich
+// die Luecke 980–1100px schliessen, ohne andere Layoutregeln zu veraendern.
+@media (min-width: 980px) and (max-width: 1100px) {
+  .navigation-container {
+    #create-topic {
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 0 0 52px;
+      width: 52px;
+      min-width: 52px;
+      max-width: 52px;
+      height: calc(var(--af-bar-h) + 4px);
+      min-height: calc(var(--af-bar-h) + 4px);
+      max-height: none;
+      margin-block: -2px;
+      padding-inline: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      border-radius: 3px;
+
+      .d-button-label {
+        display: none;
+      }
+
+      // Discourse reserves right-hand spacing for the hidden text label.
+      // Remove that offset so the remaining pen icon sits at true center.
+      > .d-icon,
+      > svg.d-icon {
+        margin: 0;
+        margin-inline: 0;
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+}
