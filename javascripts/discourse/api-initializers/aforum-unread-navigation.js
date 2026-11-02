@@ -12,7 +12,18 @@ export default apiInitializer("1.8.0", (api) => {
 
   api.addNavigationBarItem({
     name: "aforum-unread",
-    displayName: "Ungelesen",
+    // Keep the count reactive as topic read states change.
+    init: (item) => {
+      Object.defineProperty(item, "displayName", {
+        configurable: true,
+        get() {
+          // This tracked value invalidates the label after read-state updates.
+          tracking.messageCount;
+          const count = tracking.countUnread();
+          return count > 0 ? `Ungelesen (${count})` : "Ungelesen";
+        },
+      });
+    },
     title: "Ungelesene Antworten in verfolgten Themen",
     href: "/unread",
     before: "hot",
